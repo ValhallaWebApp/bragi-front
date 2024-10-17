@@ -1,0 +1,64 @@
+# Angular CLI Commands for Alex Da Torres Project
+
+# Project Initialization
+ng new alexDaTorres-frontend
+cd alexDaTorres-frontend
+
+# Core and Shared Modules
+ng generate module modules/core --routing
+ng generate module modules/shared
+
+# Home Module
+ng generate module modules/home --route home --module app.module
+ng generate component modules/home/components/hero-banner
+ng generate component modules/home/components/feature-gallery
+ng generate component modules/home/components/testimonials
+
+# Gallery Module
+ng generate module modules/gallery --route gallery --module app.module
+ng generate component modules/gallery/components/gallery
+ng generate component modules/gallery/components/artwork-card
+ng generate component modules/gallery/components/filter-panel
+ng generate component modules/gallery/components/sorting-dropdown
+
+# Authentication Module
+ng generate module modules/auth --route auth --module app.module
+ng generate component modules/auth/components/login
+ng generate component modules/auth/components/register
+ng generate component modules/auth/components/forgot-password
+
+# Cart Module
+ng generate module modules/cart --route cart --module app.module
+ng generate component modules/cart/components/cart
+ng generate component modules/cart/components/checkout
+ng generate component modules/cart/components/order-summary
+
+# User Module
+ng generate module modules/user --route user --module app.module
+ng generate component modules/user/components/profile
+ng generate component modules/user/components/order-history
+ng generate component modules/user/components/wishlist
+
+# Admin Module
+ng generate module modules/admin --route admin --module app.module
+ng generate component modules/admin/components/admin-dashboard
+ng generate component modules/admin/components/artwork-management
+ng generate component modules/admin/components/user-management
+
+# Shared Components
+ng generate component components/contact-form
+ng generate component components/header
+ng generate component components/banner
+
+# Services
+ng generate service services/api
+ng generate service services/auth
+ng generate service services/cart
+ng generate service services/user
+
+# Core Specific Services
+ng generate service modules/gallery/services/gallery
+
+# Guards and Interceptors
+ng generate service modules/core/guards/auth
+ng generate service modules/core/interceptors/auth-interceptor
