@@ -2,3 +2,4 @@ https://alexdatorres.it/#/
 FRONT-END
 Angular
 gestionale quadri e critiche
+pino
