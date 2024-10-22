@@ -6,6 +6,8 @@ import { HomeComponent } from './home.component';
 import { HeroBannerComponent } from './components/hero-banner/hero-banner.component';
 import { FeatureGalleryComponent } from './components/feature-gallery/feature-gallery.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { JumbotronComponent } from '../shared/components/jumbotron/jumbotron.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -13,11 +15,13 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
     HomeComponent,
     HeroBannerComponent,
     FeatureGalleryComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    JumbotronComponent,
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    TranslateModule
   ]
 })
 export class HomeModule { }

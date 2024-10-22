@@ -1,27 +1,72 @@
 <mat-toolbar class="app-toolbar">
-    <button mat-icon-button class="menu-icon" (click)="sidenav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span class="header-title">Alex Da Torres</span>
-    <button mat-icon-button class="download-icon">
-      <mat-icon>cloud_download</mat-icon>
-    </button>
-  </mat-toolbar>
-  
+  <!-- Pulsante per aprire il menu laterale -->
+  <button mat-icon-button class="menu-icon" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <!-- Titolo dell'header, tradotto -->
+  <span class="header-title">{{ "HEADER.TITLE" | translate }}</span>
+
+  <!-- Icona per il download con tooltip tradotto -->
+  <button mat-icon-button class="download-icon">
+    <mat-icon>cloud_download</mat-icon>
+  </button>
+</mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #sidenav mode="over" class="sidenav" [opened]="false">
-        <mat-nav-list>
-            <a mat-list-item routerLink="/home" (click)="sidenav.close()">Home</a>
-            <a mat-list-item routerLink="/gallery" (click)="sidenav.close()">Gallery</a>
-            <a mat-list-item routerLink="/auth" (click)="sidenav.close()">Login</a>
-            <a mat-list-item routerLink="/cart" (click)="sidenav.close()">Cart</a>
-            <a mat-list-item routerLink="/user" (click)="sidenav.close()">Profile</a>
-            <a mat-list-item routerLink="/admin" (click)="sidenav.close()">Admin</a>
-        </mat-nav-list>
-    </mat-sidenav>
+  <!-- Sidenav per il menu laterale -->
+  <mat-sidenav #sidenav mode="over" class="sidenav" [opened]="false">
+    <mat-nav-list>
+      <!-- I link del menu sono tradotti tramite ngx-translate -->
+      <a mat-list-item routerLink="/home" (click)="sidenav.close()">
+        {{ "HEADER.MENU.HOME" | translate }}
+      </a>
+      <a mat-list-item routerLink="/gallery" (click)="sidenav.close()">
+        {{ "HEADER.MENU.GALLERY" | translate }}
+      </a>
+      <a mat-list-item routerLink="/about-us" (click)="sidenav.close()">
+        {{ "HEADER.MENU.ABOUT_US" | translate }}
+      </a>
+      <a mat-list-item routerLink="/exhibitions" (click)="sidenav.close()">
+        {{ "HEADER.MENU.EXHIBITIONS" | translate }}
+      </a>
+      <a mat-list-item routerLink="/gallery-3d" (click)="sidenav.close()">
+        {{ "HEADER.MENU.GALLERY_3D" | translate }}
+      </a>
+      <a mat-list-item routerLink="/contact" (click)="sidenav.close()">
+        {{ "HEADER.MENU.CONTACT" | translate }}
+      </a>
+      <!-- Custom Dropdown per la Lingua -->
+      <div
+        #dropdown
+        class="custom-select"
+        (click)="toggleDropdown()"
+        [attr.aria-expanded]="dropdownOpen"
+      >
+        <div class="selected-language">
+          <img
+            [src]="getFlag(currentLanguage)"
+            width="20px"
+            [alt]="currentLanguage"
+          />
+          {{ getLanguageName(currentLanguage) }}
+        </div>
+        <div class="options" *ngIf="dropdownOpen">
+          <div
+            class="option"
+            *ngFor="let lang of languages"
+            (click)="selectLanguage($event, lang)"
+          >
+            <img [src]="getFlag(lang)" width="20px" [alt]="lang" />
+            {{ getLanguageName(lang) }}
+          </div>
+        </div>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
 
-    <mat-sidenav-content class="content-container">
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
+  <!-- Contenuto principale dell'app -->
+  <mat-sidenav-content class="content-container">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
 </mat-sidenav-container>

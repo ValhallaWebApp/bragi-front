@@ -32,17 +32,17 @@ $link-color: #705d56; /* Marrone chiaro per i link */
       left: 0;
       width: 100%;
       height: 100%;
-     
+
       z-index: -1; /* Metti l'overlay sotto gli elementi dell'header */
     }
   }
-  
+
   /* Stile per l'icona del menu (hamburger) */
   .menu-icon {
     color: #2e2e2e; /* Colore dell'icona */
     font-size: 1.8rem; /* Dimensione leggermente più grande per visibilità */
   }
-  
+
   /* Stile per il titolo dell'header */
   .header-title {
     font-size: 1.25rem;
@@ -50,13 +50,13 @@ $link-color: #705d56; /* Marrone chiaro per i link */
     color: #2e2e2e; /* Colore del testo */
     margin-left: 16px; /* Spazio per separare dal menu */
   }
-  
+
   /* Stile per l'icona di download */
   .download-icon {
     color: #2e2e2e;
     font-size: 1.8rem;
   }
-  
+
 
 /* Stile per l'icona del menu (hamburger) */
 .menu-icon {
@@ -146,3 +146,51 @@ $link-color: #705d56; /* Marrone chiaro per i link */
     transform: translateY(-2px);
   }
 }
+.custom-select {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 5px;
+  .selected-language {
+    padding: 10px;
+    background-color: #ffffffa5;
+    border: 2px solid #2e2e2e;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+
+    img {
+      margin-right: 8px;
+    }
+  }
+
+  .options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffffa4;
+    border: 2px solid #2e2e2e;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+
+    .option {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #f4c2c2;
+      }
+
+      img {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+

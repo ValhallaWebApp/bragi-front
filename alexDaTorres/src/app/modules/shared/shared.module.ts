@@ -6,7 +6,7 @@ import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 
 @NgModule({
   declarations: [
-    JumbotronComponent
+
   ],
   imports: [
     CommonModule

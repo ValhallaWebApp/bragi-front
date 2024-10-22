@@ -1,0 +1,40 @@
+/* Hero Banner Styling */
+.hero-content {
+  text-align: center;
+  padding: 50px 20px;
+  color: #fff;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  button {
+    background-color: #705d56;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #8a7a73;
+    }
+  }
+}
+.hero-background {
+  position: relative;
+  overflow: hidden;
+  .hero-bg-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.6;
+  }
+}

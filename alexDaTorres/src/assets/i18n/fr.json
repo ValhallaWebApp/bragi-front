@@ -1,0 +1,46 @@
+{
+  "HEADER": {
+    "TITLE": "Alex Da Torres",
+    "MENU": {
+      "HOME": "Accueil",
+      "GALLERY": "Galerie",
+      "ABOUT_US": "À Propos",
+      "EXHIBITIONS": "Expositions",
+      "GALLERY_3D": "Galerie 3D",
+      "CONTACT": "Contact"
+    },
+    "DOWNLOAD_ICON_TOOLTIP": "Télécharger l'Art"
+  },
+  "JUMBOTRON": {
+    "TITLE": "Bienvenue chez Bragi!",
+    "SUBTITLE": "Découvrez notre collection d'art unique.",
+    "BUTTON": "En savoir plus"
+  },
+  "GALLERY": {
+    "TITLE": "Galerie en Vedette"
+  },
+  "ARTIST_PASSION": {
+    "TITLE": "Le Voyage de l'Artiste",
+    "DESCRIPTION": "Mon voyage dans l'art a été un parcours qui a touché des destinations fascinantes, à travers des expositions dans des villes d'art comme Venise, Milan et Rome. Le Festival International de Berlin a été l'un des jalons les plus significatifs. Mondadori et Arte ont gentiment reconnu mon travail. \"Le Quai Turritan\" célèbre Porto Torres, tandis que \"L'île de Tavolara\" et \"Capo Comino\" ont trouvé leur place dans le film \"Free\", avec des acteurs extraordinaires comme Sandra Milo et Enzo Salvi. Mon art est en constante évolution, alimenté par la passion que je verse dans chaque œuvre.",
+    "IMAGE_ALT": "Oeuvre de l'artiste dans le film Free"
+  },
+  "EXHIBITIONS": {
+    "TITLE": "Expositions",
+    "DESCRIPTION": "Un voyage artistique entre les pages du \"CAM Catalogue d'Art Moderne,\" \"Libertà,\" \"La Nuova Sardegna,\" et \"Oraquadra.info.\" Ici, les coups de pinceau de ma passion prennent vie, racontant des histoires d'expositions et de peintures qui se fondent avec mon parcours artistique.",
+    "CAPOCOMINO_IMAGE_ALT": "Peinture de Capo Comino",
+    "CAPOCOMINO_DESCRIPTION": "\"Capo Comino\" - Un chef-d'œuvre présenté dans le film \"Free\".",
+    "ISOLATAVOLARA_IMAGE_ALT": "Peinture de l'île de Tavolara",
+    "ISOLATAVOLARA_DESCRIPTION": "\"Île de Tavolara\" - Présenté au Festival International de Berlin."
+  },
+  "ARTIST_INSPIRATION": {
+    "TITLE": "Inspiration",
+    "DESCRIPTION": "L'art est ma passion la plus profonde, une inspiration enracinée en Sardaigne, ma terre natale. Bien que je réside maintenant à Plaisance, la beauté et la culture de la Sardaigne sont toujours présentes dans mes œuvres. Mon aventure artistique a atteint des jalons surprenants, notamment la présentation d'une des œuvres au Vatican. Ce voyage dans l'art est un retour constant à mes racines et une exploration de la beauté qui m'entoure.",
+    "IMAGE_ALT": "Peinture inspirée par la Sardaigne"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "© 2024 Alex Da Torres. Tous droits réservés.",
+    "FOLLOW_US": "Suivez-nous",
+    "FOLLOW_US_FACEBOOK": "Suivez-nous sur Facebook",
+    "FOLLOW_US_INSTAGRAM": "Suivez-nous sur Instagram"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "HEADER": {
+    "TITLE": "Alex Da Torres",
+    "MENU": {
+      "HOME": "Home",
+      "GALLERY": "Galleria",
+      "ABOUT_US": "Chi Siamo",
+      "EXHIBITIONS": "Mostre",
+      "GALLERY_3D": "Galleria 3D",
+      "CONTACT": "Contatti"
+    },
+    "DOWNLOAD_ICON_TOOLTIP": "Scarica l'Opera"
+  },
+  "JUMBOTRON": {
+    "TITLE": "Benvenuto su Bragi!",
+    "SUBTITLE": "Scopri la nostra collezione d'arte unica.",
+    "BUTTON": "Scopri di più"
+  },
+  "GALLERY": {
+    "TITLE": "Galleria In Evidenza"
+  },
+  "ARTIST_PASSION": {
+    "TITLE": "Il Viaggio dell'Artista",
+    "DESCRIPTION": "Il mio viaggio nell'arte è stato un percorso che ha toccato mete affascinanti, attraverso mostre nelle città d'arte come Venezia, Milano e Roma. Il Festival Internazionale di Berlino è stato uno dei traguardi più significativi. Mondadori e Arte hanno gentilmente riconosciuto il mio lavoro. \"Il molo turritano\" celebra Porto Torres, mentre \"L'isola di Tavolara\" e \"Capo Comino\" hanno trovato spazio nel film \"Free,\" con attori straordinari come Sandra Milo ed Enzo Salvi. La mia arte è in costante evoluzione, alimentata dalla passione che riverso in ogni opera.",
+    "IMAGE_ALT": "Opera dell'artista nel film Free"
+  },
+  "EXHIBITIONS": {
+    "TITLE": "Mostre",
+    "DESCRIPTION": "Un viaggio nell'arte tra le righe di \"CAM catalogo dell'arte moderna,\" \"Libertà,\" \"La Nuova Sardegna,\" e \"Oraquadra.info.\" Qui le pennellate della mia passione prendono vita, raccontando storie di mostre e dipinti che si fondono con il mio percorso artistico.",
+    "CAPOCOMINO_IMAGE_ALT": "Dipinto di Capo Comino",
+    "CAPOCOMINO_DESCRIPTION": "\"Capo Comino\" - Un capolavoro presentato nel film \"Free\".",
+    "ISOLATAVOLARA_IMAGE_ALT": "Dipinto dell'Isola di Tavolara",
+    "ISOLATAVOLARA_DESCRIPTION": "\"Isola di Tavolara\" - Esposto al Festival Internazionale di Berlino."
+  },
+  "ARTIST_INSPIRATION": {
+    "TITLE": "Ispirazione",
+    "DESCRIPTION": "L'arte è la mia passione più profonda, un'ispirazione che affonda le radici nella Sardegna, la mia terra d'origine. Sebbene ora io risieda a Piacenza, la bellezza e la cultura della Sardegna sono sempre presenti nelle mie opere. La mia avventura artistica ha raggiunto traguardi sorprendenti, tra cui la presentazione una delle opera al Vaticano. Questo viaggio nell'arte è un continuo ritorno alle mie radici e un'esplorazione della bellezza che mi circonda.",
+    "IMAGE_ALT": "Dipinto ispirato alla Sardegna"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "© 2024 Alex Da Torres. Tutti i diritti riservati.",
+    "FOLLOW_US": "Seguici",
+    "FOLLOW_US_FACEBOOK": "Seguici su Facebook",
+    "FOLLOW_US_INSTAGRAM": "Seguici su Instagram"
+  }
+}

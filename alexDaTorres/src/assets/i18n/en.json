@@ -1,0 +1,46 @@
+{
+  "HEADER": {
+    "TITLE": "Alex Da Torres",
+    "MENU": {
+      "HOME": "Home",
+      "GALLERY": "Gallery",
+      "ABOUT_US": "About Us",
+      "EXHIBITIONS": "Exhibitions",
+      "GALLERY_3D": "3D Gallery",
+      "CONTACT": "Contact"
+    },
+    "DOWNLOAD_ICON_TOOLTIP": "Download Artwork"
+  },
+  "JUMBOTRON": {
+    "TITLE": "Welcome to Bragi!",
+    "SUBTITLE": "Discover our unique art collection.",
+    "BUTTON": "Learn More"
+  },
+  "GALLERY": {
+    "TITLE": "Featured Gallery"
+  },
+  "ARTIST_PASSION": {
+    "TITLE": "The Artist's Journey",
+    "DESCRIPTION": "My journey in art has been a path touching fascinating destinations, through exhibitions in art cities such as Venice, Milan, and Rome. The International Berlin Festival has been one of the most significant milestones. Mondadori and Arte have kindly recognized my work. \"The Turritan Pier\" celebrates Porto Torres, while \"The Island of Tavolara\" and \"Capo Comino\" found space in the film \"Free\", featuring extraordinary actors like Sandra Milo and Enzo Salvi. My art is in constant evolution, fueled by the passion I pour into every piece.",
+    "IMAGE_ALT": "Artist's work in the movie Free"
+  },
+  "EXHIBITIONS": {
+    "TITLE": "Exhibitions",
+    "DESCRIPTION": "An artistic journey through the pages of \"CAM Catalog of Modern Art,\" \"Libertà,\" \"La Nuova Sardegna,\" and \"Oraquadra.info.\" Here, the strokes of my passion come to life, telling stories of exhibitions and paintings intertwined with my artistic path.",
+    "CAPOCOMINO_IMAGE_ALT": "Painting of Capo Comino",
+    "CAPOCOMINO_DESCRIPTION": "\"Capo Comino\" - A masterpiece featured in the movie \"Free\".",
+    "ISOLATAVOLARA_IMAGE_ALT": "Painting of Isola Tavolara",
+    "ISOLATAVOLARA_DESCRIPTION": "\"Isola Tavolara\" - Showcased at the International Berlin Festival."
+  },
+  "ARTIST_INSPIRATION": {
+    "TITLE": "Inspiration",
+    "DESCRIPTION": "Art is my deepest passion, an inspiration rooted in Sardinia, my homeland. Although I now reside in Piacenza, the beauty and culture of Sardinia are always present in my works. My artistic adventure has achieved surprising milestones, including the presentation of one of the works at the Vatican. This journey in art is a constant return to my roots and an exploration of the beauty surrounding me.",
+    "IMAGE_ALT": "Painting inspired by Sardinia"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "© 2024 Alex Da Torres. All rights reserved.",
+    "FOLLOW_US": "Follow us",
+    "FOLLOW_US_FACEBOOK": "Follow us on Facebook",
+    "FOLLOW_US_INSTAGRAM": "Follow us on Instagram"
+  }
+}
