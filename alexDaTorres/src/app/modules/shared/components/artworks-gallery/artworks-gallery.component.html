@@ -8,7 +8,7 @@
       <div class="artwork-caption">
         <h3>{{ artwork.nome | translate }}</h3>
         <!-- <p>{{ artwork.descriptionKey | translate }}</p> -->
-        <p>{{ getTranslation(artwork?.tecnicaKey) | async }}</p>
+        <p>{{ artwork.tecnicaKey | translate}}</p>
         <button class="artwork-details-button" (click)="viewArtworkDetails(artwork)">{{ 'GALLERY.VIEW_DETAILS' | translate }}</button>
       </div>
     </div>

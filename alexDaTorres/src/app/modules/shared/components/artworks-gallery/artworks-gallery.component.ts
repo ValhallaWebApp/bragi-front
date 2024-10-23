@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ArtworksService } from '../../../../services/artworks.service'; // Verifica il percorso corretto
 import { TranslateService } from '@ngx-translate/core';
-import { Observable } from 'rxjs';
+import { forkJoin, Observable, tap } from 'rxjs';
 
 @Component({
   selector: 'app-artworks-gallery',
@@ -9,10 +9,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./artworks-gallery.component.scss']
 })
 export class ArtworksGalleryComponent implements OnInit {
-
+  artworks:any
   constructor(public artworksService: ArtworksService, public translate:TranslateService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
     // Placeholder function to handle view details button click
      viewArtworkDetails(artwork:any) {
       console.log('Viewing details for artwork:', artwork);

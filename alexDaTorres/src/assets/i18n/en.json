@@ -52,7 +52,8 @@
     "UN_SOGNO_CASSETTO_INTERPRETAZIONE": "An interpretation of the painting emphasizing the need to keep dreaming.",
     "RITORNO_VOLARE_DESCRIZIONE": "This painting represents freedom regained and the courage to face new challenges.",
     "RITORNO_VOLARE_INTERPRETAZIONE": "The artwork conveys a sense of rebirth and inner strength.",
-    "TECNIQUE_ACRILICO": "Acrylic"
+    "TECNICA_ACRILICO": "Acrylic",
+    "TECNICA_OLIO": "Oil"
   },
   "VIDEO": {
     "HERO_BACKGROUND_ALT": "Hero Background Video"

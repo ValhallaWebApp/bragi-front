@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'title';
+  src: url('../../../../../assets/font/Gruppo/Gruppo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+h2,p{
+  font-family: title;
+}
+.artist-inspiration {
+  background: linear-gradient(to right, #f0f0f0, #fafafa);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 50px 20px;
+  text-align: center;
+  font-family: title;
+}
+
+.inspiration-content img {
+  max-width: 80%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.inspiration-content img:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}

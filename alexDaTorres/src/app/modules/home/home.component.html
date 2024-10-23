@@ -4,38 +4,9 @@
   <app-hero-banner></app-hero-banner>
   <app-artworks-gallery></app-artworks-gallery>
 
-  <!-- Artist Passion Section -->
-  <section class="artist-passion">
-    <h2>{{ 'ARTIST_PASSION.TITLE' | translate }}</h2>
-    <p>{{ 'ARTIST_PASSION.DESCRIPTION' | translate }}</p>
-    <img src="../../../assets/artist/artist.jpg" alt="{{ 'ARTIST_PASSION.IMAGE_ALT' | translate }}">
-  </section>
-
-  <!-- Exhibitions Section -->
-  <section class="exhibitions">
-    <h2>{{ 'EXHIBITIONS.TITLE' | translate }}</h2>
-    <p>{{ 'EXHIBITIONS.DESCRIPTION' | translate }}</p>
-    <div class="exhibition-grid">
-      <div class="exhibition-item">
-        <img src="../../../assets/mostre/capocomino.jpg" alt="{{ 'EXHIBITIONS.CAPOCOMINO_IMAGE_ALT' | translate }}">
-        <p>{{ 'EXHIBITIONS.CAPOCOMINO_DESCRIPTION' | translate }}</p>
-      </div>
-      <div class="exhibition-item">
-        <img src="../../../assets/mostre/isolatavolara.jpeg" alt="{{ 'EXHIBITIONS.ISOLATAVOLARA_IMAGE_ALT' | translate }}">
-        <p>{{ 'EXHIBITIONS.ISOLATAVOLARA_DESCRIPTION' | translate }}</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Artist Inspiration Section -->
-  <section class="artist-inspiration">
-    <h2>{{ 'ARTIST_INSPIRATION.TITLE' | translate }}</h2>
-    <p>{{ 'ARTIST_INSPIRATION.DESCRIPTION' | translate }}</p>
-    <img src="../../../assets/mostre/bastione.jpeg" alt="{{ 'ARTIST_INSPIRATION.IMAGE_ALT' | translate }}">
-  </section>
-
-  <!-- Testimonials Section -->
-  <app-testimonials></app-testimonials>
+  <app-artist-passion></app-artist-passion>
+  <app-exhibitions></app-exhibitions>
+  <app-artist-inspiration></app-artist-inspiration>
 
   <!-- Footer -->
   <footer>

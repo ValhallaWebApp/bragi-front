@@ -10,6 +10,9 @@ import { JumbotronComponent } from '../shared/components/jumbotron/jumbotron.com
 import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '../shared/shared.module';
 import { ArtworksGalleryComponent } from '../shared/components/artworks-gallery/artworks-gallery.component';
+import { ArtistPassionComponent } from './components/artist-passion/artist-passion.component';
+import { ExhibitionsComponent } from './components/exhibitions/exhibitions.component';
+import { ArtistInspirationComponent } from './components/artist-inspiration/artist-inspiration.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { ArtworksGalleryComponent } from '../shared/components/artworks-gallery/
     FeatureGalleryComponent,
     TestimonialsComponent,
     JumbotronComponent,
-    ArtworksGalleryComponent
+    ArtworksGalleryComponent,
+    ArtistPassionComponent,
+    ExhibitionsComponent,
+    ArtistInspirationComponent
   ],
   imports: [
     CommonModule,

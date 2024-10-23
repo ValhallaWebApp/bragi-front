@@ -1,0 +1,72 @@
+.exhibitions {
+  position: relative;
+  color: #fff;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../../../assets/mostre/background.jpg') center / cover no-repeat fixed;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.exhibitions-content {
+  text-align: center;
+  z-index: 2;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+}
+
+.exhibition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.exhibition-item {
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease-in-out;
+}
+
+.exhibition-item:hover img {
+  transform: scale(1.05);
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.exhibition-item:hover .hover-overlay {
+  opacity: 1;
+}

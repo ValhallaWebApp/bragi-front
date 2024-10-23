@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'title';
+  src: url('../../../../../assets/font/Gruppo/Gruppo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+h2,p{
+  font-family: title;
+  font-weight: 900;
+  color: #705d56;
+}
+.artist-passion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #fafafa94;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.passion-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+.text-content {
+  flex: 1;
+  min-width: 350px;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0px;
+  transition: transform 0.5s ease;
+  min-width: 40vw;
+}
+
+img:hover {
+  transform: scale(1.05);
+}

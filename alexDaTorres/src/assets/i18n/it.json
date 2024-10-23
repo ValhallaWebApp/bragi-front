@@ -56,7 +56,8 @@
     "UN_SOGNO_CASSETTO_INTERPRETAZIONE": "Un'interpretazione dell'opera che richiama la necessità di sognare.",
     "RITORNO_VOLARE_DESCRIZIONE": "Questo dipinto rappresenta la libertà ritrovata e il coraggio di affrontare nuove sfide.",
     "RITORNO_VOLARE_INTERPRETAZIONE": "L'opera trasmette un senso di rinascita e forza interiore.",
-    "TECNIQUE_ACRILICO": "Acrilico"
+    "TECNICA_ACRILICO": "Acrilico",
+    "TECNICA_OLIO": "Olio"
   },
   "VIDEO": {
     "HERO_BACKGROUND_ALT": "Sfondo video dell'eroe"
