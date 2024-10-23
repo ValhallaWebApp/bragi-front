@@ -5,7 +5,7 @@
   </button>
 
   <!-- Titolo dell'header, tradotto -->
-  <span class="header-title">{{ "HEADER.TITLE" | translate }}</span>
+  <!-- <span class="header-title">{{ "HEADER.TITLE" | translate }}</span> -->
 
   <!-- Icona per il download con tooltip tradotto -->
   <button mat-icon-button class="download-icon">
@@ -61,6 +61,13 @@
             {{ getLanguageName(lang) }}
           </div>
         </div>
+      </div>
+      <div class="magazzine-download-button">
+        <button mat-raised-button color="accent" >
+          <mat-icon>cloud_download</mat-icon>
+          {{ 'MAGAZINE.DOWNLOAD_BUTTON' | translate }}
+        </button>
+
       </div>
     </mat-nav-list>
   </mat-sidenav>

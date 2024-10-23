@@ -17,7 +17,8 @@
     "BUTTON": "Learn More"
   },
   "GALLERY": {
-    "TITLE": "Featured Gallery"
+    "TITLE": "Featured Gallery",
+    "VIEW_DETAILS": "View Details"
   },
   "ARTIST_PASSION": {
     "TITLE": "The Artist's Journey",
@@ -42,5 +43,18 @@
     "FOLLOW_US": "Follow us",
     "FOLLOW_US_FACEBOOK": "Follow us on Facebook",
     "FOLLOW_US_INSTAGRAM": "Follow us on Instagram"
+  },
+
+  "ARTWORKS": {
+    "I_SOGNI_TRAMONTO_DESCRIZIONE": "An English description of the painting that talks about the idea of sunset and dreams.",
+    "I_SOGNI_TRAMONTO_INTERPRETAZIONE": "An interpretation of the artwork in English.",
+    "UN_SOGNO_CASSETTO_DESCRIZIONE": "An English description of how the painting represents hope to achieve one's dreams.",
+    "UN_SOGNO_CASSETTO_INTERPRETAZIONE": "An interpretation of the painting emphasizing the need to keep dreaming.",
+    "RITORNO_VOLARE_DESCRIZIONE": "This painting represents freedom regained and the courage to face new challenges.",
+    "RITORNO_VOLARE_INTERPRETAZIONE": "The artwork conveys a sense of rebirth and inner strength.",
+    "TECNIQUE_ACRILICO": "Acrylic"
+  },
+  "VIDEO": {
+    "HERO_BACKGROUND_ALT": "Hero Background Video"
   }
 }

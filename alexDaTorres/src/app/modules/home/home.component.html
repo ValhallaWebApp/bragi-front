@@ -1,29 +1,8 @@
 <div class="home-container">
-  <!-- Hero Banner Section -->
-  <app-hero-banner>
 
-  </app-hero-banner>
-
-  <!-- Featured Gallery Section -->
-  <section class="feature-gallery">
-    <h2>{{ 'GALLERY.TITLE' | translate }}</h2>
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="carousel-slide">
-          <img src="../../../assets/galleria/24.jpg" alt="Artwork 1">
-          <p>{{ 'GALLERY.ARTWORK1_DESCRIPTION' | translate }}</p>
-        </div>
-        <div class="carousel-slide">
-          <img src="../../../assets/galleria/aa.jpg" alt="Artwork 2">
-          <p>{{ 'GALLERY.ARTWORK2_DESCRIPTION' | translate }}</p>
-        </div>
-        <div class="carousel-slide">
-          <img src="../../../assets/galleria/bb.jpg" alt="Artwork 3">
-          <p>{{ 'GALLERY.ARTWORK3_DESCRIPTION' | translate }}</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <app-jumbotron></app-jumbotron>
+  <app-hero-banner></app-hero-banner>
+  <app-artworks-gallery></app-artworks-gallery>
 
   <!-- Artist Passion Section -->
   <section class="artist-passion">

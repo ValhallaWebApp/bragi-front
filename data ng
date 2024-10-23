@@ -64,3 +64,4 @@ ng generate service modules/core/guards/auth
 ng generate service modules/core/interceptors/auth-interceptor
 
 ng generate component modules/shared/components/jumbotron
+ng generate service services/artworks

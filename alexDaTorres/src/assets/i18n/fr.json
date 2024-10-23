@@ -17,7 +17,8 @@
     "BUTTON": "En savoir plus"
   },
   "GALLERY": {
-    "TITLE": "Galerie en Vedette"
+    "TITLE": "Galerie en Vedette",
+    "VIEW_DETAILS": "Voir les Détails"
   },
   "ARTIST_PASSION": {
     "TITLE": "Le Voyage de l'Artiste",
@@ -42,5 +43,17 @@
     "FOLLOW_US": "Suivez-nous",
     "FOLLOW_US_FACEBOOK": "Suivez-nous sur Facebook",
     "FOLLOW_US_INSTAGRAM": "Suivez-nous sur Instagram"
+  },
+  "ARTWORKS": {
+    "I_SOGNI_TRAMONTO_DESCRIZIONE": "Une description en français du tableau qui parle de l'idée du coucher de soleil et des rêves.",
+    "I_SOGNI_TRAMONTO_INTERPRETAZIONE": "Une interprétation de l'œuvre en français.",
+    "UN_SOGNO_CASSETTO_DESCRIZIONE": "Une description en français sur la manière dont l'œuvre exprime l'espoir de réaliser ses rêves.",
+    "UN_SOGNO_CASSETTO_INTERPRETAZIONE": "Une interprétation de l'œuvre qui souligne la nécessité de rêver.",
+    "RITORNO_VOLARE_DESCRIZIONE": "Ce tableau représente la liberté retrouvée et le courage de relever de nouveaux défis.",
+    "RITORNO_VOLARE_INTERPRETAZIONE": "L'œuvre transmet un sentiment de renaissance et de force intérieure.",
+    "TECNIQUE_ACRILICO": "Acrylique"
+  },
+  "VIDEO": {
+    "HERO_BACKGROUND_ALT": "Vidéo de Fond Héros"
   }
 }

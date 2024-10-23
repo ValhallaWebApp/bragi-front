@@ -1,10 +1,20 @@
-<div class="jumbotron-container" [ngClass]="{'animate': isAnimating}">
-  <div class="jumbotron-content">
-    <h1 class="jumbotron-title">Benvenuto su Bragi!</h1>
-    <p class="jumbotron-subtitle">Scopri la nostra collezione d'arte unica.</p>
-    <button class="jumbotron-button" (click)="startAnimation()">Scopri di più</button>
+<div class="slideshow-container">
+  <div class="slide" *ngFor="let slide of slides; let i = index" [ngClass]="{ 'active': i === currentSlideIndex }">
+    <img height="300px" src="../../../{{slide.image}}" [alt]="slide.caption">
+    <div class="cover-thumb"></div>
+    <div class="caption">{{ 'HEADER.TITLE' | translate }}</div>
   </div>
-  <div class="jumbotron-image-container">
-    <img src="assets/hero-image.jpg" alt="Immagine d'Arte" class="jumbotron-image">
+
+  <!-- Navigation Arrows -->
+  <button class="prev" (click)="previousSlide()">
+    <img width="50px" src="../../../../../assets/svg/chevron-arrow-left-circle.svg" alt="">
+  </button>
+  <button class="next" (click)="nextSlide()">
+    <img width="50px" src="../../../../../assets/svg/chevron-arrow-left-circle.svg" alt="">
+  </button>
+
+  <!-- Slide Indicators -->
+  <div class="indicators">
+    <span *ngFor="let slide of slides; let i = index" (click)="goToSlide(i)" [ngClass]="{ 'active-indicator': i === currentSlideIndex }"></span>
   </div>
 </div>

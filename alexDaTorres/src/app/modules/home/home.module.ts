@@ -8,6 +8,8 @@ import { FeatureGalleryComponent } from './components/feature-gallery/feature-ga
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { JumbotronComponent } from '../shared/components/jumbotron/jumbotron.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { SharedModule } from '../shared/shared.module';
+import { ArtworksGalleryComponent } from '../shared/components/artworks-gallery/artworks-gallery.component';
 
 
 @NgModule({
@@ -17,11 +19,13 @@ import { TranslateModule } from '@ngx-translate/core';
     FeatureGalleryComponent,
     TestimonialsComponent,
     JumbotronComponent,
+    ArtworksGalleryComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    TranslateModule
+    TranslateModule,
+
   ]
 })
 export class HomeModule { }

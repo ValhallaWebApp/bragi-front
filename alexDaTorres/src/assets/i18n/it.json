@@ -1,6 +1,6 @@
 {
   "HEADER": {
-    "TITLE": "Alex Da Torres",
+    "TITLE": "ALEX DA TORRES",
     "MENU": {
       "HOME": "Home",
       "GALLERY": "Galleria",
@@ -12,12 +12,13 @@
     "DOWNLOAD_ICON_TOOLTIP": "Scarica l'Opera"
   },
   "JUMBOTRON": {
-    "TITLE": "Benvenuto su Bragi!",
-    "SUBTITLE": "Scopri la nostra collezione d'arte unica.",
+    "TITLE": "Benvenuto!",
+    "SUBTITLE": "Mi fa piacere accogliervi nella mia mostra virtuale, un luogo dove condivido la mia passione più profonda: la pittura.",
     "BUTTON": "Scopri di più"
   },
   "GALLERY": {
-    "TITLE": "Galleria In Evidenza"
+    "TITLE": "Galleria In Evidenza",
+    "VIEW_DETAILS" : "Visualizza Dettagli"
   },
   "ARTIST_PASSION": {
     "TITLE": "Il Viaggio dell'Artista",
@@ -42,5 +43,22 @@
     "FOLLOW_US": "Seguici",
     "FOLLOW_US_FACEBOOK": "Seguici su Facebook",
     "FOLLOW_US_INSTAGRAM": "Seguici su Instagram"
+  },
+  "MAGAZINE": {
+    "TITLE": "Scarica la mia Rivista",
+    "DESCRIPTION": "Esplora la mia collezione artistica in questo numero speciale, disponibile per il download.",
+    "DOWNLOAD_BUTTON": "Scarica la Rivista"
+  },
+  "ARTWORKS": {
+    "I_SOGNI_TRAMONTO_DESCRIZIONE": "Una descrizione in italiano del dipinto che racconta l'idea del tramonto e dei sogni.",
+    "I_SOGNI_TRAMONTO_INTERPRETAZIONE": "Un'interpretazione in italiano dell'opera.",
+    "UN_SOGNO_CASSETTO_DESCRIZIONE": "Una descrizione in italiano su come l'opera esprima la speranza di realizzare i propri sogni.",
+    "UN_SOGNO_CASSETTO_INTERPRETAZIONE": "Un'interpretazione dell'opera che richiama la necessità di sognare.",
+    "RITORNO_VOLARE_DESCRIZIONE": "Questo dipinto rappresenta la libertà ritrovata e il coraggio di affrontare nuove sfide.",
+    "RITORNO_VOLARE_INTERPRETAZIONE": "L'opera trasmette un senso di rinascita e forza interiore.",
+    "TECNIQUE_ACRILICO": "Acrilico"
+  },
+  "VIDEO": {
+    "HERO_BACKGROUND_ALT": "Sfondo video dell'eroe"
   }
 }

@@ -81,7 +81,7 @@ $link-color: #705d56; /* Marrone chiaro per i link */
 /* Stile del sidenav */
 .sidenav {
   width: 250px;
-  background: #f5e4d7; /* Beige chiaro */
+  background: #f5e4d7bc; /* Beige chiaro */
   background-image: url('../../../assets/icon/decor_ghost.png');
   color: $dark-text;
   z-index: 1500;
@@ -98,6 +98,7 @@ $link-color: #705d56; /* Marrone chiaro per i link */
   display: flex;
   align-items: center;
   transition: background 0.3s, color 0.3s;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.548);
 }
 
 /* Cambia colore per il link attivo */
@@ -123,7 +124,7 @@ $link-color: #705d56; /* Marrone chiaro per i link */
 .content-container {
   overflow-y: auto;
   height: calc(100vh - 64px);
-  padding: 16px;
+  padding: 0px;
   background: bisque;
   color: $dark-text;
   background-image: url('../../../assets/icon/decor_ghost.png');
@@ -193,4 +194,6 @@ $link-color: #705d56; /* Marrone chiaro per i link */
     }
   }
 }
-
+.magazzine-download-button{
+  padding: 5px;
+}

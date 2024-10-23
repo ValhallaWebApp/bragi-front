@@ -1,0 +1,16 @@
+<section class="feature-gallery">
+  <h2>{{ 'GALLERY.TITLE' | translate }}</h2>
+  <div class="gallery-container">
+    <div class="gallery-item" *ngFor="let artwork of artworksService.getArtworks()">
+      <div class="image-wrapper">
+        <img src="../../../../../{{artwork?.thumb}}" [alt]="artwork.nome | translate" class="artwork-image">
+      </div>
+      <div class="artwork-caption">
+        <h3>{{ artwork.nome | translate }}</h3>
+        <!-- <p>{{ artwork.descriptionKey | translate }}</p> -->
+        <p>{{ getTranslation(artwork?.tecnicaKey) | async }}</p>
+        <button class="artwork-details-button" (click)="viewArtworkDetails(artwork)">{{ 'GALLERY.VIEW_DETAILS' | translate }}</button>
+      </div>
+    </div>
+  </div>
+</section>

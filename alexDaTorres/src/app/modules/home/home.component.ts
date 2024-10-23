@@ -1,6 +1,7 @@
 // TypeScript File for Home Component
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { ArtworksService } from 'src/app/services/artworks.service';
 
 @Component({
   selector: 'app-home',
@@ -17,13 +18,14 @@ export class HomeComponent implements OnInit {
   dropdownOpen = false;
   currentLanguage: string;
   languages = ['en', 'it', 'fr'];
-
-  constructor(public translate: TranslateService) {
+  artWorksArray:any = []
+  constructor(public translate: TranslateService, private artWorksService:ArtworksService) {
     this.currentLanguage = this.translate.currentLang || 'en';
   }
 
   ngOnInit(): void {
     this.startAutoSlide();
+    this.artWorksArray = this.artWorksService.getArtworks()
   }
 
   toggleDropdown(): void {

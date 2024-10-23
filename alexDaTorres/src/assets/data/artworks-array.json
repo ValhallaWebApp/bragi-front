@@ -1,0 +1,47 @@
+[
+  {
+    "titleKey": "ARTWORKS.ELEPHANTS_SEA_TITLE",
+    "descriptionKey": "ARTWORKS.ELEPHANTS_SEA_DESCRIPTION",
+    "image": "assets/galleria/a.jpg"
+  },
+  {
+    "titleKey": "ARTWORKS.BOATS_SUNSET_TITLE",
+    "descriptionKey": "ARTWORKS.BOATS_SUNSET_DESCRIPTION",
+    "image": "assets/galleria/barche_tramonto.jpg"
+  },
+  {
+    "titleKey": "ARTWORKS.SUNSET_WATER_TITLE",
+    "descriptionKey": "ARTWORKS.SUNSET_WATER_DESCRIPTION",
+    "image": "assets/galleria/sole_tramonto_acqua.jpg"
+  },
+  {
+    "titleKey": "ARTWORKS.TULIP_FIELDS_TITLE",
+    "descriptionKey": "ARTWORKS.TULIP_FIELDS_DESCRIPTION",
+    "image": "assets/galleria/campi_tulipani.jpg"
+  },
+  {
+    "titleKey": "ARTWORKS.URBAN_LANDSCAPE_TITLE",
+    "descriptionKey": "ARTWORKS.URBAN_LANDSCAPE_DESCRIPTION",
+    "image": "assets/galleria/paesaggio_urbano.jpg"
+  },
+  {
+    "titleKey": "ARTWORKS.PORT_SUNSET_TITLE",
+    "descriptionKey": "ARTWORKS.PORT_SUNSET_DESCRIPTION",
+    "image": "assets/galleria/porto_tramonto.jpg"
+  },
+  {
+    "titleKey": "ARTWORKS.BERLIN_FESTIVAL_TITLE",
+    "descriptionKey": "ARTWORKS.BERLIN_FESTIVAL_DESCRIPTION",
+    "image": "assets/galleria/berlino.jpg"
+  },
+  {
+    "titleKey": "ARTWORKS.MILAN_EXHIBITION_TITLE",
+    "descriptionKey": "ARTWORKS.MILAN_EXHIBITION_DESCRIPTION",
+    "image": "assets/galleria/milano.jpg"
+  },
+  {
+    "titleKey": "ARTWORKS.SARDINIA_TITLE",
+    "descriptionKey": "ARTWORKS.SARDINIA_DESCRIPTION",
+    "image": "assets/galleria/sardegna.jpg"
+  }
+]
