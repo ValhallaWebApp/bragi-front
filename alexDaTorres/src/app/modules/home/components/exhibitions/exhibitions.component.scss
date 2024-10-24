@@ -1,72 +1,89 @@
+@font-face {
+  font-family: 'title';
+  src: url('../../../../../assets/font/Gruppo/Gruppo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+h1,h3,p{
+  font-family: title;
+  font-weight: 900;
+  color: white;
+  text-align: left;
+   color: #705d56;
+}
 .exhibitions {
-  position: relative;
-  color: #fff;
-}
-
-.parallax-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('../../../assets/mostre/background.jpg') center / cover no-repeat fixed;
-  z-index: -1;
-  opacity: 0.5;
-}
-
-.exhibitions-content {
   text-align: center;
-  z-index: 2;
-  padding: 50px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 12px;
+  margin: 0px auto;
+  padding: 20px;
+  background-color: rgba(242, 204, 209, 0.418);
 }
 
 .exhibition-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.exhibition-item {
-  overflow: hidden;
-  position: relative;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.image-wrapper {
-  position: relative;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.4s ease-in-out;
-}
-
-.exhibition-item:hover img {
-  transform: scale(1.05);
-}
-
-.hover-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
+  align-items: stretch;
+  overflow-x: scroll;
+  max-width: 100vw;
+  gap: 30px;
+  padding: 10px 0px;
 }
 
-.exhibition-item:hover .hover-overlay {
-  opacity: 1;
+.exhibition-card {
+  min-width: 60vw;
+  max-width: 350px;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s;
+  background: rgba(255, 255, 255, 0.377);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exhibition-card:hover {
+  transform: translateY(-10px);
+}
+
+.exhibition-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.exhibition-details {
+  padding: 15px;
+  font-family: title;
+  font-weight: 900;
+  color: #705d56;
+}
+
+.exhibition-details h3 {
+  font: 18px var(--display);
+  color: var(--green);
+  margin-bottom: 10px;
+}
+
+.exhibition-details p {
+  font: 14px var(--mono);
+  color: var(--terracotta);
+}
+
+.exhibition-link {
+  background-color: rgba(162, 162, 248, 0.553);
+  text-decoration: none;
+  font: bold 12px var(--mono);
+  color: var(--dterracotta);
+  padding: 8px 12px;
+  border: 1px solid var(--dterracotta);
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.exhibition-link:hover {
+  background-color: var(--dterracotta);
+  color: var(--white);
 }

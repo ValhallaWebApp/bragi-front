@@ -1,24 +1,14 @@
 <section class="exhibitions">
-  <div class="parallax-bg"></div>
-  <div class="exhibitions-content">
-    <h2>{{ 'EXHIBITIONS.TITLE' | translate }}</h2>
-    <p>{{ 'EXHIBITIONS.DESCRIPTION' | translate }}</p>
-    <div class="exhibition-grid">
-      <div class="exhibition-item">
-        <div class="image-wrapper">
-          <img src="../../../assets/mostre/capocomino.jpg" alt="{{ 'EXHIBITIONS.CAPOCOMINO_IMAGE_ALT' | translate }}">
-          <div class="hover-overlay">
-            <p>{{ 'EXHIBITIONS.CAPOCOMINO_DESCRIPTION' | translate }}</p>
-          </div>
-        </div>
-      </div>
-      <div class="exhibition-item">
-        <div class="image-wrapper">
-          <img src="../../../assets/mostre/isolatavolara.jpeg" alt="{{ 'EXHIBITIONS.ISOLATAVOLARA_IMAGE_ALT' | translate }}">
-          <div class="hover-overlay">
-            <p>{{ 'EXHIBITIONS.ISOLATAVOLARA_DESCRIPTION' | translate }}</p>
-          </div>
-        </div>
+  <h1>{{ 'EXHIBITIONS.TITLE' | translate }}</h1>
+  <div class="exhibition-grid">
+    <div class="exhibition-card" *ngFor="let exhibition of exhibitions">
+      <img [src]="exhibition.image" [alt]="exhibition.title" class="exhibition-image">
+      <div class="exhibition-details">
+        <h3>{{ exhibition.title }}</h3>
+        <p>{{ exhibition.description }}</p>
+        <a [href]="exhibition.link" target="_blank" class="exhibition-link">
+          {{ 'VIEW_DETAILS' | translate }}
+        </a>
       </div>
     </div>
   </div>

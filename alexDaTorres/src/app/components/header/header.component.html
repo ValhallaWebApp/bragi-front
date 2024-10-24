@@ -1,16 +1,18 @@
 <mat-toolbar class="app-toolbar">
-  <!-- Pulsante per aprire il menu laterale -->
-  <button mat-icon-button class="menu-icon" (click)="toggleMenu()">
-    <mat-icon>menu</mat-icon>
-  </button>
+  <div class="filter">
+  </div>
+    <!-- Pulsante per aprire il menu laterale -->
+    <button mat-icon-button class="menu-icon" (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
 
-  <!-- Titolo dell'header, tradotto -->
-  <!-- <span class="header-title">{{ "HEADER.TITLE" | translate }}</span> -->
+    <!-- Titolo dell'header, tradotto -->
+    <!-- <span class="header-title">{{ "HEADER.TITLE" | translate }}</span> -->
 
-  <!-- Icona per il download con tooltip tradotto -->
-  <button mat-icon-button class="download-icon">
-    <mat-icon>cloud_download</mat-icon>
-  </button>
+    <!-- Icona per il download con tooltip tradotto -->
+    <button mat-icon-button class="download-icon">
+      <mat-icon>cloud_download</mat-icon>
+    </button>
 </mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container">
@@ -63,11 +65,10 @@
         </div>
       </div>
       <div class="magazzine-download-button">
-        <button mat-raised-button color="accent" >
+        <button mat-raised-button color="accent">
           <mat-icon>cloud_download</mat-icon>
-          {{ 'MAGAZINE.DOWNLOAD_BUTTON' | translate }}
+          {{ "MAGAZINE.DOWNLOAD_BUTTON" | translate }}
         </button>
-
       </div>
     </mat-nav-list>
   </mat-sidenav>

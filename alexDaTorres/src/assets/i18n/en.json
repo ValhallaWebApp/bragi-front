@@ -16,9 +16,9 @@
     "SUBTITLE": "Discover our unique art collection.",
     "BUTTON": "Learn More"
   },
+  "VIEW_DETAILS": "View Details",
   "GALLERY": {
-    "TITLE": "Featured Gallery",
-    "VIEW_DETAILS": "View Details"
+    "TITLE": "Featured Gallery"
   },
   "ARTIST_PASSION": {
     "TITLE": "The Artist's Journey",

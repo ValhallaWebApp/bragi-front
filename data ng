@@ -65,3 +65,6 @@ ng generate service modules/core/interceptors/auth-interceptor
 
 ng generate component modules/shared/components/jumbotron
 ng generate service services/artworks
+ng generate component modules/home/components/artist-passion
+ng generate component modules/home/components/exhibitions
+ng generate component modules/home/components/artist-inspiration

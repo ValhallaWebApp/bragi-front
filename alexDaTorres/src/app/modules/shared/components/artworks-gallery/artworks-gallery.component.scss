@@ -6,6 +6,8 @@
 }
 .feature-gallery {
   padding: 20px;
+  background-color: rgba(242, 204, 209, 0.418);
+
 }
 
 .gallery-container {
@@ -16,10 +18,11 @@
   align-items: stretch;
   max-width: 100vw;
   color: #705d56;
+
 }
 
 .gallery-item {
-  background: rgba(255, 255, 255, 0.587);
+  background: rgba(255, 255, 255, 0.377);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -56,6 +59,9 @@
 
 .artwork-caption {
   text-align: center;
+  font-family: title;
+  font-weight: 900;
+  color: #705d56;
 }
 
 .artwork-details-button {
@@ -67,12 +73,15 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-family: title;
+  font-weight: 900;
 }
 
 .artwork-details-button:hover {
   background-color: #0056b3;
 }
-h2{
+h1,h3{
   font-family: title;
   font-weight: 900;
+  color: #705d56;
 }

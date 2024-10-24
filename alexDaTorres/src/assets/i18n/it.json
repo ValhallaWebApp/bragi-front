@@ -16,9 +16,9 @@
     "SUBTITLE": "Mi fa piacere accogliervi nella mia mostra virtuale, un luogo dove condivido la mia passione più profonda: la pittura.",
     "BUTTON": "Scopri di più"
   },
+  "VIEW_DETAILS" : "Visualizza Dettagli",
   "GALLERY": {
-    "TITLE": "Galleria In Evidenza",
-    "VIEW_DETAILS" : "Visualizza Dettagli"
+    "TITLE": "Galleria In Evidenza"
   },
   "ARTIST_PASSION": {
     "TITLE": "Il Viaggio dell'Artista",
