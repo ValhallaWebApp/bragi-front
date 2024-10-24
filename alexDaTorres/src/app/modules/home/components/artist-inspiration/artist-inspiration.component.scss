@@ -20,7 +20,7 @@ section {
   --beige: #cdad93ca;
   --terracotta: #B9816D;
   --dterracotta: #885444;
-  --peach: #d28d3ec9;
+  --peach: #f5a74ebc;
   --orange: #BF835A;
   --green: #9f4e4e75;
   --dgreen: #2e6881;
@@ -158,7 +158,7 @@ section {
   background: var(--dgreen);
   font: 10px/10px var(--mono);
   text-transform: uppercase;
-  color: var(--white);
+  color: white;
   text-decoration: none;
   letter-spacing: 1px;
   display: flex;
@@ -166,6 +166,7 @@ section {
   justify-content: center;
   transition:
     bottom .6s linear;
+
 }
 .minip:hover a.plot {
   bottom: 35px;
