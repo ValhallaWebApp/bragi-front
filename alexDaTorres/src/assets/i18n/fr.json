@@ -21,9 +21,12 @@
     "TITLE": "Galerie en Vedette"
   },
   "ARTIST_PASSION": {
-    "TITLE": "Le Voyage de l'Artiste",
-    "DESCRIPTION": "Mon voyage dans l'art a été un parcours qui a touché des destinations fascinantes, à travers des expositions dans des villes d'art comme Venise, Milan et Rome. Le Festival International de Berlin a été l'un des jalons les plus significatifs. Mondadori et Arte ont gentiment reconnu mon travail. \"Le Quai Turritan\" célèbre Porto Torres, tandis que \"L'île de Tavolara\" et \"Capo Comino\" ont trouvé leur place dans le film \"Free\", avec des acteurs extraordinaires comme Sandra Milo et Enzo Salvi. Mon art est en constante évolution, alimenté par la passion que je verse dans chaque œuvre.",
-    "IMAGE_ALT": "Oeuvre de l'artiste dans le film Free"
+    "TITLE_TRAVEL": "Le Voyage de l'Artiste",
+    "DESCRIPTION_TRAVEL": "Mon voyage dans l'art a été un parcours qui a touché des destinations fascinantes, à travers des expositions dans des villes d'art comme Venise, Milan et Rome. Le Festival International de Berlin a été l'un des jalons les plus significatifs. Mondadori et Arte ont gentiment reconnu mon travail. \"Le Quai Turritan\" célèbre Porto Torres, tandis que \"L'île de Tavolara\" et \"Capo Comino\" ont trouvé leur place dans le film \"Free\", avec des acteurs extraordinaires comme Sandra Milo et Enzo Salvi. Mon art est en constante évolution, alimenté par la passion que je verse dans chaque œuvre.",
+    "IMAGE_ALT": "Oeuvre de l'artiste dans le film Free",
+    "TITLE_EXHIBITION": "Le Voyage de l'Artiste",
+    "DESCRIPTION_EXHIBITION": "Mon voyage dans l'art a été un parcours qui a touché des destinations fascinantes, à travers des expositions dans des villes d'art comme Venise, Milan et Rome. Le Festival International de Berlin a été l'un des jalons les plus significatifs. Mondadori et Arte ont gentiment reconnu mon travail. \"Le Quai Turritan\" célèbre Porto Torres, tandis que \"L'île de Tavolara\" et \"Capo Comino\" ont trouvé leur place dans le film \"Free\", avec des acteurs extraordinaires comme Sandra Milo et Enzo Salvi. Mon art est en constante évolution, alimenté par la passion que je verse dans chaque œuvre."
+
   },
   "EXHIBITIONS": {
     "TITLE": "Expositions",

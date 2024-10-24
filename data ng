@@ -68,3 +68,4 @@ ng generate service services/artworks
 ng generate component modules/home/components/artist-passion
 ng generate component modules/home/components/exhibitions
 ng generate component modules/home/components/artist-inspiration
+ng generate service services/articles

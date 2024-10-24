@@ -83,4 +83,5 @@ export class HomeComponent implements OnInit {
   previousSlide(): void {
     this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
   }
+  text = `Il mio viaggio nell'arte è stato un percorso che ha toccato mete affascinanti, attraverso mostre nelle città d'arte come Venezia, Milano e Roma. Il Festival Internazionale di Berlino è stato uno dei traguardi più significativi. La Mondadori e Arte hanno gentilmente riconosciuto il mio lavoro. "Il molo turritano" celebra Porto Torres, mentre "L'isola di Tavolara" e "Capo Comino" hanno trovato spazio nel film "Free," con attori straordinari come Sandra Milo ed Enzo Salvi. La mia arte è in costante evoluzione, alimentata dalla passione che riverso in ogni opera. `
 }

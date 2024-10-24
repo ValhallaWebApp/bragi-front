@@ -4,7 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
-h1,p{
+h1,p,span,a{
   font-family: title;
   font-weight: 900;
   color: #705d56;
@@ -28,10 +28,17 @@ section {
   /*FONTS*/
   --mono: 'source-code-pro';
   --display: 'lust-sans';
-}
 
+}
+.container{
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+  max-width: 100vw;
+  padding-bottom: 20px;
+}
 .minip {
-  width: 300px;
+  min-width: 300px;
   height: 450px;
 
   background: var(--white);
@@ -94,7 +101,7 @@ section {
   bottom: 0px;
   right: 0px;
   background: var(--green);
-  background-position: top center;
+  background-position: center;
   background-size: cover;
   transition:
     width .6s linear,
@@ -144,6 +151,7 @@ section {
 .minip a.plot {
   width: 110px;
   height: 30px;
+  padding-left: 5px;
   position: absolute;
   bottom: 85px;
   left: 85px;

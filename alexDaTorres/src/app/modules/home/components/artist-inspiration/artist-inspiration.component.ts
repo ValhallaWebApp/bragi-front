@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ArticlesService } from 'src/app/services/articles.service';
 
 @Component({
   selector: 'app-artist-inspiration',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./artist-inspiration.component.scss']
 })
 export class ArtistInspirationComponent {
+  articles:any[] = []
+  constructor(public articleService:ArticlesService){
 
+  }
+  ngOnInit(){
+    this.articles = this.articleService.getArticles()
+  }
 }

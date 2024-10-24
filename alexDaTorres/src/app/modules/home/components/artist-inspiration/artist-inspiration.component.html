@@ -1,27 +1,29 @@
 <section>
   <h1>Articoli</h1>
   <div class="container">
-    <div class="minip">
+    <div class="minip" *ngFor="let article of articles">
       <div class="mg">
         <div class="clr"></div>
         <div class="group">
-          <span>membergroup</span>
+          <span>Articolo</span>
         </div>
       </div>
       <div
         class="av"
-        style="
-          background-image: url('https://pbs.twimg.com/media/DjfSp1BVAAAiEyV.jpg');
-        "
+        [style.background-image]="'url(' + article.image + ')'"
       ></div>
       <div class="info">
-        <span class="nome">jinkyu do</span>
-        <span class="deets">
-          369 › he/him<br />
-          soccer player
-        </span>
+        <span class="nome">{{ article.title }}</span>
+        <!-- <span class="deets">{{ article.description }}</span> -->
       </div>
-      <a class="plot" title="plot with jinkyu" href="/"> view plots → </a>
+      <a
+        class="plot"
+        title="{{ article.title }}"
+        [href]="article.link"
+        target="_blank"
+      >
+        Visualizza Dettagli →
+      </a>
     </div>
   </div>
 </section>

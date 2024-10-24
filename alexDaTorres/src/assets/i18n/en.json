@@ -23,7 +23,9 @@
   "ARTIST_PASSION": {
     "TITLE": "The Artist's Journey",
     "DESCRIPTION": "My journey in art has been a path touching fascinating destinations, through exhibitions in art cities such as Venice, Milan, and Rome. The International Berlin Festival has been one of the most significant milestones. Mondadori and Arte have kindly recognized my work. \"The Turritan Pier\" celebrates Porto Torres, while \"The Island of Tavolara\" and \"Capo Comino\" found space in the film \"Free\", featuring extraordinary actors like Sandra Milo and Enzo Salvi. My art is in constant evolution, fueled by the passion I pour into every piece.",
-    "IMAGE_ALT": "Artist's work in the movie Free"
+    "IMAGE_ALT": "Artist's work in the movie Free",
+    "TITLE_EXHIBITION": "The Artist's Journey",
+    "DESCRIPTION_EXHIBITION":"My journey in art has been a path touching fascinating destinations, through exhibitions in art cities such as Venice, Milan, and Rome. The International Berlin Festival has been one of the most significant milestones. Mondadori and Arte have kindly recognized my work. \"The Turritan Pier\" celebrates Porto Torres, while \"The Island of Tavolara\" and \"Capo Comino\" found space in the film \"Free\", featuring extraordinary actors like Sandra Milo and Enzo Salvi. My art is in constant evolution, fueled by the passion I pour into every piece."
   },
   "EXHIBITIONS": {
     "TITLE": "Exhibitions",

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-artist-passion',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./artist-passion.component.scss']
 })
 export class ArtistPassionComponent {
-
+  @Input() titleKey = ''
+  @Input() descriptionKey = ''
 }

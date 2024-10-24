@@ -21,9 +21,11 @@
     "TITLE": "Galleria In Evidenza"
   },
   "ARTIST_PASSION": {
-    "TITLE": "Il Viaggio dell'Artista",
-    "DESCRIPTION": "Il mio viaggio nell'arte è stato un percorso che ha toccato mete affascinanti, attraverso mostre nelle città d'arte come Venezia, Milano e Roma. Il Festival Internazionale di Berlino è stato uno dei traguardi più significativi. Mondadori e Arte hanno gentilmente riconosciuto il mio lavoro. \"Il molo turritano\" celebra Porto Torres, mentre \"L'isola di Tavolara\" e \"Capo Comino\" hanno trovato spazio nel film \"Free,\" con attori straordinari come Sandra Milo ed Enzo Salvi. La mia arte è in costante evoluzione, alimentata dalla passione che riverso in ogni opera.",
-    "IMAGE_ALT": "Opera dell'artista nel film Free"
+    "TITLE_TRAVEL": "Il Viaggio dell'Artista",
+    "DESCRIPTION_TRAVEL": "Il mio viaggio nell'arte è stato un percorso che ha toccato mete affascinanti, attraverso mostre nelle città d'arte come Venezia, Milano e Roma. Il Festival Internazionale di Berlino è stato uno dei traguardi più significativi. Mondadori e Arte hanno gentilmente riconosciuto il mio lavoro. \"Il molo turritano\" celebra Porto Torres, mentre \"L'isola di Tavolara\" e \"Capo Comino\" hanno trovato spazio nel film \"Free,\" con attori straordinari come Sandra Milo ed Enzo Salvi. La mia arte è in costante evoluzione, alimentata dalla passione che riverso in ogni opera.",
+    "IMAGE_ALT": "Opera dell'artista nel film Free",
+    "TITLE_EXHIBITION": "",
+    "DESCRIPTION_EXHIBITION": "Il mio viaggio nell'arte è stato un percorso che ha toccato mete affascinanti, attraverso mostre nelle città d'arte come Venezia, Milano e Roma. Il Festival Internazionale di Berlino è stato uno dei traguardi più significativi. Mondadori e Arte hanno gentilmente riconosciuto il mio lavoro. \"Il molo turritano\" celebra Porto Torres, mentre \"L'isola di Tavolara\" e \"Capo Comino\" hanno trovato spazio nel film \"Free,\" con attori straordinari come Sandra Milo ed Enzo Salvi. La mia arte è in costante evoluzione, alimentata dalla passione che riverso in ogni opera."
   },
   "EXHIBITIONS": {
     "TITLE": "Mostre",
