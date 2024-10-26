@@ -26,11 +26,48 @@ export class GalleryComponent implements OnInit, AfterViewInit {
   private direction = new THREE.Vector3(); // Direzione di movimento dell'avatar
   private targetPosition?: THREE.Vector3; // Posizione target per il movimento verso un punto cliccato
   private mixer!: THREE.AnimationMixer;
+  showHelp: boolean = true;
+  popupVisible = false;
+popupData: { title: string; description: string } | null = null;
+
+private showArtworkInfo(data: { title: string; description: string }): void {
+  this.popupData = data;
+  this.popupVisible = true;
+}
+
+closePopup(): void {
+  this.popupVisible = false;
+  this.popupData = null;
+}
 
   constructor() {}
 
   ngOnInit(): void {
     // Logica per l'inizializzazione del componente, se necessario
+  }
+  @ViewChild('minimap', { static: false }) minimapCanvas!: ElementRef;
+
+  private initMinimap(): void {
+    const canvas = this.minimapCanvas.nativeElement as HTMLCanvasElement;
+    canvas.width = 200;
+    canvas.height = 200;
+  }
+  private updateMinimap(): void {
+    const canvas = this.minimapCanvas.nativeElement as HTMLCanvasElement;
+    const ctx = canvas.getContext('2d')!;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Disegna la stanza (un quadrato centrale)
+    ctx.fillStyle = '#333';
+    ctx.fillRect(50, 50, 100, 100);
+
+    // Disegna l'avatar
+    ctx.fillStyle = 'red';
+    ctx.beginPath();
+    const x = 50 + (this.playerAvatar.position.x + 10) * 5;
+    const y = 50 + (this.playerAvatar.position.z + 10) * 5;
+    ctx.arc(x, y, 5, 0, Math.PI * 2);
+    ctx.fill();
   }
 
   ngAfterViewInit(): void {
@@ -43,6 +80,33 @@ export class GalleryComponent implements OnInit, AfterViewInit {
       this.addArtworkFrames(); // Aggiunge i quadri alle pareti
       this.addControls(); // Aggiunge i controlli per muoversi nella scena
       this.animate(); // Avvia il ciclo di animazione
+      this.initMinimap();
+    }
+  }
+  @HostListener('dblclick', ['$event'])
+  onDoubleClickQuadro(event: MouseEvent): void {
+    const rect = this.renderer.domElement.getBoundingClientRect();
+    const mouse = new THREE.Vector2(
+      ((event.clientX - rect.left) / rect.width) * 2 - 1,
+      -((event.clientY - rect.top) / rect.height) * 2 + 1
+    );
+
+    const raycaster = new THREE.Raycaster();
+    raycaster.setFromCamera(mouse, this.camera);
+    const intersects = raycaster.intersectObjects(this.scene.children, true);
+
+    if (intersects.length > 0) {
+      const object:any = intersects[0].object;
+      if (object.callback) {
+        object.callback(); // Mostra il popup informativo
+      } else {
+        const point = intersects[0].point;
+        this.targetPosition = new THREE.Vector3(
+          Math.max(-9, Math.min(9, point.x)),
+          0.5,
+          Math.max(-9, Math.min(9, point.z))
+        );
+      }
     }
   }
 
@@ -104,20 +168,26 @@ export class GalleryComponent implements OnInit, AfterViewInit {
 
   // Rileva il doppio click per spostare l'avatar verso la zona indicata
   @HostListener('dblclick', ['$event'])
-  onDoubleClick(event: MouseEvent): void {
-    const rect = this.renderer.domElement.getBoundingClientRect();
-    const mouse = new THREE.Vector2(
-      ((event.clientX - rect.left) / rect.width) * 2 - 1,
-      -((event.clientY - rect.top) / rect.height) * 2 + 1
-    );
+onDoubleClick(event: MouseEvent): void {
+  const rect = this.renderer.domElement.getBoundingClientRect();
+  const mouse = new THREE.Vector2(
+    ((event.clientX - rect.left) / rect.width) * 2 - 1,
+    -((event.clientY - rect.top) / rect.height) * 2 + 1
+  );
 
-    const raycaster = new THREE.Raycaster();
-    raycaster.setFromCamera(mouse, this.camera);
-    const intersects = raycaster.intersectObjects(this.scene.children, true);
+  const raycaster = new THREE.Raycaster();
+  raycaster.setFromCamera(mouse, this.camera);
+  const intersects = raycaster.intersectObjects(this.scene.children, true);
 
-    if (intersects.length > 0) {
+  if (intersects.length > 0) {
+    const object:any = intersects[0].object;
+
+    // Verifica se l'oggetto cliccato è un quadro
+    if (object.userData?.isArtwork) {
+      this.showArtworkInfo(object.userData); // Mostra il popup informativo
+    } else {
+      // Logica per il movimento dell'avatar
       const point = intersects[0].point;
-      // Limita la posizione target per rimanere all'interno dei confini della stanza
       this.targetPosition = new THREE.Vector3(
         Math.max(-9, Math.min(9, point.x)),
         0.5,
@@ -125,6 +195,8 @@ export class GalleryComponent implements OnInit, AfterViewInit {
       );
     }
   }
+}
+
 
   // Inizializza la scena, la camera e il renderer
   private initScene(): void {
@@ -211,22 +283,54 @@ export class GalleryComponent implements OnInit, AfterViewInit {
     this.scene.add(floor);
   }
 
-  // Aggiunge dei quadri alle pareti della stanza
+  // Aggiunge dei quadri alle pareti della stanza e pop up informativo
   private addArtworkFrames(): void {
     const frameGeometry = new THREE.BoxGeometry(3, 2, 0.2);
     const loader = new THREE.TextureLoader();
 
+    // Carica e posiziona i quadri sulle pareti
     for (let i = 0; i < 4; i++) {
-      // Carica una texture per il quadro
       const artworkTexture = loader.load(`assets/img/${i + 1}.jpg`);
       const frameMaterial = new THREE.MeshBasicMaterial({ map: artworkTexture });
       const frame = new THREE.Mesh(frameGeometry, frameMaterial);
 
-      // Posiziona i quadri sulla parete posteriore
-      frame.position.set(-7 + i * 5, 2.5, -9.9);
+      // Posiziona i quadri su pareti diverse in base all'indice
+      switch (i) {
+        case 0: // Parete posteriore
+          frame.position.set(-7 + i * 5, 2.5, -9.9);
+          break;
+        case 1: // Parete destra
+          frame.position.set(9.9, 2.5, -5 + i * 5);
+          frame.rotation.y = -Math.PI / 2;
+          break;
+        case 2: // Parete anteriore
+          frame.position.set(-7 + (i - 2) * 5, 2.5, 9.9);
+          frame.rotation.y = Math.PI;
+          break;
+        case 3: // Parete sinistra
+          frame.position.set(-9.9, 2.5, -5 + (i - 2) * 5);
+          frame.rotation.y = Math.PI / 2;
+          break;
+      }
+      frame.userData = {
+        isArtwork: true, // Aggiunge un identificatore
+        title: `Opera ${i + 1}`,
+        description: 'Descrizione dell’opera'
+      };
       this.scene.add(frame);
     }
   }
+
+  private checkProximityToFrames(): void {
+    const avatarPosition = this.playerAvatar.position;
+    this.scene.children.forEach((child: any) => {
+      if (child?.userData?.isArtwork) {
+        const distance = avatarPosition.distanceTo(child.position);
+        (child.material as THREE.MeshBasicMaterial).opacity = distance < 3 ? 1 : 0.5;
+      }
+    });
+  }
+
 
   // Aggiunge controlli per permettere all'utente di ruotare e zoomare con il mouse
   private addControls(): void {
@@ -276,6 +380,10 @@ export class GalleryComponent implements OnInit, AfterViewInit {
     }
 
     this.controls.update(); // Aggiorna i controlli per abilitare lo zoom e la rotazione
+    this.updateMinimap();
+    this.checkProximityToFrames();
     this.renderer.render(this.scene, this.camera); // Rende la scena attuale sulla camera
   }
+
+
 }
