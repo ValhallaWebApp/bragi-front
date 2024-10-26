@@ -1,5 +1,14 @@
-<div #galleryContainer class="gallery-container"></div>
-<canvas #minimap class="minimap"></canvas>
+<!-- Container della galleria -->
+<div #galleryContainer class="gallery-container">
+  <!-- Canvas per la minimappa -->
+  <canvas #minimap class="minimap"></canvas>
+  <!-- Popup informativo -->
+  <div *ngIf="popupVisible" class="popup">
+    <h3>{{ popupData?.title }}</h3>
+    <p>{{ popupData?.description }}</p>
+    <button (click)="closePopup()">Chiudi</button>
+  </div>
+</div>
 
 <div class="help-tooltip" *ngIf="showHelp">
   <p>Comandi:</p>
