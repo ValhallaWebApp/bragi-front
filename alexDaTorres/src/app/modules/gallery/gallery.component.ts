@@ -83,32 +83,6 @@ closePopup(): void {
       this.initMinimap();
     }
   }
-  @HostListener('dblclick', ['$event'])
-  onDoubleClickQuadro(event: MouseEvent): void {
-    const rect = this.renderer.domElement.getBoundingClientRect();
-    const mouse = new THREE.Vector2(
-      ((event.clientX - rect.left) / rect.width) * 2 - 1,
-      -((event.clientY - rect.top) / rect.height) * 2 + 1
-    );
-
-    const raycaster = new THREE.Raycaster();
-    raycaster.setFromCamera(mouse, this.camera);
-    const intersects = raycaster.intersectObjects(this.scene.children, true);
-
-    if (intersects.length > 0) {
-      const object:any = intersects[0].object;
-      if (object.callback) {
-        object.callback(); // Mostra il popup informativo
-      } else {
-        const point = intersects[0].point;
-        this.targetPosition = new THREE.Vector3(
-          Math.max(-9, Math.min(9, point.x)),
-          0.5,
-          Math.max(-9, Math.min(9, point.z))
-        );
-      }
-    }
-  }
 
   // Gestisce il ridimensionamento della finestra per adattare la camera e il renderer
   @HostListener('window:resize', ['$event'])
