@@ -1,0 +1,1463 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.8.6",
+  "deps": {
+    "@angular/animations": "^18.2.9",
+    "@angular/cdk": "^17.3.10",
+    "@angular/common": "^18.2.9",
+    "@angular/compiler": "^18.2.9",
+    "@angular/core": "^18.2.9",
+    "@angular/forms": "^18.2.9",
+    "@angular/material": "^17.3.10",
+    "@angular/platform-browser": "^18.2.9",
+    "@angular/platform-browser-dynamic": "^18.2.9",
+    "@angular/router": "^18.2.9",
+    "@ngx-translate/core": "^15.0.0",
+    "@ngx-translate/http-loader": "^8.0.0",
+    "@types/three": "^0.169.0",
+    "angular-three": "^2.5.1",
+    "ngxtension": "^4.0.0",
+    "rxjs": "~7.8.0",
+    "three": "^0.169.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.10",
+    "@angular-devkit/build-angular": "^18.2.10",
+    "@angular/cli": "~18.2.10",
+    "@angular/compiler-cli": "^18.2.9",
+    "@types/jasmine": "~4.3.0",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "typescript": "~5.4.5"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "17241496168097493888"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "4689145951703824387"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "11934160580685414355"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "17406702432687230417"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "496677350472390889"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "10093397977228577162"
+      },
+      {
+        "file": "README.md",
+        "hash": "5446230769505165958"
+      },
+      {
+        "file": "angular.json",
+        "hash": "199595592313824930"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "7951473158638897209"
+      },
+      {
+        "file": "package.json",
+        "hash": "4804512722595747072"
+      },
+      {
+        "file": "src/app/app-routing.module.ts",
+        "hash": "2789135814575431676"
+      },
+      {
+        "file": "src/app/app.component.html",
+        "hash": "10446120692080786999"
+      },
+      {
+        "file": "src/app/app.component.scss",
+        "hash": "5945020539003427067"
+      },
+      {
+        "file": "src/app/app.component.spec.ts",
+        "hash": "10991491476362845871"
+      },
+      {
+        "file": "src/app/app.component.ts",
+        "hash": "17163812079025390616"
+      },
+      {
+        "file": "src/app/app.module.ts",
+        "hash": "11150270317348166828"
+      },
+      {
+        "file": "src/app/components/banner/banner.component.html",
+        "hash": "8439212903365355936"
+      },
+      {
+        "file": "src/app/components/banner/banner.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/components/banner/banner.component.spec.ts",
+        "hash": "11655538628075319492"
+      },
+      {
+        "file": "src/app/components/banner/banner.component.ts",
+        "hash": "7085447721411175699"
+      },
+      {
+        "file": "src/app/components/contact-form/contact-form.component.html",
+        "hash": "11518593583743539490"
+      },
+      {
+        "file": "src/app/components/contact-form/contact-form.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/components/contact-form/contact-form.component.spec.ts",
+        "hash": "1762065674500534574"
+      },
+      {
+        "file": "src/app/components/contact-form/contact-form.component.ts",
+        "hash": "2781748448997260894"
+      },
+      {
+        "file": "src/app/components/footer/footer.component.html",
+        "hash": "12662293253340992702"
+      },
+      {
+        "file": "src/app/components/footer/footer.component.scss",
+        "hash": "16057455433603711210"
+      },
+      {
+        "file": "src/app/components/footer/footer.component.spec.ts",
+        "hash": "1944692066901072230"
+      },
+      {
+        "file": "src/app/components/footer/footer.component.ts",
+        "hash": "14920457969305345040"
+      },
+      {
+        "file": "src/app/components/header/header.component.html",
+        "hash": "6566738649744114596"
+      },
+      {
+        "file": "src/app/components/header/header.component.scss",
+        "hash": "5021618700594484202"
+      },
+      {
+        "file": "src/app/components/header/header.component.spec.ts",
+        "hash": "14465742688965997085"
+      },
+      {
+        "file": "src/app/components/header/header.component.ts",
+        "hash": "15050303961556910180"
+      },
+      {
+        "file": "src/app/modules/admin/admin-routing.module.ts",
+        "hash": "3437488299697735559"
+      },
+      {
+        "file": "src/app/modules/admin/admin.component.html",
+        "hash": "12279081650474027042"
+      },
+      {
+        "file": "src/app/modules/admin/admin.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/admin/admin.component.spec.ts",
+        "hash": "203036169966721150"
+      },
+      {
+        "file": "src/app/modules/admin/admin.component.ts",
+        "hash": "5090925340575827800"
+      },
+      {
+        "file": "src/app/modules/admin/admin.module.ts",
+        "hash": "16155654887935798464"
+      },
+      {
+        "file": "src/app/modules/admin/components/admin-dashboard/admin-dashboard.component.html",
+        "hash": "2541647212469307272"
+      },
+      {
+        "file": "src/app/modules/admin/components/admin-dashboard/admin-dashboard.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/admin/components/admin-dashboard/admin-dashboard.component.spec.ts",
+        "hash": "7581703002510120188"
+      },
+      {
+        "file": "src/app/modules/admin/components/admin-dashboard/admin-dashboard.component.ts",
+        "hash": "9024507591468237973"
+      },
+      {
+        "file": "src/app/modules/admin/components/artwork-management/artwork-management.component.html",
+        "hash": "5862182179569397988"
+      },
+      {
+        "file": "src/app/modules/admin/components/artwork-management/artwork-management.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/admin/components/artwork-management/artwork-management.component.spec.ts",
+        "hash": "10212237478093089091"
+      },
+      {
+        "file": "src/app/modules/admin/components/artwork-management/artwork-management.component.ts",
+        "hash": "10014953580806371799"
+      },
+      {
+        "file": "src/app/modules/admin/components/user-management/user-management.component.html",
+        "hash": "13102478967509694662"
+      },
+      {
+        "file": "src/app/modules/admin/components/user-management/user-management.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/admin/components/user-management/user-management.component.spec.ts",
+        "hash": "7026693120702782278"
+      },
+      {
+        "file": "src/app/modules/admin/components/user-management/user-management.component.ts",
+        "hash": "8018202400079193995"
+      },
+      {
+        "file": "src/app/modules/auth/auth-routing.module.ts",
+        "hash": "13388179112804058003"
+      },
+      {
+        "file": "src/app/modules/auth/auth.component.html",
+        "hash": "13518466470038221810"
+      },
+      {
+        "file": "src/app/modules/auth/auth.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/auth/auth.component.spec.ts",
+        "hash": "7320722292188748104"
+      },
+      {
+        "file": "src/app/modules/auth/auth.component.ts",
+        "hash": "13024962285050224455"
+      },
+      {
+        "file": "src/app/modules/auth/auth.module.ts",
+        "hash": "3466266944399571083"
+      },
+      {
+        "file": "src/app/modules/auth/components/forgot-password/forgot-password.component.html",
+        "hash": "6652606179714440229"
+      },
+      {
+        "file": "src/app/modules/auth/components/forgot-password/forgot-password.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/auth/components/forgot-password/forgot-password.component.spec.ts",
+        "hash": "4235772161246566428"
+      },
+      {
+        "file": "src/app/modules/auth/components/forgot-password/forgot-password.component.ts",
+        "hash": "5676402547878035961"
+      },
+      {
+        "file": "src/app/modules/auth/components/login/login.component.html",
+        "hash": "17867980221530361052"
+      },
+      {
+        "file": "src/app/modules/auth/components/login/login.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/auth/components/login/login.component.spec.ts",
+        "hash": "8518509768595172761"
+      },
+      {
+        "file": "src/app/modules/auth/components/login/login.component.ts",
+        "hash": "17049559506260263993"
+      },
+      {
+        "file": "src/app/modules/auth/components/register/register.component.html",
+        "hash": "2489894839149508814"
+      },
+      {
+        "file": "src/app/modules/auth/components/register/register.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/auth/components/register/register.component.spec.ts",
+        "hash": "4458253410064476153"
+      },
+      {
+        "file": "src/app/modules/auth/components/register/register.component.ts",
+        "hash": "18386772275544198014"
+      },
+      {
+        "file": "src/app/modules/cart/cart-routing.module.ts",
+        "hash": "114711821099283131"
+      },
+      {
+        "file": "src/app/modules/cart/cart.component.html",
+        "hash": "17189827945208450585"
+      },
+      {
+        "file": "src/app/modules/cart/cart.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/cart/cart.component.spec.ts",
+        "hash": "11462058078469378239"
+      },
+      {
+        "file": "src/app/modules/cart/cart.component.ts",
+        "hash": "2888118238028594519"
+      },
+      {
+        "file": "src/app/modules/cart/cart.module.ts",
+        "hash": "8084905986638922682"
+      },
+      {
+        "file": "src/app/modules/cart/components/cart/cart.component.html",
+        "hash": "17189827945208450585"
+      },
+      {
+        "file": "src/app/modules/cart/components/cart/cart.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/cart/components/cart/cart.component.spec.ts",
+        "hash": "11462058078469378239"
+      },
+      {
+        "file": "src/app/modules/cart/components/cart/cart.component.ts",
+        "hash": "2888118238028594519"
+      },
+      {
+        "file": "src/app/modules/cart/components/checkout/checkout.component.html",
+        "hash": "2281771137726725248"
+      },
+      {
+        "file": "src/app/modules/cart/components/checkout/checkout.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/cart/components/checkout/checkout.component.spec.ts",
+        "hash": "16938764098510336445"
+      },
+      {
+        "file": "src/app/modules/cart/components/checkout/checkout.component.ts",
+        "hash": "4703104683528161122"
+      },
+      {
+        "file": "src/app/modules/cart/components/order-summary/order-summary.component.html",
+        "hash": "14586831978188477113"
+      },
+      {
+        "file": "src/app/modules/cart/components/order-summary/order-summary.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/cart/components/order-summary/order-summary.component.spec.ts",
+        "hash": "6222589951504525"
+      },
+      {
+        "file": "src/app/modules/cart/components/order-summary/order-summary.component.ts",
+        "hash": "7433994126965020653"
+      },
+      {
+        "file": "src/app/modules/core/core-routing.module.ts",
+        "hash": "10334943465067022432"
+      },
+      {
+        "file": "src/app/modules/core/core.module.ts",
+        "hash": "6732532459376921465"
+      },
+      {
+        "file": "src/app/modules/core/guards/auth.service.spec.ts",
+        "hash": "6927655796975040699"
+      },
+      {
+        "file": "src/app/modules/core/guards/auth.service.ts",
+        "hash": "5525367579097834745"
+      },
+      {
+        "file": "src/app/modules/core/interceptors/auth-interceptor.service.spec.ts",
+        "hash": "18048660205922308579"
+      },
+      {
+        "file": "src/app/modules/core/interceptors/auth-interceptor.service.ts",
+        "hash": "3048749517235741469"
+      },
+      {
+        "file": "src/app/modules/gallery/components/artwork-card/artwork-card.component.html",
+        "hash": "11214829431864023316"
+      },
+      {
+        "file": "src/app/modules/gallery/components/artwork-card/artwork-card.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/gallery/components/artwork-card/artwork-card.component.spec.ts",
+        "hash": "12453224205249542381"
+      },
+      {
+        "file": "src/app/modules/gallery/components/artwork-card/artwork-card.component.ts",
+        "hash": "8066427240662413381"
+      },
+      {
+        "file": "src/app/modules/gallery/components/filter-panel/filter-panel.component.html",
+        "hash": "5525999124408488003"
+      },
+      {
+        "file": "src/app/modules/gallery/components/filter-panel/filter-panel.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/gallery/components/filter-panel/filter-panel.component.spec.ts",
+        "hash": "14281167687990013372"
+      },
+      {
+        "file": "src/app/modules/gallery/components/filter-panel/filter-panel.component.ts",
+        "hash": "7291262372284664568"
+      },
+      {
+        "file": "src/app/modules/gallery/components/gallery/gallery.component.html",
+        "hash": "3849768757414105222"
+      },
+      {
+        "file": "src/app/modules/gallery/components/gallery/gallery.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/gallery/components/gallery/gallery.component.spec.ts",
+        "hash": "15991917446987218984"
+      },
+      {
+        "file": "src/app/modules/gallery/components/gallery/gallery.component.ts",
+        "hash": "13264015415471109318"
+      },
+      {
+        "file": "src/app/modules/gallery/components/sorting-dropdown/sorting-dropdown.component.html",
+        "hash": "14217865128880576027"
+      },
+      {
+        "file": "src/app/modules/gallery/components/sorting-dropdown/sorting-dropdown.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/gallery/components/sorting-dropdown/sorting-dropdown.component.spec.ts",
+        "hash": "11201051348823359698"
+      },
+      {
+        "file": "src/app/modules/gallery/components/sorting-dropdown/sorting-dropdown.component.ts",
+        "hash": "908544366594222950"
+      },
+      {
+        "file": "src/app/modules/gallery/gallery-routing.module.ts",
+        "hash": "15277817309960506712"
+      },
+      {
+        "file": "src/app/modules/gallery/gallery.component.html",
+        "hash": "8718960167711486661"
+      },
+      {
+        "file": "src/app/modules/gallery/gallery.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/gallery/gallery.component.spec.ts",
+        "hash": "15991917446987218984"
+      },
+      {
+        "file": "src/app/modules/gallery/gallery.component.ts",
+        "hash": "5165582682304013026"
+      },
+      {
+        "file": "src/app/modules/gallery/gallery.module.ts",
+        "hash": "14889441494459951408"
+      },
+      {
+        "file": "src/app/modules/gallery/services/gallery.service.spec.ts",
+        "hash": "9929065313684241509"
+      },
+      {
+        "file": "src/app/modules/gallery/services/gallery.service.ts",
+        "hash": "6216147799962720382"
+      },
+      {
+        "file": "src/app/modules/home/components/artist-inspiration/artist-inspiration.component.html",
+        "hash": "11132806195770406555"
+      },
+      {
+        "file": "src/app/modules/home/components/artist-inspiration/artist-inspiration.component.scss",
+        "hash": "3709353698426146458"
+      },
+      {
+        "file": "src/app/modules/home/components/artist-inspiration/artist-inspiration.component.spec.ts",
+        "hash": "5358972629024636020"
+      },
+      {
+        "file": "src/app/modules/home/components/artist-inspiration/artist-inspiration.component.ts",
+        "hash": "185085452761065947"
+      },
+      {
+        "file": "src/app/modules/home/components/artist-passion/artist-passion.component.html",
+        "hash": "5755259746666626210"
+      },
+      {
+        "file": "src/app/modules/home/components/artist-passion/artist-passion.component.scss",
+        "hash": "15000418411881369348"
+      },
+      {
+        "file": "src/app/modules/home/components/artist-passion/artist-passion.component.spec.ts",
+        "hash": "14912929918909098744"
+      },
+      {
+        "file": "src/app/modules/home/components/artist-passion/artist-passion.component.ts",
+        "hash": "9317869997407500764"
+      },
+      {
+        "file": "src/app/modules/home/components/exhibitions/exhibitions.component.html",
+        "hash": "12873909853488268679"
+      },
+      {
+        "file": "src/app/modules/home/components/exhibitions/exhibitions.component.scss",
+        "hash": "5404142996002046293"
+      },
+      {
+        "file": "src/app/modules/home/components/exhibitions/exhibitions.component.spec.ts",
+        "hash": "16613456092730629751"
+      },
+      {
+        "file": "src/app/modules/home/components/exhibitions/exhibitions.component.ts",
+        "hash": "11743345876851684060"
+      },
+      {
+        "file": "src/app/modules/home/components/feature-gallery/feature-gallery.component.html",
+        "hash": "2895581512123786148"
+      },
+      {
+        "file": "src/app/modules/home/components/feature-gallery/feature-gallery.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/home/components/feature-gallery/feature-gallery.component.spec.ts",
+        "hash": "9678935701429294150"
+      },
+      {
+        "file": "src/app/modules/home/components/feature-gallery/feature-gallery.component.ts",
+        "hash": "1551979732340796126"
+      },
+      {
+        "file": "src/app/modules/home/components/hero-banner/hero-banner.component.html",
+        "hash": "17241945377751657535"
+      },
+      {
+        "file": "src/app/modules/home/components/hero-banner/hero-banner.component.scss",
+        "hash": "6229045137350936405"
+      },
+      {
+        "file": "src/app/modules/home/components/hero-banner/hero-banner.component.spec.ts",
+        "hash": "2394466243844364034"
+      },
+      {
+        "file": "src/app/modules/home/components/hero-banner/hero-banner.component.ts",
+        "hash": "106000313223334936"
+      },
+      {
+        "file": "src/app/modules/home/components/testimonials/testimonials.component.html",
+        "hash": "1251427305736318788"
+      },
+      {
+        "file": "src/app/modules/home/components/testimonials/testimonials.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/home/components/testimonials/testimonials.component.spec.ts",
+        "hash": "4675071898149723699"
+      },
+      {
+        "file": "src/app/modules/home/components/testimonials/testimonials.component.ts",
+        "hash": "14719945344744506270"
+      },
+      {
+        "file": "src/app/modules/home/home-routing.module.ts",
+        "hash": "5109343389082697141"
+      },
+      {
+        "file": "src/app/modules/home/home.component.html",
+        "hash": "8264303730930516428"
+      },
+      {
+        "file": "src/app/modules/home/home.component.scss",
+        "hash": "16384353957505225116"
+      },
+      {
+        "file": "src/app/modules/home/home.component.spec.ts",
+        "hash": "17251428766814914771"
+      },
+      {
+        "file": "src/app/modules/home/home.component.ts",
+        "hash": "7163716147471799256"
+      },
+      {
+        "file": "src/app/modules/home/home.module.ts",
+        "hash": "11396990438349252607"
+      },
+      {
+        "file": "src/app/modules/shared/components/artworks-gallery/artworks-gallery.component.html",
+        "hash": "15936413527714639539"
+      },
+      {
+        "file": "src/app/modules/shared/components/artworks-gallery/artworks-gallery.component.scss",
+        "hash": "16210421278544809908"
+      },
+      {
+        "file": "src/app/modules/shared/components/artworks-gallery/artworks-gallery.component.spec.ts",
+        "hash": "3001677136653555474"
+      },
+      {
+        "file": "src/app/modules/shared/components/artworks-gallery/artworks-gallery.component.ts",
+        "hash": "1574201272498348975"
+      },
+      {
+        "file": "src/app/modules/shared/components/artworks-video/artworks-video.component.html",
+        "hash": "14559465738236117622"
+      },
+      {
+        "file": "src/app/modules/shared/components/artworks-video/artworks-video.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/shared/components/artworks-video/artworks-video.component.spec.ts",
+        "hash": "14542837377162704186"
+      },
+      {
+        "file": "src/app/modules/shared/components/artworks-video/artworks-video.component.ts",
+        "hash": "3563014605283481531"
+      },
+      {
+        "file": "src/app/modules/shared/components/jumbotron/jumbotron.component.html",
+        "hash": "14214947626731789576"
+      },
+      {
+        "file": "src/app/modules/shared/components/jumbotron/jumbotron.component.scss",
+        "hash": "15104092705023914397"
+      },
+      {
+        "file": "src/app/modules/shared/components/jumbotron/jumbotron.component.spec.ts",
+        "hash": "190608966017216051"
+      },
+      {
+        "file": "src/app/modules/shared/components/jumbotron/jumbotron.component.ts",
+        "hash": "17270130444186007498"
+      },
+      {
+        "file": "src/app/modules/shared/shared.module.ts",
+        "hash": "14382414914931456050"
+      },
+      {
+        "file": "src/app/modules/user/components/order-history/order-history.component.html",
+        "hash": "11221123804900019874"
+      },
+      {
+        "file": "src/app/modules/user/components/order-history/order-history.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/user/components/order-history/order-history.component.spec.ts",
+        "hash": "3454864769097690929"
+      },
+      {
+        "file": "src/app/modules/user/components/order-history/order-history.component.ts",
+        "hash": "6215017008756265048"
+      },
+      {
+        "file": "src/app/modules/user/components/profile/profile.component.html",
+        "hash": "8294397383785906270"
+      },
+      {
+        "file": "src/app/modules/user/components/profile/profile.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/user/components/profile/profile.component.spec.ts",
+        "hash": "12300472364243693388"
+      },
+      {
+        "file": "src/app/modules/user/components/profile/profile.component.ts",
+        "hash": "14998843516865036851"
+      },
+      {
+        "file": "src/app/modules/user/components/wishlist/wishlist.component.html",
+        "hash": "7695326368161820873"
+      },
+      {
+        "file": "src/app/modules/user/components/wishlist/wishlist.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/user/components/wishlist/wishlist.component.spec.ts",
+        "hash": "11515468179814886771"
+      },
+      {
+        "file": "src/app/modules/user/components/wishlist/wishlist.component.ts",
+        "hash": "3304577286764897828"
+      },
+      {
+        "file": "src/app/modules/user/user-routing.module.ts",
+        "hash": "7247424693269371305"
+      },
+      {
+        "file": "src/app/modules/user/user.component.html",
+        "hash": "282541306346707902"
+      },
+      {
+        "file": "src/app/modules/user/user.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/modules/user/user.component.spec.ts",
+        "hash": "15353942871248506512"
+      },
+      {
+        "file": "src/app/modules/user/user.component.ts",
+        "hash": "12452433915540269623"
+      },
+      {
+        "file": "src/app/modules/user/user.module.ts",
+        "hash": "12665663796903463894"
+      },
+      {
+        "file": "src/app/services/api.service.spec.ts",
+        "hash": "8951269545676367714"
+      },
+      {
+        "file": "src/app/services/api.service.ts",
+        "hash": "17802186268945996182"
+      },
+      {
+        "file": "src/app/services/articles.service.spec.ts",
+        "hash": "8191763103055810807"
+      },
+      {
+        "file": "src/app/services/articles.service.ts",
+        "hash": "7314720673300853594"
+      },
+      {
+        "file": "src/app/services/artworks.service.spec.ts",
+        "hash": "13731161479685455003"
+      },
+      {
+        "file": "src/app/services/artworks.service.ts",
+        "hash": "10978837495113456693"
+      },
+      {
+        "file": "src/app/services/auth.service.spec.ts",
+        "hash": "6927655796975040699"
+      },
+      {
+        "file": "src/app/services/auth.service.ts",
+        "hash": "5525367579097834745"
+      },
+      {
+        "file": "src/app/services/cart.service.spec.ts",
+        "hash": "5904820136775790015"
+      },
+      {
+        "file": "src/app/services/cart.service.ts",
+        "hash": "9680248160308664961"
+      },
+      {
+        "file": "src/app/services/user.service.spec.ts",
+        "hash": "18148047139486964869"
+      },
+      {
+        "file": "src/app/services/user.service.ts",
+        "hash": "9404843467178539356"
+      },
+      {
+        "file": "src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/assets/3dGalleria/10_06_2024, 10_59_13 - Screen - Untitled video.webm",
+        "hash": "13835654485400653176"
+      },
+      {
+        "file": "src/assets/3dGalleria/Progetto senza titolo.pdf",
+        "hash": "14279890244064466451"
+      },
+      {
+        "file": "src/assets/3dGalleria/Progetto_modificato (1).pdf",
+        "hash": "15218316980264487424"
+      },
+      {
+        "file": "src/assets/3dGalleria/Progetto_modificato.pdf",
+        "hash": "7702017676340540135"
+      },
+      {
+        "file": "src/assets/3dGalleria/a.png",
+        "hash": "13727907262728909520"
+      },
+      {
+        "file": "src/assets/3dGalleria/b.png",
+        "hash": "4963614344133819630"
+      },
+      {
+        "file": "src/assets/3dGalleria/c.png",
+        "hash": "11028815667100280914"
+      },
+      {
+        "file": "src/assets/3dGalleria/gallert_record.mp4",
+        "hash": "11769974904575474186"
+      },
+      {
+        "file": "src/assets/3dGalleria/record gallery 3d.zip",
+        "hash": "6994212876255317649"
+      },
+      {
+        "file": "src/assets/Removal-6.png",
+        "hash": "2612165296009040868"
+      },
+      {
+        "file": "src/assets/articles/alex_da_torres_1.JPG",
+        "hash": "3778418735855736115"
+      },
+      {
+        "file": "src/assets/articles/alex_da_torres_1_bis.jpg",
+        "hash": "11087214595561307459"
+      },
+      {
+        "file": "src/assets/articles/alex_da_torres_2.jpg",
+        "hash": "17463135706412462648"
+      },
+      {
+        "file": "src/assets/articles/alex_da_torres_3.webp",
+        "hash": "3008221262186147595"
+      },
+      {
+        "file": "src/assets/articles/alex_da_torres_4.jpg",
+        "hash": "16415070709012292721"
+      },
+      {
+        "file": "src/assets/artist/artist-interview.jpg",
+        "hash": "8323772853294335607"
+      },
+      {
+        "file": "src/assets/artist/artist.jpg",
+        "hash": "9526825211767954773"
+      },
+      {
+        "file": "src/assets/artist/artist2.jpg",
+        "hash": "15502732692237882058"
+      },
+      {
+        "file": "src/assets/biennale/milano.jpeg",
+        "hash": "11369186763348349048"
+      },
+      {
+        "file": "src/assets/data/articles-array.json",
+        "hash": "1713313588591808334"
+      },
+      {
+        "file": "src/assets/data/artworks-array.json",
+        "hash": "14675068367702202152"
+      },
+      {
+        "file": "src/assets/finali/amatrice.jpeg",
+        "hash": "1687478021560729122"
+      },
+      {
+        "file": "src/assets/finali/arteLaguna.jpeg",
+        "hash": "4463301992773925704"
+      },
+      {
+        "file": "src/assets/firma quadri.jfif",
+        "hash": "4608403751104470625"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font.zip",
+        "hash": "13852908014045298803"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/Audrey/Audrey-Bold.otf",
+        "hash": "435841877666527546"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/Audrey/Audrey-BoldOblique.otf",
+        "hash": "10059673131234758053"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/Audrey/Audrey-Medium.otf",
+        "hash": "2397783490710925263"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/Audrey/Audrey-MediumOblique.otf",
+        "hash": "11919395988734811193"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/Audrey/Audrey-Normal.otf",
+        "hash": "10066844802780160515"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/Audrey/Audrey-NormalOblique.otf",
+        "hash": "2394923913341767082"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/Audrey/_License.txt",
+        "hash": "10584905468353963969"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/__MACOSX/._Audrey",
+        "hash": "11439142805160295248"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/__MACOSX/Audrey/._Audrey-Bold.otf",
+        "hash": "3229788298245038529"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/__MACOSX/Audrey/._Audrey-BoldOblique.otf",
+        "hash": "10595966294576505346"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/__MACOSX/Audrey/._Audrey-Medium.otf",
+        "hash": "352319284948602667"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/__MACOSX/Audrey/._Audrey-MediumOblique.otf",
+        "hash": "9735584593522582765"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/__MACOSX/Audrey/._Audrey-Normal.otf",
+        "hash": "11110995536534200718"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/__MACOSX/Audrey/._Audrey-NormalOblique.otf",
+        "hash": "10214637268466812067"
+      },
+      {
+        "file": "src/assets/font/Audrey-Font/__MACOSX/Audrey/.__License.txt",
+        "hash": "608651594713396743"
+      },
+      {
+        "file": "src/assets/font/Gruppo.zip",
+        "hash": "15483843945353122613"
+      },
+      {
+        "file": "src/assets/font/Gruppo/Gruppo-Regular.ttf",
+        "hash": "17861500510929755006"
+      },
+      {
+        "file": "src/assets/font/Gruppo/OFL.txt",
+        "hash": "15804254937079496223"
+      },
+      {
+        "file": "src/assets/font/OFL.txt",
+        "hash": "7176901950253649311"
+      },
+      {
+        "file": "src/assets/font/Orbitron-VariableFont_wght.ttf",
+        "hash": "13008766142505729147"
+      },
+      {
+        "file": "src/assets/font/Orbitron.zip",
+        "hash": "1944943806555005221"
+      },
+      {
+        "file": "src/assets/font/README.txt",
+        "hash": "16173570243863525123"
+      },
+      {
+        "file": "src/assets/font/static/Orbitron-Black.ttf",
+        "hash": "2026472984133536293"
+      },
+      {
+        "file": "src/assets/font/static/Orbitron-Bold.ttf",
+        "hash": "17910509205507003333"
+      },
+      {
+        "file": "src/assets/font/static/Orbitron-ExtraBold.ttf",
+        "hash": "16638778259508530323"
+      },
+      {
+        "file": "src/assets/font/static/Orbitron-Medium.ttf",
+        "hash": "15136443580580220030"
+      },
+      {
+        "file": "src/assets/font/static/Orbitron-Regular.ttf",
+        "hash": "13447368572190623789"
+      },
+      {
+        "file": "src/assets/font/static/Orbitron-SemiBold.ttf",
+        "hash": "8955627727476322808"
+      },
+      {
+        "file": "src/assets/galleria/24.jpg",
+        "hash": "6654444242852980086"
+      },
+      {
+        "file": "src/assets/galleria/a.jpg",
+        "hash": "12417495550250916260"
+      },
+      {
+        "file": "src/assets/galleria/aa.jpg",
+        "hash": "2839051329866865163"
+      },
+      {
+        "file": "src/assets/galleria/b.jpg",
+        "hash": "9920678188149045783"
+      },
+      {
+        "file": "src/assets/galleria/bb.jpg",
+        "hash": "9147472572318670376"
+      },
+      {
+        "file": "src/assets/galleria/breda.jpeg",
+        "hash": "4463301992773925704"
+      },
+      {
+        "file": "src/assets/galleria/c.jpg",
+        "hash": "8673863961477180180"
+      },
+      {
+        "file": "src/assets/galleria/cc.jpg",
+        "hash": "9147472572318670376"
+      },
+      {
+        "file": "src/assets/galleria/d.jpg",
+        "hash": "17278741110983917593"
+      },
+      {
+        "file": "src/assets/galleria/dd.jpg",
+        "hash": "9051151356389089878"
+      },
+      {
+        "file": "src/assets/galleria/e.jpg",
+        "hash": "2895954536481978248"
+      },
+      {
+        "file": "src/assets/galleria/ee.jpg",
+        "hash": "13864520512155584133"
+      },
+      {
+        "file": "src/assets/galleria/f.jpg",
+        "hash": "15806152947187334741"
+      },
+      {
+        "file": "src/assets/galleria/g.jpg",
+        "hash": "14309878872494192997"
+      },
+      {
+        "file": "src/assets/galleria/h.jpg",
+        "hash": "5392465815088519092"
+      },
+      {
+        "file": "src/assets/galleria/i.jpg",
+        "hash": "10090533942970681841"
+      },
+      {
+        "file": "src/assets/galleria/l.jpg",
+        "hash": "17464596778693028887"
+      },
+      {
+        "file": "src/assets/galleria/m.jpg",
+        "hash": "9895157299734856084"
+      },
+      {
+        "file": "src/assets/galleria/n.jpg",
+        "hash": "9507696072567051412"
+      },
+      {
+        "file": "src/assets/galleria/o.jpg",
+        "hash": "7501099345924111492"
+      },
+      {
+        "file": "src/assets/galleria/p.jpg",
+        "hash": "10870886589519208207"
+      },
+      {
+        "file": "src/assets/galleria/q.jpg",
+        "hash": "5826555738258291080"
+      },
+      {
+        "file": "src/assets/galleria/r.jpg",
+        "hash": "16915292260327964719"
+      },
+      {
+        "file": "src/assets/galleria/s.jpg",
+        "hash": "2710436266384012689"
+      },
+      {
+        "file": "src/assets/galleria/t.jpg",
+        "hash": "4581447228345133517"
+      },
+      {
+        "file": "src/assets/galleria/u.jpg",
+        "hash": "327219526727296621"
+      },
+      {
+        "file": "src/assets/galleria/v.jpg",
+        "hash": "4133287450171595291"
+      },
+      {
+        "file": "src/assets/galleria/z.jpg",
+        "hash": "9689043556669544004"
+      },
+      {
+        "file": "src/assets/i18n/en.json",
+        "hash": "10015839269740582997"
+      },
+      {
+        "file": "src/assets/i18n/fr.json",
+        "hash": "6148770439608353709"
+      },
+      {
+        "file": "src/assets/i18n/it.json",
+        "hash": "16578745563460858721"
+      },
+      {
+        "file": "src/assets/icon/book.svg",
+        "hash": "10198059063661857055"
+      },
+      {
+        "file": "src/assets/icon/comment.svg",
+        "hash": "3644008628445044701"
+      },
+      {
+        "file": "src/assets/icon/comment_functions.png",
+        "hash": "8734709434796959328"
+      },
+      {
+        "file": "src/assets/icon/dashboard.svg",
+        "hash": "3121664073034649781"
+      },
+      {
+        "file": "src/assets/icon/decor_bird.png",
+        "hash": "10049334494797437913"
+      },
+      {
+        "file": "src/assets/icon/decor_eyed.png",
+        "hash": "4812925522926471831"
+      },
+      {
+        "file": "src/assets/icon/decor_flower.png",
+        "hash": "17014286300417093888"
+      },
+      {
+        "file": "src/assets/icon/decor_ghost.png",
+        "hash": "4883379290412804184"
+      },
+      {
+        "file": "src/assets/icon/decor_ghost2.png",
+        "hash": "7875948318438263076"
+      },
+      {
+        "file": "src/assets/icon/decor_poit.png",
+        "hash": "1550645826643390909"
+      },
+      {
+        "file": "src/assets/icon/decor_viola.png",
+        "hash": "1317213276381015036"
+      },
+      {
+        "file": "src/assets/icon/decor_viola_ghost.png",
+        "hash": "18256348529888800989"
+      },
+      {
+        "file": "src/assets/icon/download.svg",
+        "hash": "11109199415569124568"
+      },
+      {
+        "file": "src/assets/icon/email-svgrepo-com.svg",
+        "hash": "10645989824460199914"
+      },
+      {
+        "file": "src/assets/icon/facebook.svg",
+        "hash": "2694958729025108662"
+      },
+      {
+        "file": "src/assets/icon/flag-en.svg",
+        "hash": "9667141970433375774"
+      },
+      {
+        "file": "src/assets/icon/flag-fr.svg",
+        "hash": "5843160671024479796"
+      },
+      {
+        "file": "src/assets/icon/flag-it.svg",
+        "hash": "14628052146691567858"
+      },
+      {
+        "file": "src/assets/icon/flag-mf.svg",
+        "hash": "12172683493677727647"
+      },
+      {
+        "file": "src/assets/icon/gallery-wide.svg",
+        "hash": "1465703408433857039"
+      },
+      {
+        "file": "src/assets/icon/gallery.png",
+        "hash": "13621028308811480295"
+      },
+      {
+        "file": "src/assets/icon/giornale.png",
+        "hash": "5632046101115602619"
+      },
+      {
+        "file": "src/assets/icon/giornalista.png",
+        "hash": "3537811040959213053"
+      },
+      {
+        "file": "src/assets/icon/loader.gif",
+        "hash": "3450959461681329311"
+      },
+      {
+        "file": "src/assets/icon/star.svg",
+        "hash": "9308157752821080499"
+      },
+      {
+        "file": "src/assets/icon/user-hands.svg",
+        "hash": "5242245250323344630"
+      },
+      {
+        "file": "src/assets/icon/v.jpg",
+        "hash": "4133287450171595291"
+      },
+      {
+        "file": "src/assets/icon/whatsapp-svgrepo-com.svg",
+        "hash": "11470935887047764133"
+      },
+      {
+        "file": "src/assets/icon/x.png",
+        "hash": "2736950930253375444"
+      },
+      {
+        "file": "src/assets/img/1.jpg",
+        "hash": "17148060666708473360"
+      },
+      {
+        "file": "src/assets/img/10.jpg",
+        "hash": "13056674852938522842"
+      },
+      {
+        "file": "src/assets/img/11.jpg",
+        "hash": "2351300526651381488"
+      },
+      {
+        "file": "src/assets/img/12.jpg",
+        "hash": "12969496273047578589"
+      },
+      {
+        "file": "src/assets/img/13.JPG",
+        "hash": "16522510472237639050"
+      },
+      {
+        "file": "src/assets/img/14.JPG",
+        "hash": "2424271006656900865"
+      },
+      {
+        "file": "src/assets/img/15.JPG",
+        "hash": "9083548923868774550"
+      },
+      {
+        "file": "src/assets/img/16.JPG",
+        "hash": "15062429022274768228"
+      },
+      {
+        "file": "src/assets/img/17.JPG",
+        "hash": "16408657119595756832"
+      },
+      {
+        "file": "src/assets/img/18.JPG",
+        "hash": "12212111744467049811"
+      },
+      {
+        "file": "src/assets/img/19.JPG",
+        "hash": "3778418735855736115"
+      },
+      {
+        "file": "src/assets/img/2.jpg",
+        "hash": "10715748618632293168"
+      },
+      {
+        "file": "src/assets/img/20.JPG",
+        "hash": "6377219347295698678"
+      },
+      {
+        "file": "src/assets/img/21.JPG",
+        "hash": "14329957495445354302"
+      },
+      {
+        "file": "src/assets/img/22.jpeg",
+        "hash": "17472601045097443932"
+      },
+      {
+        "file": "src/assets/img/23.jpg",
+        "hash": "9051151356389089878"
+      },
+      {
+        "file": "src/assets/img/3.JPG",
+        "hash": "986412896795734591"
+      },
+      {
+        "file": "src/assets/img/4.jpg",
+        "hash": "17466251559965293162"
+      },
+      {
+        "file": "src/assets/img/5.jpg",
+        "hash": "5599146171364777772"
+      },
+      {
+        "file": "src/assets/img/6.jpg",
+        "hash": "4683292034082136482"
+      },
+      {
+        "file": "src/assets/img/7.jpg",
+        "hash": "2977804392789371473"
+      },
+      {
+        "file": "src/assets/img/8.jpg",
+        "hash": "8315712154210758077"
+      },
+      {
+        "file": "src/assets/img/9.jpg",
+        "hash": "7853678767090157034"
+      },
+      {
+        "file": "src/assets/img/ee.jpg",
+        "hash": "13864520512155584133"
+      },
+      {
+        "file": "src/assets/mostre/bastione.jpeg",
+        "hash": "13275338509944251438"
+      },
+      {
+        "file": "src/assets/mostre/capocomino.jpg",
+        "hash": "2008697547271388143"
+      },
+      {
+        "file": "src/assets/mostre/free.jpeg",
+        "hash": "15466998437699600125"
+      },
+      {
+        "file": "src/assets/mostre/isolatavolara.jpeg",
+        "hash": "5721254053311724934"
+      },
+      {
+        "file": "src/assets/premiati e in mostra/berlino.jpg",
+        "hash": "14602248397246788835"
+      },
+      {
+        "file": "src/assets/premiati e in mostra/paoloLevi.jpeg",
+        "hash": "11063636017419237453"
+      },
+      {
+        "file": "src/assets/rivista.pdf",
+        "hash": "17519848038374995164"
+      },
+      {
+        "file": "src/assets/svg/chevron-arrow-left-circle.svg",
+        "hash": "1327439633428280695"
+      },
+      {
+        "file": "src/assets/svg/close-circle.svg",
+        "hash": "13301730923776489137"
+      },
+      {
+        "file": "src/assets/svg/comment.svg",
+        "hash": "18437319777824948980"
+      },
+      {
+        "file": "src/assets/svg/delete-svgrepo-com.svg",
+        "hash": "14599546761180551713"
+      },
+      {
+        "file": "src/assets/svg/delete.svg",
+        "hash": "7573355014296219547"
+      },
+      {
+        "file": "src/assets/svg/download.svg",
+        "hash": "11109199415569124568"
+      },
+      {
+        "file": "src/assets/svg/eye-svgrepo-com.svg",
+        "hash": "7716555091864063864"
+      },
+      {
+        "file": "src/assets/svg/hamburger-menu.svg",
+        "hash": "14850028232690969664"
+      },
+      {
+        "file": "src/assets/svg/heart-svgrepo-com.svg",
+        "hash": "11345896568872321076"
+      },
+      {
+        "file": "src/assets/svg/like-svgrepo.svg",
+        "hash": "16365361011071770329"
+      },
+      {
+        "file": "src/assets/svg/send-alt.svg",
+        "hash": "12110624616832175912"
+      },
+      {
+        "file": "src/assets/svg/sort-ascending.svg",
+        "hash": "14930412209111449664"
+      },
+      {
+        "file": "src/assets/svg/sort-descending.svg",
+        "hash": "13232749335915225886"
+      },
+      {
+        "file": "src/assets/svg/video-camera.svg",
+        "hash": "8717039674050133794"
+      },
+      {
+        "file": "src/favicon.ico",
+        "hash": "3464744996580215640"
+      },
+      {
+        "file": "src/index.html",
+        "hash": "5041130626267887061"
+      },
+      {
+        "file": "src/main.ts",
+        "hash": "9374417435436826166"
+      },
+      {
+        "file": "src/styles.scss",
+        "hash": "14032706286487182274"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "13119632651406065538"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "11214911829656606299"
+      },
+      {
+        "file": "tsconfig.spec.json",
+        "hash": "5122839733245053999"
+      }
+    ]
+  }
+}

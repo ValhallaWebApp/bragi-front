@@ -11,7 +11,7 @@
   margin: auto;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 50vh;
+  height: 40vh;
   .slide {
     display: none;
     width: 100%;
@@ -33,7 +33,7 @@
     }
     img {
       width: 100%;
-      min-height: 50vh;
+      min-height: 40vh;
       height: auto;
       object-fit: cover;
     }
