@@ -300,11 +300,14 @@ onDoubleClick(event: MouseEvent): void {
     this.scene.children.forEach((child: any) => {
       if (child?.userData?.isArtwork) {
         const distance = avatarPosition.distanceTo(child.position);
-        (child.material as THREE.MeshBasicMaterial).opacity = distance < 3 ? 1 : 0.5;
+        const material = child.material as THREE.MeshBasicMaterial;
+        material.opacity = distance < 3 ? 1 : 0.5;
+
+        // Aggiunge un piccolo effetto di scala
+        child.scale.set(distance < 3 ? 1.1 : 1, distance < 3 ? 1.1 : 1, 1);
       }
     });
   }
-
 
   // Aggiunge controlli per permettere all'utente di ruotare e zoomare con il mouse
   private addControls(): void {
