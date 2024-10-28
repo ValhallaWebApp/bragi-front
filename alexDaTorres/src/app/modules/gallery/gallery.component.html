@@ -9,6 +9,9 @@
     <button (click)="closePopup()">Chiudi</button>
   </div>
 </div>
+<button (click)="toggleView()">
+  {{ isFirstPersonView ? 'Visuale in Terza Persona' : 'Visuale in Prima Persona' }}
+</button>
 
 <div class="help-tooltip" *ngIf="showHelp">
   <p>Comandi:</p>
