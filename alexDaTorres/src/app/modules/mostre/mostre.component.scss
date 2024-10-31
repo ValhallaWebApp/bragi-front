@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "title";
+  src: url("../../../assets/font/Gruppo/Gruppo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+section {
+  font-family: "title";
+  background-color: rgba(242, 204, 209, 0.418);
+  * {
+    font-family: "title";
+  }
+}

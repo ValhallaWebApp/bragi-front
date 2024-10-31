@@ -1,0 +1,29 @@
+  <!-- Container della galleria -->
+  <div #galleryContainer class="gallery-container">
+    <!-- Canvas per la minimappa -->
+   <canvas #minimap class="minimap"></canvas>
+  <!-- Popup informativo -->
+   <div *ngIf="popupVisible" class="popup">
+     <h3>{{ popupData?.title }}</h3>
+     <p>{{ popupData?.description }}</p>
+     <button (click)="closePopup()">Chiudi</button>
+   </div>
+ </div>
+ <button (click)="toggleView()">
+   {{ isFirstPersonView ? 'Visuale in Terza Persona' : 'Visuale in Prima Persona' }}
+ </button>
+
+ <div class="help-tooltip" *ngIf="showHelp">
+   <p>Comandi:</p>
+   <ul>
+     <li>WASD o frecce per muoverti</li>
+     <li>Doppio clic per navigare verso un punto</li>
+     <li>Zoom con scroll del mouse</li>
+   </ul>
+   <button (click)="showHelp = false">Chiudi</button>
+ </div>
+ <div *ngIf="popupVisible" class="popup">
+   <h3>{{ popupData?.title }}</h3>
+   <p>{{ popupData?.description }}</p>
+   <button (click)="closePopup()">Chiudi</button>
+ </div>

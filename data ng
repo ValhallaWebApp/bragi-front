@@ -13,6 +13,14 @@ ng generate module modules/home --route home --module app.module
 ng generate component modules/home/components/hero-banner
 ng generate component modules/home/components/feature-gallery
 ng generate component modules/home/components/testimonials
+# Mostre Module
+ng generate module modules/mostre --route mostre --module app.module
+# Who Module
+ng generate module modules/who --route who --module app.module
+# Contact Module
+ng generate module modules/contact --route contact --module app.module
+# Gallery 3d Module
+ng generate module modules/gallery3d --route gallery3d --module app.module
 
 # Gallery Module
 ng generate module modules/gallery --route gallery --module app.module

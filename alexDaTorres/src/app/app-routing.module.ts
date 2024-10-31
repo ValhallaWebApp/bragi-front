@@ -32,6 +32,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/admin/admin.module').then((m) => m.AdminModule),
   },
+  {
+    path: 'who',
+    loadChildren: () =>
+      import('./modules/who/who.module').then((m) => m.WhoModule),
+  },
+  { path: 'contact', loadChildren: () => import('./modules/contact/contact.module').then(m => m.ContactModule) },
+  { path: 'gallery3d', loadChildren: () => import('./modules/gallery3d/gallery3d.module').then(m => m.Gallery3dModule) },
+  { path: 'mostre', loadChildren: () => import('./modules/mostre/mostre.module').then(m => m.MostreModule) },
 ];
 
 @NgModule({

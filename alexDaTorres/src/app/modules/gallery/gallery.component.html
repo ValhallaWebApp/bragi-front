@@ -1,29 +1,42 @@
-<!-- Container della galleria -->
-<div #galleryContainer class="gallery-container">
-  <!-- Canvas per la minimappa -->
-  <canvas #minimap class="minimap"></canvas>
-  <!-- Popup informativo -->
-  <div *ngIf="popupVisible" class="popup">
-    <h3>{{ popupData?.title }}</h3>
-    <p>{{ popupData?.description }}</p>
-    <button (click)="closePopup()">Chiudi</button>
-  </div>
-</div>
-<button (click)="toggleView()">
-  {{ isFirstPersonView ? 'Visuale in Terza Persona' : 'Visuale in Prima Persona' }}
-</button>
+<section>
 
-<div class="help-tooltip" *ngIf="showHelp">
-  <p>Comandi:</p>
-  <ul>
-    <li>WASD o frecce per muoverti</li>
-    <li>Doppio clic per navigare verso un punto</li>
-    <li>Zoom con scroll del mouse</li>
-  </ul>
-  <button (click)="showHelp = false">Chiudi</button>
-</div>
-<div *ngIf="popupVisible" class="popup">
-  <h3>{{ popupData?.title }}</h3>
-  <p>{{ popupData?.description }}</p>
-  <button (click)="closePopup()">Chiudi</button>
-</div>
+  <div>
+    <h2>GALLERIA 2D</h2>
+    <div class="container">
+      <div class="card-filter">
+        <label for="">Tecnica</label>
+        <select (change)="filtered($event)" name="" id="">
+          <option value="acrilico" defaultSelected>Acrilico</option>
+          <option value="olio">Olio</option>
+        </select>
+      </div>
+      <div class="card-filter">
+        <label for="">Titolo</label>
+        <input
+          (change)="filtered($event)"
+          type="text"
+          placeholder="cerca per titolo"
+        />
+      </div>
+      <div class="card-filter">
+        <label for="">Anno</label>
+        <input (change)="filtered($event)" type="number" placeholder="Anno" />
+      </div>
+
+      <div class="card-filter">
+        <label for="">Ordine</label>
+        <select (change)="filtered($event)" name="" id="">
+          <option value="0" defaultSelected>Popolari</option>
+          <option value="1">Data crescente</option>
+          <option value="2">Data decrescente</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card" *ngFor="let artWork of artworksArray">
+      <img src="../../../../../{{ artWork.thumb }}" alt="" />
+      <h3>{{ artWork.nome }}</h3>
+    </div>
+  </div>
+</section>
