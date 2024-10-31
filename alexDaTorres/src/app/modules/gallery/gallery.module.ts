@@ -6,6 +6,10 @@ import { GalleryComponent } from './gallery.component';
 import { ArtworkCardComponent } from './components/artwork-card/artwork-card.component';
 import { FilterPanelComponent } from './components/filter-panel/filter-panel.component';
 import { SortingDropdownComponent } from './components/sorting-dropdown/sorting-dropdown.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +21,11 @@ import { SortingDropdownComponent } from './components/sorting-dropdown/sorting-
   ],
   imports: [
     CommonModule,
-    GalleryRoutingModule
+    GalleryRoutingModule,
+    MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    FormsModule
   ]
 })
 export class GalleryModule { }

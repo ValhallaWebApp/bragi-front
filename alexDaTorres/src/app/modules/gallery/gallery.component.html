@@ -1,40 +1,59 @@
 <section>
-
   <div>
     <h2>GALLERIA 2D</h2>
     <div class="container">
       <div class="card-filter">
-        <label for="">Tecnica</label>
-        <select (change)="filtered($event)" name="" id="">
-          <option value="acrilico" defaultSelected>Acrilico</option>
-          <option value="olio">Olio</option>
-        </select>
-      </div>
-      <div class="card-filter">
-        <label for="">Titolo</label>
-        <input
-          (change)="filtered($event)"
-          type="text"
-          placeholder="cerca per titolo"
-        />
-      </div>
-      <div class="card-filter">
-        <label for="">Anno</label>
-        <input (change)="filtered($event)" type="number" placeholder="Anno" />
+        <mat-form-field appearance="fill">
+          <mat-label>Tecnica</mat-label>
+          <mat-select [(ngModel)]="selectedTecnica" (ngModelChange)="filtered()">
+            <mat-option value="">-----</mat-option>
+            <mat-option value="acrilico">Acrilico</mat-option>
+            <mat-option value="olio">Olio</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
 
       <div class="card-filter">
-        <label for="">Ordine</label>
-        <select (change)="filtered($event)" name="" id="">
-          <option value="0" defaultSelected>Popolari</option>
-          <option value="1">Data crescente</option>
-          <option value="2">Data decrescente</option>
-        </select>
+        <mat-form-field appearance="fill">
+          <mat-label>Titolo</mat-label>
+          <input
+            matInput
+            [(ngModel)]="searchTitle"
+            (ngModelChange)="filtered()"
+            type="text"
+            placeholder="Cerca per titolo"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="card-filter">
+        <mat-form-field appearance="fill">
+          <mat-label>Anno</mat-label>
+          <input
+            matInput
+            [(ngModel)]="searchYear"
+            (ngModelChange)="filtered()"
+            type="number"
+            placeholder="Anno"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="card-filter">
+        <mat-form-field appearance="fill">
+          <mat-label>Ordine</mat-label>
+          <mat-select [(ngModel)]="selectedOrder" (ngModelChange)="filtered()">
+            <mat-option value="0">Popolari</mat-option>
+            <mat-option value="1">Data crescente</mat-option>
+            <mat-option value="2">Data decrescente</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
     </div>
   </div>
+
   <div class="container">
-    <div class="card" *ngFor="let artWork of artworksArray">
+    <div class="card" *ngFor="let artWork of filteredArtworksArray">
       <img src="../../../../../{{ artWork.thumb }}" alt="" />
       <h3>{{ artWork.nome }}</h3>
     </div>

@@ -18,7 +18,9 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { MatInputModule } from '@angular/material/input';         // Per utilizzare gli input di Angular Material
+import { MatSelectModule } from '@angular/material/select';       // Per utilizzare i menu a tendina (select)
+import { MatFormFieldModule } from '@angular/material/form-field'; // Per utilizzare i contenitori dei campi di input (form-field)
 // Funzione per caricare i file di traduzione
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -39,6 +41,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         MatButtonModule,
         MatListModule,
         BrowserAnimationsModule,
+
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
