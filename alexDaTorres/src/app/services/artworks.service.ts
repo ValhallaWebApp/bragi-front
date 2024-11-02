@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-// import artworks from '../../assets/data/artworks-array'; // Non serve specificare l'estensione .ts
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +12,7 @@ export class ArtworksService {
       nome: "I Sogni sono come il Tramonto, se aspetti svaniscono",
       tecnicaKey: "ARTWORKS.TECNICA_ACRILICO",
       flag: true,
-      like: 18,
+      rating: 4,
       thumb: "assets/img/22.jpeg",
       descrizioneKey: "ARTWORKS.I_SOGNI_TRAMONTO_DESCRIZIONE",
       interpretazioneKey: "ARTWORKS.I_SOGNI_TRAMONTO_INTERPRETAZIONE"
@@ -25,7 +24,7 @@ export class ArtworksService {
       nome: "Un Sogno nel Cassetto",
       tecnicaKey: "ARTWORKS.TECNICA_ACRILICO",
       flag: true,
-      like: 5,
+      rating: 3,
       thumb: "assets/img/1.jpg",
       descrizioneKey: "ARTWORKS.UN_SOGNO_CASSETTO_DESCRIZIONE",
       interpretazioneKey: "ARTWORKS.UN_SOGNO_CASSETTO_INTERPRETAZIONE"
@@ -37,7 +36,7 @@ export class ArtworksService {
       nome: "Ritornerò a volare",
       tecnicaKey: "ARTWORKS.TECNICA_ACRILICO",
       flag: true,
-      like: 1,
+      rating: 5,
       thumb: "assets/img/5.jpg",
       descrizioneKey: "ARTWORKS.RITORNO_VOLARE_DESCRIZIONE",
       interpretazioneKey: "ARTWORKS.RITORNO_VOLARE_INTERPRETAZIONE"
@@ -49,7 +48,7 @@ export class ArtworksService {
       nome: "E Viva la gioia di vivere",
       tecnicaKey: "ARTWORKS.TECNICA_ACRILICO",
       flag: true,
-      like: 1,
+      rating: 2,
       thumb: "assets/img/17.JPG",
       descrizioneKey: "ARTWORKS.E_VIVA_LA_GIOIA_DESCRIZIONE",
       interpretazioneKey: "ARTWORKS.E_VIVA_LA_GIOIA_INTERPRETAZIONE"
@@ -61,7 +60,7 @@ export class ArtworksService {
       nome: "Fai volare i tuoi sogni",
       tecnicaKey: "ARTWORKS.TECNICA_ACRILICO",
       flag: true,
-      like: 1,
+      rating: 4,
       thumb: "assets/img/15.JPG",
       descrizioneKey: "ARTWORKS.FAI_VOLARE_SOGNI_DESCRIZIONE",
       interpretazioneKey: "ARTWORKS.FAI_VOLARE_SOGNI_INTERPRETAZIONE"
@@ -73,7 +72,7 @@ export class ArtworksService {
       nome: "Il giardino degli illuminati",
       tecnicaKey: "ARTWORKS.TECNICA_ACRILICO",
       flag: true,
-      like: 1,
+      rating: 5,
       thumb: "assets/img/16.JPG",
       descrizioneKey: "ARTWORKS.IL_GIARDINO_ILLUMINATI_DESCRIZIONE",
       interpretazioneKey: "ARTWORKS.IL_GIARDINO_ILLUMINATI_INTERPRETAZIONE"
@@ -88,11 +87,10 @@ export class ArtworksService {
   }
 
   getArtworkByTitle(titleKey: string): any | undefined {
-    return this.artworks.find((artwork:any) => artwork.titleKey === titleKey);
+    return this.artworks.find((artwork: any) => artwork.titleKey === titleKey);
   }
 
   getArtworksByCategory(category: string): any[] {
-    // Placeholder per filtraggio per categoria
-    return this.artworks.filter((artwork:any) => artwork.category === category);
+    return this.artworks.filter((artwork: any) => artwork.category === category);
   }
 }

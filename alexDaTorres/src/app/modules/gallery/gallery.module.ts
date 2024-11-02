@@ -10,6 +10,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { MatIcon } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatSelectModule,
     MatFormFieldModule,
-    FormsModule
+    MatIcon,
+    MatButtonModule,
+    FormsModule,
+    TranslateModule
   ]
 })
 export class GalleryModule { }

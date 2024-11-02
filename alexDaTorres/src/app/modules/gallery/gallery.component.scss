@@ -1,74 +1,98 @@
-
 @font-face {
   font-family: 'title';
   src: url('../../../assets/font/Gruppo/Gruppo-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-section{
+p,h1,h2,h3,span,label,input,select,option,button{
   font-family: 'title';
-  background-color: rgba(242, 204, 209, 0.418);
-
+  font-weight: 900;
 }
 .gallery-container {
-  width: 100%;
-  height: 80vh; /* Imposta un'altezza fissa per vedere il rendering */
+  font-family: 'title';
 }
-.help-tooltip {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  border-radius: 5px;
-  z-index: 1000;
-}
-.gallery-container {
-  position: relative;
 }
 
-
-.minimap {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 100px;
-  height: 100px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid #fff;
-  z-index: 1000;
+.artwork-count {
+  font-size: 1.2rem;
+  color: #757575;
 }
 
-.popup {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  z-index: 1000;
-}
-
-
-//gallery 2d
-
-.container{
+.container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   margin-bottom: 20px;
+}
 
-  .card-filter{
-    display: flex;
-    flex-direction: column;
+.card-filter {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.reset-button {
+  display: flex;
+  align-items: center;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+.card {
+  flex: 1 1 calc(25% - 20px);
+  background-color: #ffffffa0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+  margin: 5px;
+}
+
+.card img {
+ height: 250px;
+  border-radius: 5px;
+}
+h3{
+  font-size: 1.5rem;
+
+}
+.artwork-year {
+  color: #757575;
+  font-size: 0.9rem;
+}
+
+.rating {
+  margin-top: 10px;
+}
+
+.rating mat-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #d3d3d3;
+}
+
+.rating mat-icon.active {
+  color: #ffca28;
+}
+
+/* Media Queries per rendere la galleria responsive */
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 calc(50% - 20px);
   }
-  .card{
+}
 
-    text-align: center;
-    img{
-      max-height: 200px;
-    }
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
   }
 }

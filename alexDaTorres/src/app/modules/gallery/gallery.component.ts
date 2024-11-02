@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Component } from '@angular/core';
 import { ArtworksService } from 'src/app/services/artworks.service';
 
@@ -13,10 +14,10 @@ export class GalleryComponent {
   // Filtri
   selectedTecnica: string = '';
   searchTitle: string = '';
-  searchYear: number | null = null;
+  searchYear: number | any = null;
   selectedOrder: string = '0';
 
-  constructor(private artworksService: ArtworksService) {
+  constructor(private artworksService: ArtworksService,public translate: TranslateService) {
     this.artworksArray = this.artworksService.getArtworks();
     this.filteredArtworksArray = this.artworksArray;
   }
@@ -42,7 +43,7 @@ export class GalleryComponent {
     // Filtra per anno
     if (this.searchYear) {
       filteredArray = filteredArray.filter(
-        (artWork:any) => artWork.anno.toString().includes(this.searchYear?.toString())
+        (artWork:any) => artWork.anno.toString().includes(this.searchYear?.toLowerCase())
       );
     }
 
@@ -57,5 +58,31 @@ export class GalleryComponent {
 
     // Aggiorna l'array di opere d'arte filtrato
     this.filteredArtworksArray = filteredArray;
+  }
+  // Metodo per assegnare un rating (numero di stelle) a un'opera d'arte
+  rateArtwork(artworkId: any, rating: number) {
+    console.log(artworkId, rating)
+    // Trova l'opera d'arte corrispondente e assegna il rating
+    const artwork = this.artworksArray.find((art: any) => art.id === artworkId);
+    if (artwork) {
+      artwork.rating = rating; // Assegna il voto (rating) all'opera
+    }
+    this.filtered(); // Applica nuovamente i filtri per aggiornare la vista
+  }
+
+  // Metodo per resettare tutti i filtri ai valori predefiniti
+  resetFilters() {
+    this.selectedTecnica = '';
+    this.searchTitle = '';
+    this.searchYear = null;
+    this.selectedOrder = '0';
+    this.filteredArtworksArray = this.artworksArray; // Ripristina l'array originale
+  }
+
+  openArtworkDialog(artwork: any): void {
+    const dialogRef = this.dialog.open(ArtworkDialogComponent, {
+      width: '400px',
+      data: artwork,
+    });
   }
 }

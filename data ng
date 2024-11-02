@@ -8,6 +8,9 @@ cd alexDaTorres-frontend
 ng generate module modules/core --routing
 ng generate module modules/shared
 
+# Pop up component
+ng generate component components/dialog/artwork-dialog
+
 # Home Module
 ng generate module modules/home --route home --module app.module
 ng generate component modules/home/components/hero-banner

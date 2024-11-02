@@ -41,7 +41,6 @@ export function HttpLoaderFactory(http: HttpClient) {
         MatButtonModule,
         MatListModule,
         BrowserAnimationsModule,
-
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

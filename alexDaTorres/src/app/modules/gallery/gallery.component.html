@@ -1,61 +1,84 @@
-<section>
-  <div>
-    <h2>GALLERIA 2D</h2>
-    <div class="container">
-      <div class="card-filter">
-        <mat-form-field appearance="fill">
-          <mat-label>Tecnica</mat-label>
-          <mat-select [(ngModel)]="selectedTecnica" (ngModelChange)="filtered()">
-            <mat-option value="">-----</mat-option>
-            <mat-option value="acrilico">Acrilico</mat-option>
-            <mat-option value="olio">Olio</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
+<section class="gallery-container">
+  <!-- Titolo della Galleria -->
+  <div class="header">
+    <h2>Galleria 2D</h2>
+    <p class="artwork-count">Opere disponibili: {{ filteredArtworksArray.length }}</p>
+  </div>
 
-      <div class="card-filter">
-        <mat-form-field appearance="fill">
-          <mat-label>Titolo</mat-label>
-          <input
-            matInput
-            [(ngModel)]="searchTitle"
-            (ngModelChange)="filtered()"
-            type="text"
-            placeholder="Cerca per titolo"
-          />
-        </mat-form-field>
-      </div>
+  <!-- Filtro della Galleria -->
+  <div class="container">
+    <div class="card-filter">
+      <mat-form-field appearance="fill">
+        <mat-label>Tecnica</mat-label>
+        <mat-select [(ngModel)]="selectedTecnica" (ngModelChange)="filtered()">
+          <mat-option value="">Tutte</mat-option>
+          <mat-option value="acrilico">Acrilico</mat-option>
+          <mat-option value="olio">Olio</mat-option>
+          <!-- Aggiungere altre tecniche se necessario -->
+        </mat-select>
+      </mat-form-field>
+    </div>
 
-      <div class="card-filter">
-        <mat-form-field appearance="fill">
-          <mat-label>Anno</mat-label>
-          <input
-            matInput
-            [(ngModel)]="searchYear"
-            (ngModelChange)="filtered()"
-            type="number"
-            placeholder="Anno"
-          />
-        </mat-form-field>
-      </div>
+    <div class="card-filter">
+      <mat-form-field appearance="fill">
+        <mat-label>Titolo</mat-label>
+        <input
+          matInput
+          [(ngModel)]="searchTitle"
+          (ngModelChange)="filtered()"
+          type="text"
+          placeholder="Cerca per titolo"
+        />
+      </mat-form-field>
+    </div>
 
-      <div class="card-filter">
-        <mat-form-field appearance="fill">
-          <mat-label>Ordine</mat-label>
-          <mat-select [(ngModel)]="selectedOrder" (ngModelChange)="filtered()">
-            <mat-option value="0">Popolari</mat-option>
-            <mat-option value="1">Data crescente</mat-option>
-            <mat-option value="2">Data decrescente</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
+    <div class="card-filter">
+      <mat-form-field appearance="fill">
+        <mat-label>Anno</mat-label>
+        <input
+          matInput
+          [(ngModel)]="searchYear"
+          (ngModelChange)="filtered()"
+          type="number"
+          placeholder="Anno"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="card-filter">
+      <mat-form-field appearance="fill">
+        <mat-label>Ordine</mat-label>
+        <mat-select [(ngModel)]="selectedOrder" (ngModelChange)="filtered()">
+          <mat-option value="0">Popolari</mat-option>
+          <mat-option value="1">Data crescente</mat-option>
+          <mat-option value="2">Data decrescente</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Aggiunta di un pulsante per resettare i filtri -->
+    <div class="card-filter reset-button">
+      <button mat-raised-button color="primary" (click)="resetFilters()">
+        <mat-icon>delete</mat-icon>
+        RESET
+      </button>
+
     </div>
   </div>
 
+  <!-- Sezione Opere della Galleria -->
   <div class="container">
     <div class="card" *ngFor="let artWork of filteredArtworksArray">
-      <img src="../../../../../{{ artWork.thumb }}" alt="" />
+      <img [src]="artWork.thumb" alt="" (click)="openArtworkDialog(artWork)"/>
       <h3>{{ artWork.nome }}</h3>
+      <h2>{{artWork.anno}}</h2>
+      <h2>{{artWork.tecnicaKey | translate}}</h2>
+      <!-- Sezione per mostrare il rating in stelle -->
+      <div class="rating">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index" (click)="rateArtwork(artWork.id,i)">
+          <mat-icon [ngClass]="{'active': i < artWork.rating}" >star</mat-icon>
+        </ng-container>
+      </div>
     </div>
   </div>
 </section>
