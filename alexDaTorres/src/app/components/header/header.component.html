@@ -20,7 +20,7 @@
   <mat-sidenav #sidenav mode="over" class="sidenav" [opened]="false">
     <mat-nav-list>
       <!-- I link del menu sono tradotti tramite ngx-translate -->
-      <a mat-list-item routerLink="/home" (click)="sidenav.close()">
+      <a mat-list-item routerLink="/" (click)="sidenav.close()">
         {{ "HEADER.MENU.HOME" | translate }}
       </a>
       <a mat-list-item routerLink="/gallery" (click)="sidenav.close()">

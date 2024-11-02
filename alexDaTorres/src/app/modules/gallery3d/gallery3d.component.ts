@@ -109,7 +109,7 @@ export class Gallery3dComponent {
       this.addArtworkFrames(); // Aggiunge i quadri alle pareti
       this.addControls(); // Aggiunge i controlli per muoversi nella scena
       this.animate(); // Avvia il ciclo di animazione
-      this.initMinimap();
+      // this.initMinimap();
     }
   }
 
@@ -249,7 +249,10 @@ onDoubleClick(event: MouseEvent): void {
       this.galleryContainer.nativeElement.clientWidth,
       this.galleryContainer.nativeElement.clientHeight
     );
-    this.renderer.setPixelRatio(window.devicePixelRatio);
+    if (window.devicePixelRatio > 1) {
+      this.renderer.setPixelRatio(1);
+    }
+    // this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
     this.galleryContainer.nativeElement.appendChild(this.renderer.domElement);
 
@@ -314,32 +317,25 @@ private addLighting(): void {
 
 
 
-  // Aggiunge l'avatar che rappresenta il giocatore nella scena
-  private addPlayerAvatar(): void {
-    const loader = new FBXLoader();
-    loader.load(
-      'assets/avatar/Breakdance 2.fbx',
-      (object) => {
-        object.scale.set(0.01, 0.01, 0.01); // Scala l'avatar come necessario
-        object.position.set(0, 0.5, 0);
-        this.playerAvatar = object; // Usa playerAvatar come riferimento all'avatar per il movimento
-        this.scene.add(object);
+private isAvatarLoaded = false;
 
-        // Imposta il mixer per le animazioni
-        this.mixer = new THREE.AnimationMixer(object);
-        if (object.animations.length > 0) {
-          const action = this.mixer.clipAction(object.animations[0]);
-          action.play();
-        }
-      },
-      (xhr) => {
-        console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
-      },
-      (error) => {
-        console.error('An error happened', error);
-      }
-    );
-  }
+private addPlayerAvatar(): void {
+  const loader = new FBXLoader();
+  loader.load('assets/avatar/Breakdance 2.fbx', (object) => {
+    object.scale.set(0.01, 0.01, 0.01);
+    object.position.set(0, 0.5, 0);
+    this.playerAvatar = object;
+    this.scene.add(object);
+
+    this.isAvatarLoaded = true; // L'avatar è ora pronto
+  },
+  (xhr) => {
+    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+  },
+  (error) => {
+    console.error('An error happened', error);
+  });
+}
 
   // Aggiunge dei quadri alle pareti della stanza e pop up informativo
   private addArtworkFrames(): void {
@@ -434,29 +430,40 @@ private addLighting(): void {
       }
     }
 
-    this.playerAvatar.position.add(this.velocity);
+    if (this.isAvatarLoaded && this.playerAvatar) {
+      // Prosegui con l'animazione solo se l'avatar è caricato
+      this.updateAvatarPosition();
+    }
 
-    // Limita il movimento dell'avatar entro i confini della stanza
-    this.playerAvatar.position.x = Math.max(
-      -9,
-      Math.min(9, this.playerAvatar.position.x)
-    );
-    this.playerAvatar.position.z = Math.max(
-      -9,
-      Math.min(9, this.playerAvatar.position.z)
-    );
 
-    // Impedisce all'avatar di uscire verticalmente
-    this.playerAvatar.position.y = Math.min(4.8, this.playerAvatar.position.y); // Leggermente inferiore all'altezza del tetto
 
     if (this.mixer) {
       this.mixer.update(delta);
     }
 
     this.controls.update(); // Aggiorna i controlli per abilitare lo zoom e la rotazione
-    this.updateMinimap();
-    this.checkProximityToFrames();
+    // this.updateMinimap();
+    // this.checkProximityToFrames();
     this.renderer.render(this.scene, this.camera); // Rende la scena attuale sulla camera
+  }
+  private updateAvatarPosition(): void {
+    // Logica di animazione per aggiornare la posizione dell'avatar
+    const delta = 0.05;
+    this.velocity.x -= this.velocity.x * 10.0 * delta;
+    this.velocity.z -= this.velocity.z * 10.0 * delta;
+
+    this.direction.z = Number(this.moveForward) - Number(this.moveBackward);
+    this.direction.x = Number(this.moveRight) - Number(this.moveLeft);
+    this.direction.normalize();
+
+    if (this.moveForward || this.moveBackward) this.velocity.z -= this.direction.z * 0.1 * delta;
+    if (this.moveLeft || this.moveRight) this.velocity.x -= this.direction.x * 0.1 * delta;
+
+    this.playerAvatar.position.add(this.velocity);
+
+    // Limita il movimento entro i confini della stanza
+    this.playerAvatar.position.x = Math.max(-9, Math.min(9, this.playerAvatar.position.x));
+    this.playerAvatar.position.z = Math.max(-9, Math.min(9, this.playerAvatar.position.z));
   }
   toggleView(): void {
     this.isFirstPersonView = !this.isFirstPersonView;

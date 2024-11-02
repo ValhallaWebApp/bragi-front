@@ -4,15 +4,19 @@
   font-weight: normal;
   font-style: normal;
 }
+/* Media query per display computer */
+@media screen and (min-width: 1024px) {
+
+}
+
 section{
   font-family: 'title';
   background-color: rgba(242, 204, 209, 0.418);
   text-align: center;
-  &>div>img{
-    width: 100%;
-  }
+
   p{
     padding: 15px;
+    font-size: 1.2rem;
   }
   .social-media a {
     margin: 0 10px;
@@ -27,5 +31,24 @@ section{
 
   .social-media img:hover {
     transform: scale(1.2);
+  }
+}
+.thumb{
+  display: flex;
+  max-width: 100vw;
+  img{
+
+  }
+  p{
+    width: 50vw;
+    min-width: 250px;
+    background-color: rgba(0, 0, 0, 0.675);
+    color: beige;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    font-size: 1.2rem;
   }
 }
