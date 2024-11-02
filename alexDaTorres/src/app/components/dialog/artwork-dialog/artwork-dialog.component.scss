@@ -1,0 +1,14 @@
+.container-pop{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  img{
+    width: 100%;
+    text-align: center;
+  }
+  button{
+    margin-right: 10px;
+  }
+}

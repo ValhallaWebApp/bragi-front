@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { MatIcon } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { TranslateModule } from '@ngx-translate/core';
+import { DialogModule } from '@angular/cdk/dialog';
+import { ArtworkDialogComponent } from 'src/app/components/dialog/artwork-dialog/artwork-dialog.component';
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { TranslateModule } from '@ngx-translate/core';
     GalleryComponent,
     ArtworkCardComponent,
     FilterPanelComponent,
-    SortingDropdownComponent
+    SortingDropdownComponent,
+    ArtworkDialogComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +34,8 @@ import { TranslateModule } from '@ngx-translate/core';
     MatIcon,
     MatButtonModule,
     FormsModule,
-    TranslateModule
+    TranslateModule,
+    DialogModule
   ]
 })
 export class GalleryModule { }

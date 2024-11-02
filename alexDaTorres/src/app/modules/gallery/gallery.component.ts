@@ -1,6 +1,8 @@
 import { TranslateService } from '@ngx-translate/core';
 import { Component } from '@angular/core';
 import { ArtworksService } from 'src/app/services/artworks.service';
+import { ArtworkDialogComponent } from 'src/app/components/dialog/artwork-dialog/artwork-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-gallery',
@@ -17,7 +19,7 @@ export class GalleryComponent {
   searchYear: number | any = null;
   selectedOrder: string = '0';
 
-  constructor(private artworksService: ArtworksService,public translate: TranslateService) {
+  constructor(private artworksService: ArtworksService,public translate: TranslateService,public dialog: MatDialog) {
     this.artworksArray = this.artworksService.getArtworks();
     this.filteredArtworksArray = this.artworksArray;
   }

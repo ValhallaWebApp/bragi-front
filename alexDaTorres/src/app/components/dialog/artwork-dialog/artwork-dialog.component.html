@@ -1,1 +1,14 @@
-<p>artwork-dialog works!</p>
+<div class="container-pop">
+  <h2 mat-dialog-title>{{ data.nome }}</h2>
+  <div mat-dialog-content>
+    <img [src]="data.thumb" alt="{{ data.nome }}" />
+    <p><strong>Anno:</strong> {{ data.anno }}</p>
+    <p><strong>Dimensioni:</strong> {{ data.dimensioni }}</p>
+    <p><strong>Tecnica:</strong> {{ data.tecnicaKey | translate }}</p>
+    <p><strong>Descrizione:</strong> {{ data.descrizioneKey | translate }}</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onClose()">Chiudi</button>
+    <button mat-raised-button color="primary">Contatta per quest'opera</button>
+  </div>
+</div>
