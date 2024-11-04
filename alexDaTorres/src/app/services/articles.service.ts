@@ -37,8 +37,111 @@ export class ArticlesService {
       link: 'https://www.lanuovasardegna.it/sassari/cronaca/2020/09/01/news/alex-da-torres-sbarca-a-venezia-1.39257858',
     },
   ];
+  // Mostre Collettive
+  collectiveExhibitionsArray = [
+    {
+      text: 'Festival di Venezia 2020',
+      thumb: 'assets/mostre/free.jpeg'
+    },
+    {
+      text: 'Biennale di Milano',
+      thumb: 'assets/biennale/milano.jpeg'
+    },
+    {
+      text: 'Fiera Mercato di Forlì',
+      thumb: 'assets/mostre/bastione.jpeg'
+    },
+    {
+      text: 'Villa Breda a Padova',
+      thumb: 'assets/galleria/breda.jpeg'
+    },
+    {
+      text: 'Roma',
+      thumb: 'assets/galleria/e.jpg'
+    }
+  ];
 
-  getArticles(): any[] {
-    return this.articles;
+  // Finali Artistiche
+  artisticFinalsArray = [
+    {
+      text: 'Amatrice finale internazionale teatro alla verme',
+      thumb: 'assets/finali/amatrice.jpeg'
+    },
+    {
+      text: 'Arte e laguna',
+      thumb: 'assets/finali/arteLaguna.jpeg'
+    },
+    {
+      text: 'Premio internazionale arte Milano',
+      thumb: 'assets/galleria/g.jpg'
+    }
+  ];
+
+  // Premi
+  awardsExtraArray = [
+    {
+      text: 'Premio Internazionale Berlino',
+      thumb: 'assets/premiati e in mostra/berlino.jpg'
+    },
+    {
+      text: 'Premio Internazionale Paolo Levi',
+      thumb: 'assets/premiati e in mostra/paoloLevi.jpeg'
+    }
+  ];
+
+  // Sponsorizzazioni
+  sponsorshipsArray = [
+    'Mondadori'
+  ];
+
+  // Quadri
+  paintingsArray = [
+    {
+      titolo: 'Capo Comino',
+      text: 'Rappresentazione di Capo Comino.',
+      thumb: 'assets/mostre/capocomino.jpg'
+    },
+    {
+      titolo: 'L\'isola di Tavolara',
+      text: 'Quadro ispirato all\'isola di Tavolara.',
+      thumb: 'assets/mostre/isolatavolara.jpeg'
+    }
+  ];
+
+  // Film Associato
+  associatedFilm = 'Free';
+
+  // Metodi per ottenere i dati
+  getCollectiveExhibitions() {
+    return this.collectiveExhibitionsArray;
+  }
+
+  getArtisticFinals() {
+    return this.artisticFinalsArray;
+  }
+
+  getExtraAwards() {
+    return this.awardsExtraArray;
+  }
+
+  getSponsorships() {
+    return this.sponsorshipsArray;
+  }
+
+  getPaintings() {
+    return this.paintingsArray;
+  }
+
+  getAssociatedFilm() {
+    return this.associatedFilm;
+  }
+
+  // Metodo per gestire i link
+  openExternalLink(url: string) {
+    window.open(url, '_blank');
+  }
+  getArticles(){
+    return this.articles
   }
 }
+

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ArticlesService } from 'src/app/services/articles.service';
 
 @Component({
   selector: 'app-mostre',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './mostre.component.scss'
 })
 export class MostreComponent {
+  constructor(public articlesService:ArticlesService){
 
+  }
 }

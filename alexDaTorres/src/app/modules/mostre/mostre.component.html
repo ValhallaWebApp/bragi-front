@@ -1,3 +1,60 @@
-<section>
-  <h2>Mostre e Collezioni</h2>
+<section class="awards-exhibitions-container">
+  <!-- Premi e Riconoscimenti -->
+  <div class="awards-section">
+    <h2>Premi e Riconoscimenti</h2>
+    <div class="awards-list">
+      <div class="award-card" *ngFor="let award of articlesService?.getExtraAwards()">
+        <img [src]="'../../../'+award.thumb" alt="Immagine del premio" />
+        <h3>{{ award.text }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mostre Collettive -->
+  <div class="exhibitions-section">
+    <h2>Mostre Collettive</h2>
+    <div class="exhibitions-timeline">
+      <div class="exhibition-card" *ngFor="let exhibition of articlesService?.getCollectiveExhibitions()">
+        <img [src]="'../../../'+exhibition.thumb" alt="{{ exhibition.text }}" />
+        <h3>{{ exhibition.text }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Finali Artistiche -->
+  <div class="artistic-finals-section">
+    <h2>Finali Artistiche</h2>
+    <div class="finals-timeline">
+      <div class="final-card" *ngFor="let final of articlesService?.getArtisticFinals()">
+        <img [src]="'../../../'+final.thumb" alt="{{ final.text }}" />
+        <h3>{{ final.text }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quadri -->
+  <div class="paintings-section">
+    <h2>Quadri</h2>
+    <div class="paintings-list">
+      <div class="painting-card" *ngFor="let painting of articlesService?.getPaintings()">
+        <img [src]="'../../../'+painting.thumb" alt="{{ painting.titolo }}" />
+        <h3>{{ painting.titolo }}</h3>
+        <p>{{ painting.text }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sponsorizzazioni -->
+  <div class="sponsorships-section">
+    <h2>Sponsorizzazioni</h2>
+    <ul>
+      <li *ngFor="let sponsor of articlesService?.getSponsorships()">{{ sponsor }}</li>
+    </ul>
+  </div>
+
+  <!-- Film Associato -->
+  <div class="associated-film-section">
+    <h2>Film Associato</h2>
+    <p>{{ articlesService?.getAssociatedFilm() }}</p>
+  </div>
 </section>

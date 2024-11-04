@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-
+ // Metodo per gestire i link
+ openExternalLink(url: string) {
+  window.open(url, '_blank');
+}
 }

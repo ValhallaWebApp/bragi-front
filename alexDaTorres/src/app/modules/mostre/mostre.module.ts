@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MostreRoutingModule } from './mostre-routing.module';
 import { MostreComponent } from './mostre.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { MostreComponent } from './mostre.component';
   ],
   imports: [
     CommonModule,
-    MostreRoutingModule
+    MostreRoutingModule,
+    MatButtonModule
   ]
 })
 export class MostreModule { }

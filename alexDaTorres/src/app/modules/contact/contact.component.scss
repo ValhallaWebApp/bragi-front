@@ -6,14 +6,35 @@
 }
 /* Media query per display computer */
 @media screen and (min-width: 1024px) {
+  .thumb{
+    display: flex;
+    flex-wrap: nowrap;
+    img{
+      width: auto;
+      max-height: 90vh;
+    }
+    p{
+      padding: 10px 10px;
+     text-align: center;
+      margin: 0px;
+      font-size: 1.2rem;
+    }
+  }
 
 }
-
+.info-text{
+  color: #705d56;
+  margin: auto;
+  h1{
+    font-family: 'title';
+    font-weight: 900;
+    font-size: 2rem;
+  }
+}
 section{
   font-family: 'title';
   background-color: rgba(242, 204, 209, 0.418);
   text-align: center;
-
   p{
     padding: 15px;
     font-size: 1.2rem;
@@ -34,21 +55,18 @@ section{
   }
 }
 .thumb{
-  display: flex;
+
   max-width: 100vw;
   img{
-
+    max-width: 100vw;
   }
   p{
-    width: 50vw;
-    min-width: 250px;
-    background-color: rgba(0, 0, 0, 0.675);
-    color: beige;
-    padding: 0px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px 10px;
+    text-align: center;
     margin: 0px;
     font-size: 1.2rem;
   }
+}
+button{
+  margin: 5px;
 }
