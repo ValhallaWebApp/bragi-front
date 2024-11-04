@@ -10,13 +10,16 @@ ng generate module modules/shared
 
 # Pop up component
 ng generate component components/dialog/artwork-dialog
+
 # Contact shortcut component
 ng generate component components/shortcut/contact-icon
+
 # Home Module
 ng generate module modules/home --route home --module app.module
 ng generate component modules/home/components/hero-banner
 ng generate component modules/home/components/feature-gallery
 ng generate component modules/home/components/testimonials
+
 # Mostre Module
 ng generate module modules/mostre --route mostre --module app.module
 # Who Module

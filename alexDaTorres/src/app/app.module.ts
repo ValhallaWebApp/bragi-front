@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { ContactIconComponent } from './components/shortcut/contact-icon/contact-icon.component';
 
 //material
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -22,6 +23,7 @@ import { MatInputModule } from '@angular/material/input';         // Per utilizz
 import { MatSelectModule } from '@angular/material/select';       // Per utilizzare i menu a tendina (select)
 import { MatFormFieldModule } from '@angular/material/form-field'; // Per utilizzare i contenitori dei campi di input (form-field)
 import { MatDialogModule } from '@angular/material/dialog';
+import { ContactModule } from './modules/contact/contact.module';
 // Funzione per caricare i file di traduzione
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -33,7 +35,6 @@ export function HttpLoaderFactory(http: HttpClient) {
         HeaderComponent,
         BannerComponent,
         FooterComponent,
-
     ],
     bootstrap: [AppComponent], imports: [
         BrowserModule,
@@ -46,6 +47,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         BrowserAnimationsModule,
         MatDialogModule,
         MatButtonModule,
+        ContactModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

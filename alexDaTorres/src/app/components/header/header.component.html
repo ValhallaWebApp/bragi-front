@@ -10,9 +10,31 @@
     <!-- <span class="header-title">{{ "HEADER.TITLE" | translate }}</span> -->
 
     <!-- Icona per il download con tooltip tradotto -->
-    <button mat-icon-button class="download-icon">
-      <mat-icon>cloud_download</mat-icon>
-    </button>
+    <div
+    #dropdown
+    class="custom-select"
+    (click)="toggleDropdown()"
+    [attr.aria-expanded]="dropdownOpen"
+  >
+    <div class="selected-language">
+      <img
+        [src]="getFlag(currentLanguage)"
+        width="20px"
+        [alt]="currentLanguage"
+      />
+      {{ getLanguageName(currentLanguage) }}
+    </div>
+    <div class="options" *ngIf="dropdownOpen">
+      <div
+        class="option"
+        *ngFor="let lang of languages"
+        (click)="selectLanguage($event, lang)"
+      >
+        <img [src]="getFlag(lang)" width="20px" [alt]="lang" />
+        {{ getLanguageName(lang) }}
+      </div>
+    </div>
+  </div>
 </mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container">
@@ -38,6 +60,13 @@
       <a mat-list-item routerLink="/contact" (click)="sidenav.close()">
         {{ "HEADER.MENU.CONTACT" | translate }}
       </a>
+      <div class="magazzine-download-button">
+        <button mat-raised-button color="accent">
+          <mat-icon>cloud_download</mat-icon>
+          {{ "MAGAZINE.DOWNLOAD_BUTTON" | translate }}
+        </button>
+      </div>
+      <app-contact-icon></app-contact-icon>
       <!-- Custom Dropdown per la Lingua -->
       <div
         #dropdown
@@ -63,12 +92,6 @@
             {{ getLanguageName(lang) }}
           </div>
         </div>
-      </div>
-      <div class="magazzine-download-button">
-        <button mat-raised-button color="accent">
-          <mat-icon>cloud_download</mat-icon>
-          {{ "MAGAZINE.DOWNLOAD_BUTTON" | translate }}
-        </button>
       </div>
     </mat-nav-list>
   </mat-sidenav>
