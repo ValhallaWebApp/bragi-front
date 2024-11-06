@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ArtworksService } from '../../../../services/artworks.service'; // Verifica il percorso corretto
 import { TranslateService } from '@ngx-translate/core';
 import { forkJoin, Observable, tap } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { ArtworkDialogComponent } from 'src/app/components/dialog/artwork-dialog/artwork-dialog.component';
 
 @Component({
   selector: 'app-artworks-gallery',
@@ -10,7 +12,7 @@ import { forkJoin, Observable, tap } from 'rxjs';
 })
 export class ArtworksGalleryComponent implements OnInit {
   artworks:any
-  constructor(public artworksService: ArtworksService, public translate:TranslateService) {}
+  constructor(public dialog: MatDialog,public artworksService: ArtworksService, public translate:TranslateService) {}
 
   ngOnInit(): void {
   }
@@ -22,5 +24,10 @@ export class ArtworksGalleryComponent implements OnInit {
       console.log(key,this.translate.get(key))
       return this.translate.get(key);
     }
-
+    openArtworkDialog(artwork: any): void {
+      const dialogRef = this.dialog.open(ArtworkDialogComponent, {
+        width: '400px',
+        data: artwork,
+      });
+    }
 }

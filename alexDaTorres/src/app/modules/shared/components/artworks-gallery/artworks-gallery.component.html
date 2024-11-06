@@ -1,7 +1,7 @@
 <section class="feature-gallery">
   <h1>{{ 'GALLERY.TITLE' | translate }}</h1>
   <div class="gallery-container">
-    <div class="gallery-item" *ngFor="let artwork of artworksService.getArtworks()">
+    <div class="gallery-item" *ngFor="let artwork of artworksService.getArtworks()" >
       <div class="image-wrapper">
         <img src="../../../../../{{artwork?.thumb}}" [alt]="artwork.nome | translate" class="artwork-image">
       </div>
@@ -9,7 +9,7 @@
         <h3>{{ artwork.nome | translate }}</h3>
         <!-- <p>{{ artwork.descriptionKey | translate }}</p> -->
         <p>{{ artwork.tecnicaKey | translate}}</p>
-        <button class="artwork-details-button" (click)="viewArtworkDetails(artwork)">{{ 'VIEW_DETAILS' | translate }}</button>
+        <button class="artwork-details-button" (click)="openArtworkDialog(artwork)">{{ 'VIEW_DETAILS' | translate }}</button>
       </div>
     </div>
   </div>
