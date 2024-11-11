@@ -32,7 +32,6 @@ export class GalleryComponent {
       filteredArray = filteredArray.filter((artWork:any) =>
         artWork.tecnica?.toLowerCase().includes(this.selectedTecnica.toLowerCase())
       );
-      console.log(this.selectedTecnica,)
     }
 
     // Filtra per titolo
@@ -63,7 +62,6 @@ export class GalleryComponent {
   }
   // Metodo per assegnare un rating (numero di stelle) a un'opera d'arte
   rateArtwork(artworkId: any, rating: number) {
-    console.log(artworkId, rating)
     // Trova l'opera d'arte corrispondente e assegna il rating
     const artwork = this.artworksArray.find((art: any) => art.id === artworkId);
     if (artwork) {

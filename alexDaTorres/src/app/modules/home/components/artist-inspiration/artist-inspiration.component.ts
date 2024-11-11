@@ -3,6 +3,7 @@ import { ArticlesService } from 'src/app/services/articles.service';
 
 @Component({
   selector: 'app-artist-inspiration',
+  standalone:false,
   templateUrl: './artist-inspiration.component.html',
   styleUrls: ['./artist-inspiration.component.scss']
 })

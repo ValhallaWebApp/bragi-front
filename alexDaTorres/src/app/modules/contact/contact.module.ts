@@ -5,20 +5,23 @@ import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact.component';
 import { MatButtonModule } from '@angular/material/button';
 import { ContactIconComponent } from "../../components/shortcut/contact-icon/contact-icon.component";
+import { ContactFormComponent } from 'src/app/components/contact-form/contact-form.component';
 
 
 @NgModule({
   declarations: [
     ContactComponent,
-    ContactIconComponent
+    ContactIconComponent,
+    ContactFormComponent
   ],
   imports: [
-    CommonModule,
     ContactRoutingModule,
     MatButtonModule,
 ],
 exports:[
-  ContactIconComponent
+  ContactComponent,
+  ContactIconComponent,
+  ContactFormComponent
 ]
 })
 export class ContactModule { }

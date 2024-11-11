@@ -82,7 +82,6 @@ export class ArtworksService {
   constructor() {}
 
   getArtworks() {
-    console.log(this.artworks)
     return this.artworks;
   }
 

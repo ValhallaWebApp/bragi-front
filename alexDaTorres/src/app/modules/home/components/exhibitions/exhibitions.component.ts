@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-exhibitions',
+  standalone:false,
   templateUrl: './exhibitions.component.html',
   styleUrls: ['./exhibitions.component.scss']
 })

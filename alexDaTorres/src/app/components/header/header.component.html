@@ -42,6 +42,9 @@
   <mat-sidenav #sidenav mode="over" class="sidenav" [opened]="false">
     <mat-nav-list>
       <!-- I link del menu sono tradotti tramite ngx-translate -->
+      <a mat-list-item routerLink="/auth/login" (click)="sidenav.close()">
+        {{ "Test Login" }}
+      </a>
       <a mat-list-item routerLink="/" (click)="sidenav.close()">
         {{ "HEADER.MENU.HOME" | translate }}
       </a>

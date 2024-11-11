@@ -7,6 +7,7 @@ import { ArtworkDialogComponent } from 'src/app/components/dialog/artwork-dialog
 
 @Component({
   selector: 'app-artworks-gallery',
+  standalone:false,
   templateUrl: './artworks-gallery.component.html',
   styleUrls: ['./artworks-gallery.component.scss']
 })

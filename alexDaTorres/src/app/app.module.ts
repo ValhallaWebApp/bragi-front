@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { AuthModule } from '@angular/fire/auth';
+import { importProvidersFrom, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,19 +25,28 @@ import { MatSelectModule } from '@angular/material/select';       // Per utilizz
 import { MatFormFieldModule } from '@angular/material/form-field'; // Per utilizzare i contenitori dei campi di input (form-field)
 import { MatDialogModule } from '@angular/material/dialog';
 import { ContactModule } from './modules/contact/contact.module';
+
+import { FormsModule } from '@angular/forms';
+
+// Firebase e AngularFire
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from './environment';
 // Funzione per caricare i file di traduzione
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
-
-@NgModule({ declarations: [
+@NgModule({
+  declarations: [
         AppComponent,
-        ContactFormComponent,
         HeaderComponent,
         BannerComponent,
-        FooterComponent,
+        FooterComponent
     ],
-    bootstrap: [AppComponent], imports: [
+    bootstrap: [AppComponent],
+    exports:[AuthModule],
+    imports: [
         BrowserModule,
         AppRoutingModule,
         MatSidenavModule,
@@ -48,11 +58,24 @@ export function HttpLoaderFactory(http: HttpClient) {
         MatDialogModule,
         MatButtonModule,
         ContactModule,
+        FormsModule,
+        AuthModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFireAuthModule,
+        AngularFirestoreModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
                 useFactory: HttpLoaderFactory,
                 deps: [HttpClient]
             }
-        })], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        }),
+      ],
+        providers: [
+          provideHttpClient(withInterceptorsFromDi()),
+          // importProvidersFrom(
+          //   provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+          //   provideAuth(() => getAuth())
+          // )
+        ] })
 export class AppModule { }

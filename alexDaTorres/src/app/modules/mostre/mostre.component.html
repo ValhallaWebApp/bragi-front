@@ -55,6 +55,6 @@
   <!-- Film Associato -->
   <div class="associated-film-section">
     <h2>Film Associato</h2>
-    <p>{{ articlesService?.getAssociatedFilm() }}</p>
+    <p>{{ articlesService.getAssociatedFilm()?  articlesService.getAssociatedFilm() : ''}}</p>
   </div>
 </section>

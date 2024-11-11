@@ -5,6 +5,7 @@ import { ArtworksService } from 'src/app/services/artworks.service';
 
 @Component({
   selector: 'app-home',
+  standalone:false,
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
