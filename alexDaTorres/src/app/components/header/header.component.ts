@@ -1,6 +1,8 @@
 import { Component, ViewChild, ElementRef, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -18,7 +20,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   domain = '';
   private documentClickListener!: () => void;
 
-  constructor(public translate: TranslateService, private renderer: Renderer2) {}
+  constructor(private authService: AuthService, private router: Router,public translate: TranslateService, private renderer: Renderer2) {}
 
   ngOnInit() {
     this.domain = window.location.hostname;
@@ -69,5 +71,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
       case 'fr': return 'Français';
       default: return '';
     }
+  }
+
+    onLogout() {
+    this.authService.logout()
+      .then(() => {
+        console.log('Logout avvenuto con successo!');
+        this.router.navigate(['/auth/login']);  // Reindirizza l'utente alla pagina di login
+      })
+      .catch((error) => {
+        console.error('Errore durante il logout:', error);
+      });
   }
 }

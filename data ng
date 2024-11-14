@@ -4,9 +4,17 @@
 ng new alexDaTorres-frontend
 cd alexDaTorres-frontend
 
+# Guard Auth
+ng generate guard services/auth
+
 # Core and Shared Modules
 ng generate module modules/core --routing
 ng generate module modules/shared
+
+# Auth component
+
+ng generate component modules/auth/components/login
+ng generate component modules/auth/components/register
 
 # Pop up component
 ng generate component components/dialog/artwork-dialog

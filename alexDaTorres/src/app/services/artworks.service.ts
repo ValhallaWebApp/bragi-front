@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -79,17 +82,28 @@ export class ArtworksService {
     }
   ];
 
-  constructor() {}
+  private apiUrl = 'https://bragi-alex-default-rtdb.firebaseio.com/paints/'; // URL API per il backend dei quadri
 
+  constructor(private http: HttpClient,private db: AngularFireDatabase) {}
+
+  // Get all artworks
   getArtworks() {
-    return this.artworks;
+    return this.db.list('/paints').valueChanges();
   }
 
-  getArtworkByTitle(titleKey: string): any | undefined {
-    return this.artworks.find((artwork: any) => artwork.titleKey === titleKey);
+  // Create a new artwork
+  createArtwork(artwork: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, artwork);
   }
 
-  getArtworksByCategory(category: string): any[] {
-    return this.artworks.filter((artwork: any) => artwork.category === category);
+  // Update an existing artwork
+  updateArtwork(id: string, artwork: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${id}`, artwork);
+  }
+
+  // Delete an artwork
+  deleteArtwork(id: string): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/${id}`);
   }
 }
+

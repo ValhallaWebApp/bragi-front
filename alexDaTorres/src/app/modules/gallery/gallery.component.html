@@ -66,18 +66,33 @@
   </div>
 
   <!-- Sezione Opere della Galleria -->
-  <div class="container">
-    <div class="card" *ngFor="let artWork of filteredArtworksArray">
-      <img [src]="artWork.thumb" alt="" (click)="openArtworkDialog(artWork)"/>
-      <h3>{{ artWork.nome }}</h3>
-      <h2>{{artWork.anno}}</h2>
-      <h2>{{artWork.tecnicaKey | translate}}</h2>
-      <!-- Sezione per mostrare il rating in stelle -->
-      <div class="rating">
-        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index" (click)="rateArtwork(artWork.id,i)">
-          <mat-icon [ngClass]="{'active': i < artWork.rating}" >star</mat-icon>
-        </ng-container>
-      </div>
+ <!-- Sezione Opere della Galleria -->
+<div *ngIf="isLoaded; else loading" class="container">
+  <div class="card" *ngFor="let artWork of filteredArtworksArray">
+    <img
+      [src]="'../../../assets/img/' + artWork.thumb"
+      alt="{{ artWork.nome }}"
+      (click)="openArtworkDialog(artWork)"
+    />
+    <h3>{{ artWork.Nome }}</h3>
+    <h4>{{ artWork.ANNO }}</h4>
+    <h5>{{ artWork.Tecnica | translate }}</h5>
+
+    <!-- Sezione per mostrare il rating in stelle -->
+    <div class="rating">
+      <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+        <mat-icon
+          (click)="rateArtwork(artWork.id, i)"
+          [ngClass]="{ active: i < artWork?.rating }"
+          >star</mat-icon
+        >
+      </ng-container>
     </div>
   </div>
+</div>
+
+<ng-template #loading>
+  <p>Caricamento in corso...</p>
+</ng-template>
+
 </section>

@@ -12,15 +12,26 @@ import { MatDialog } from '@angular/material/dialog';
 export class GalleryComponent {
   artworksArray:any = [];
   filteredArtworksArray:any = [];
-
+  isLoaded: boolean = false;
   // Filtri
   selectedTecnica: string = '';
   searchTitle: string = '';
   searchYear: number | any = null;
   selectedOrder: string = '0';
-
+  ngOnInit(){
+      this.artworksService.getArtworks().subscribe(
+        (data) => {
+          this.artworksArray = data;
+          this.filteredArtworksArray = [...this.artworksArray]; // Clona i dati
+          this.isLoaded = true;
+        },
+        (error) => {
+          console.error('Errore durante il recupero dei dati:', error);
+        }
+      );
+  }
   constructor(private artworksService: ArtworksService,public translate: TranslateService,public dialog: MatDialog) {
-    this.artworksArray = this.artworksService.getArtworks();
+
     this.filteredArtworksArray = this.artworksArray;
   }
 

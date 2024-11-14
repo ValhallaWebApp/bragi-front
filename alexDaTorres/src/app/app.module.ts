@@ -33,6 +33,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from './environment';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+
 // Funzione per caricare i file di traduzione
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -61,6 +63,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         FormsModule,
         AuthModule,
         AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFireDatabaseModule,
         AngularFireAuthModule,
         AngularFirestoreModule,
         TranslateModule.forRoot({

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   {
@@ -29,8 +30,9 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    loadChildren: () =>
-      import('./modules/admin/admin.module').then((m) => m.AdminModule),
+    loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule),
+    canActivate: [AuthGuard],  // Protegge la rotta 'Admin' con l'AuthGuard
+    canLoad: [AuthGuard]       // Evita di caricare il modulo se l'utente non è autenticato
   },
   {
     path: 'who',

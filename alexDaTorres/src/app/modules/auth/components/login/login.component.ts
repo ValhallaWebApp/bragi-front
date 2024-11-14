@@ -17,6 +17,7 @@ export class LoginComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
+
   }
 
   onLogin() {
@@ -32,4 +33,5 @@ export class LoginComponent {
         });
     }
   }
+
 }

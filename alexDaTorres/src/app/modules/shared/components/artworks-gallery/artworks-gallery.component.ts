@@ -31,4 +31,9 @@ export class ArtworksGalleryComponent implements OnInit {
         data: artwork,
       });
     }
+    getArtworks(){
+      this.artworksService.getArtworks().subscribe(( data:any) => {
+        this.artworks = data;
+      });
+    }
 }
