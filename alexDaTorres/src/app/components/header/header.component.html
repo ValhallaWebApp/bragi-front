@@ -42,9 +42,9 @@
   <mat-sidenav #sidenav mode="over" class="sidenav" [opened]="false">
     <mat-nav-list>
       <!-- I link del menu sono tradotti tramite ngx-translate -->
-      <a mat-list-item routerLink="/auth/login" (click)="sidenav.close()">
+      <!-- <a mat-list-item routerLink="/auth/login" (click)="sidenav.close()">
         {{ "Test Login" }}
-      </a>
+      </a> -->
       <a mat-list-item routerLink="/" (click)="sidenav.close()">
         {{ "HEADER.MENU.HOME" | translate }}
       </a>
@@ -69,36 +69,11 @@
           {{ "MAGAZINE.DOWNLOAD_BUTTON" | translate }}
         </button>
       </div>
-      <button mat-raised-button color="warn" (click)="onLogout()">
+      <!-- <button mat-raised-button color="warn" (click)="onLogout()">
         Logout
-      </button>
+      </button> -->
       <app-contact-icon></app-contact-icon>
       <!-- Custom Dropdown per la Lingua -->
-      <div
-        #dropdown
-        class="custom-select"
-        (click)="toggleDropdown()"
-        [attr.aria-expanded]="dropdownOpen"
-      >
-        <div class="selected-language">
-          <img
-            [src]="getFlag(currentLanguage)"
-            width="20px"
-            [alt]="currentLanguage"
-          />
-          {{ getLanguageName(currentLanguage) }}
-        </div>
-        <div class="options" *ngIf="dropdownOpen">
-          <div
-            class="option"
-            *ngFor="let lang of languages"
-            (click)="selectLanguage($event, lang)"
-          >
-            <img [src]="getFlag(lang)" width="20px" [alt]="lang" />
-            {{ getLanguageName(lang) }}
-          </div>
-        </div>
-      </div>
     </mat-nav-list>
   </mat-sidenav>
 

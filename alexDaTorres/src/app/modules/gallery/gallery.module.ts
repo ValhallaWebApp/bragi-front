@@ -35,7 +35,8 @@ import { ArtworkDialogComponent } from 'src/app/components/dialog/artwork-dialog
     MatButtonModule,
     FormsModule,
     TranslateModule,
-    DialogModule
+    DialogModule,
+    MatButtonModule
   ]
 })
 export class GalleryModule { }

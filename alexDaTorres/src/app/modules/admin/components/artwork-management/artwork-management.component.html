@@ -1,1 +1,20 @@
-<p>artwork-management works!</p>
+<section>
+  <h1>Modifica e gestisci i tuoi quadri</h1>
+  <button (click)="addAllArtworks()">pinooooooooooo</button>
+  <div class="container-artworks">
+    <div class="artwork-card" *ngFor="let artWork of artworksArray">
+      <div>
+        <img src="../../../../../assets/img/{{artWork.thumbnail}}" alt="">
+      </div>
+      <div>
+        <!-- creare un nuovo componente dialog che possa permettere la modifica del quadro  -->
+        <button (click)="editArtwork(artWork)" mat-raised-button color="primary">
+          Modifica
+        </button>
+        <button mat-raised-button color="secondary">
+          {{artWork.flag ? 'Nascondi': 'Visualizza'}}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

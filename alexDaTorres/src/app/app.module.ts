@@ -1,3 +1,4 @@
+import { AdminModule } from './modules/admin/admin.module';
 import { AuthModule } from '@angular/fire/auth';
 import { importProvidersFrom, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';

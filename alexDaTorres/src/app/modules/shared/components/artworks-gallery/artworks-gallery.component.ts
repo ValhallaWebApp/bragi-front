@@ -16,6 +16,7 @@ export class ArtworksGalleryComponent implements OnInit {
   constructor(public dialog: MatDialog,public artworksService: ArtworksService, public translate:TranslateService) {}
 
   ngOnInit(): void {
+    this.getArtworks()
   }
     // Placeholder function to handle view details button click
      viewArtworkDetails(artwork:any) {

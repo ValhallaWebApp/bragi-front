@@ -31,8 +31,8 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule),
-    canActivate: [AuthGuard],  // Protegge la rotta 'Admin' con l'AuthGuard
-    canLoad: [AuthGuard]       // Evita di caricare il modulo se l'utente non è autenticato
+    // canActivate: [AuthGuard],  // Protegge la rotta 'Admin' con l'AuthGuard
+    // canLoad: [AuthGuard]       // Evita di caricare il modulo se l'utente non è autenticato
   },
   {
     path: 'who',

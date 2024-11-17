@@ -1,47 +1,477 @@
 [
-  {
-    "titleKey": "ARTWORKS.ELEPHANTS_SEA_TITLE",
-    "descriptionKey": "ARTWORKS.ELEPHANTS_SEA_DESCRIPTION",
-    "image": "assets/galleria/a.jpg"
-  },
-  {
-    "titleKey": "ARTWORKS.BOATS_SUNSET_TITLE",
-    "descriptionKey": "ARTWORKS.BOATS_SUNSET_DESCRIPTION",
-    "image": "assets/galleria/barche_tramonto.jpg"
-  },
-  {
-    "titleKey": "ARTWORKS.SUNSET_WATER_TITLE",
-    "descriptionKey": "ARTWORKS.SUNSET_WATER_DESCRIPTION",
-    "image": "assets/galleria/sole_tramonto_acqua.jpg"
-  },
-  {
-    "titleKey": "ARTWORKS.TULIP_FIELDS_TITLE",
-    "descriptionKey": "ARTWORKS.TULIP_FIELDS_DESCRIPTION",
-    "image": "assets/galleria/campi_tulipani.jpg"
-  },
-  {
-    "titleKey": "ARTWORKS.URBAN_LANDSCAPE_TITLE",
-    "descriptionKey": "ARTWORKS.URBAN_LANDSCAPE_DESCRIPTION",
-    "image": "assets/galleria/paesaggio_urbano.jpg"
-  },
-  {
-    "titleKey": "ARTWORKS.PORT_SUNSET_TITLE",
-    "descriptionKey": "ARTWORKS.PORT_SUNSET_DESCRIPTION",
-    "image": "assets/galleria/porto_tramonto.jpg"
-  },
-  {
-    "titleKey": "ARTWORKS.BERLIN_FESTIVAL_TITLE",
-    "descriptionKey": "ARTWORKS.BERLIN_FESTIVAL_DESCRIPTION",
-    "image": "assets/galleria/berlino.jpg"
-  },
-  {
-    "titleKey": "ARTWORKS.MILAN_EXHIBITION_TITLE",
-    "descriptionKey": "ARTWORKS.MILAN_EXHIBITION_DESCRIPTION",
-    "image": "assets/galleria/milano.jpg"
-  },
-  {
-    "titleKey": "ARTWORKS.SARDINIA_TITLE",
-    "descriptionKey": "ARTWORKS.SARDINIA_DESCRIPTION",
-    "image": "assets/galleria/sardegna.jpg"
-  }
+    {
+        "id": "-NiVKzojxE6jn7J-eEaa",
+        "year": 2023,
+        "dimensions": {
+            "width": 150,
+            "height": 100,
+            "unit": "cm"
+        },
+        "title": "Anima e cuore del Turritano",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 3,
+        "thumbnail": "24.jpg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzojxE6jn7J-eEpq",
+        "year": 2023,
+        "dimensions": {
+            "width": 70,
+            "height": 100,
+            "unit": "cm"
+        },
+        "title": "I Sogni sono come il Tramonto, se aspetti svaniscono",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 18,
+        "thumbnail": "22.jpeg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzojxE6jn7J-eEsq",
+        "year": 2024,
+        "dimensions": {
+            "width": 70,
+            "height": 100,
+            "unit": "cm"
+        },
+        "title": "Vorrei illuminarti l'anima",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 0,
+        "thumbnail": "23.jpg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzojxE6jn7J-epyy",
+        "year": 2024,
+        "dimensions": {
+            "width": 70,
+            "height": 100,
+            "unit": "cm"
+        },
+        "title": "Il ricordo di un amore puro",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 1,
+        "thumbnail": "ee.jpg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzopBq2Lbkt7o2fq",
+        "year": 2023,
+        "dimensions": {
+            "width": 100,
+            "height": 70,
+            "unit": "cm"
+        },
+        "title": "Un Sogno nel Cassetto",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 5,
+        "thumbnail": "1.jpg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzorcMMGmCXq1jhS",
+        "year": null,
+        "dimensions": {
+            "width": 100,
+            "height": 120,
+            "unit": "cm"
+        },
+        "title": "Molo Turritano",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 4,
+        "thumbnail": "2.jpg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzos5G-PNeIn5Wtw",
+        "year": null,
+        "dimensions": {
+            "width": 100,
+            "height": 70,
+            "unit": "cm"
+        },
+        "title": "Liberi di volare",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 1,
+        "thumbnail": "3.JPG",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzoth3KZHtvAZiis",
+        "year": 2019,
+        "dimensions": {
+            "width": 100,
+            "height": 130,
+            "unit": "cm"
+        },
+        "title": "Stagno di Cabras",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 1,
+        "thumbnail": "4.jpg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzoucwaRg8D9WxhE",
+        "year": 2019,
+        "dimensions": {
+            "width": 110,
+            "height": 90,
+            "unit": "cm"
+        },
+        "title": "Ritorner\u00f2 a volare",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 1,
+        "thumbnail": "5.jpg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzovbsYcVhhoSNsk",
+        "year": null,
+        "dimensions": {
+            "width": 80,
+            "height": 100,
+            "unit": "cm"
+        },
+        "title": "La luce della speranza",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 2,
+        "thumbnail": "6.jpg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzowJFdBQDnNLxyv",
+        "year": 2021,
+        "dimensions": {
+            "width": 100,
+            "height": 130,
+            "unit": "cm"
+        },
+        "title": "Tu sei Speciale",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 0,
+        "thumbnail": "7.jpg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzoxfxO-xfysV1KT",
+        "year": null,
+        "dimensions": {
+            "width": 100,
+            "height": 100,
+            "unit": "cm"
+        },
+        "title": "Il gitano che veglia sulla costa catalana",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 0,
+        "thumbnail": "8.jpg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzoyRIKeEdQYBbrH",
+        "year": null,
+        "dimensions": {
+            "width": 50,
+            "height": 70,
+            "unit": "cm"
+        },
+        "title": "Goditi il tuo tempo perchè domani è troppo tardi",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 0,
+        "thumbnail": "9.jpg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzozGC4EfE-jrPVh",
+        "year": null,
+        "dimensions": {
+            "width": 100,
+            "height": 150,
+            "unit": "cm"
+        },
+        "title": "Enigmi",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 0,
+        "thumbnail": "10.jpg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzp-ax9a51PIUudB",
+        "year": null,
+        "dimensions": {
+            "width": 100,
+            "height": 100,
+            "unit": "cm"
+        },
+        "title": "Il risveglio a colori",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 1,
+        "thumbnail": "11.jpg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzp-ax9a51PIUudC",
+        "year": 2021,
+        "dimensions": {
+            "width": 80,
+            "height": 80,
+            "unit": "cm"
+        },
+        "title": "L\u2019isola rossa",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 0,
+        "thumbnail": "12.jpg",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzp002_KITeqjPm5",
+        "year": null,
+        "dimensions": {
+            "width": 100,
+            "height": 100,
+            "unit": "cm"
+        },
+        "title": "Una splendida Serata",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 0,
+        "thumbnail": "13.JPG",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzp1XCPpS4Zl3Rwe",
+        "year": 2021,
+        "dimensions": {
+            "width": 100,
+            "height": 100,
+            "unit": "cm"
+        },
+        "title": "La melodia dei gabbiani",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 1,
+        "thumbnail": "14.JPG",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzp2v5MIteO1TTWl",
+        "year": 2022,
+        "dimensions": {
+            "width": 120,
+            "height": 100,
+            "unit": "cm"
+        },
+        "title": "Fai volare i tuoi sogni",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 1,
+        "thumbnail": "15.JPG",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzp3pO338QN9ActW",
+        "year": null,
+        "dimensions": {
+            "width": 150,
+            "height": 100,
+            "unit": "cm"
+        },
+        "title": "Il giardino degli illuminati",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 1,
+        "thumbnail": "16.JPG",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzp4UL2_ilaCcSKB",
+        "year": null,
+        "dimensions": {
+            "width": 120,
+            "height": 80,
+            "unit": "cm"
+        },
+        "title": "E Viva la gioia di vivere",
+        "technique": "Acrilico",
+        "availability": true,
+        "likes": 1,
+        "thumbnail": "17.JPG",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzp4UL2_ilaCcSKC",
+        "year": 2017,
+        "dimensions": {
+            "width": 50,
+            "height": 70,
+            "unit": "cm"
+        },
+        "title": "La Raccolta delle castagne",
+        "technique": "Olio",
+        "availability": true,
+        "likes": 0,
+        "thumbnail": "18.JPG",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzp5NHmreqTTZNsy",
+        "year": 2004,
+        "dimensions": {
+            "width": 50,
+            "height": 70,
+            "unit": "cm"
+        },
+        "title": "Il promontorio di Vieste",
+        "technique": "Olio",
+        "availability": true,
+        "likes": 0,
+        "thumbnail": "19.JPG",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzp6KUiSLW_DkeU-",
+        "year": 2017,
+        "dimensions": {
+            "width": 80,
+            "height": 80,
+            "unit": "cm"
+        },
+        "title": "Prime luci turritane",
+        "technique": "Olio",
+        "availability": true,
+        "likes": 0,
+        "thumbnail": "20.JPG",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    },
+    {
+        "id": "-NiVKzp70ap1d0qdd1oi",
+        "year": null,
+        "dimensions": {
+            "width": 50,
+            "height": 40,
+            "unit": "cm"
+        },
+        "title": "La Serenità non ha un limite",
+        "technique": "Olio",
+        "availability": true,
+        "likes": 0,
+        "thumbnail": "21.JPG",
+        "rating": {
+            "average": 0,
+            "totalVotes": 0,
+            "reviews": []
+        }
+    }
 ]

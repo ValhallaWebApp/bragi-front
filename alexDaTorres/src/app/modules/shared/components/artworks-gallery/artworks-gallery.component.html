@@ -3,12 +3,12 @@
   <div class="gallery-container">
     <div class="gallery-item" *ngFor="let artwork of artworks" >
       <div class="image-wrapper">
-        <img src="../../../../../{{artwork?.thumb}}" [alt]="artwork.nome | translate" class="artwork-image">
+        <img src="../../../../../assets/img/{{artwork?.thumbnail}}" [alt]="artwork.title | translate" class="artwork-image">
       </div>
       <div class="artwork-caption">
-        <h3>{{ artwork?.Nome | translate }}</h3>
+        <h3>{{ artwork?.title | translate }}</h3>
         <!-- <p>{{ artwork.descriptionKey | translate }}</p> -->
-        <p>{{ artwork.tecnicaKey | translate}}</p>
+        <p>{{ artwork.technique | translate}}</p>
         <button class="artwork-details-button" (click)="openArtworkDialog(artwork)">{{ 'VIEW_DETAILS' | translate }}</button>
       </div>
     </div>

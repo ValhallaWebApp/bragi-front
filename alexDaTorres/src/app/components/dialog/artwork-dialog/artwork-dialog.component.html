@@ -1,10 +1,10 @@
 <div class="container-pop">
-  <h2 mat-dialog-title>{{ data.nome }}</h2>
+  <h2 mat-dialog-title>{{ data.title }}</h2>
   <div mat-dialog-content>
-    <img [src]="data.thumb" alt="{{ data.nome }}" />
-    <p><strong>Anno:</strong> {{ data.anno }}</p>
-    <p><strong>Dimensioni:</strong> {{ data.dimensioni }}</p>
-    <p><strong>Tecnica:</strong> {{ data.tecnicaKey | translate }}</p>
+    <img [src]="'../../../../assets/img/'+data.thumbnail" alt="{{ data.title }}" />
+    <p><strong>Anno:</strong> {{ data.year }}</p>
+    <p><strong>Dimensioni:</strong> {{ data.dimensions.height }} * {{ data.dimensions.width }}</p>
+    <p><strong>Tecnica:</strong> {{ data.technique | translate }}</p>
     <p><strong>Descrizione:</strong> {{ data.descrizioneKey | translate }}</p>
   </div>
   <div mat-dialog-actions>

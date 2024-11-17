@@ -24,6 +24,7 @@ export class GalleryComponent {
           this.artworksArray = data;
           this.filteredArtworksArray = [...this.artworksArray]; // Clona i dati
           this.isLoaded = true;
+          console.log(data)
         },
         (error) => {
           console.error('Errore durante il recupero dei dati:', error);

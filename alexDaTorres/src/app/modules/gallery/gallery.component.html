@@ -70,13 +70,13 @@
 <div *ngIf="isLoaded; else loading" class="container">
   <div class="card" *ngFor="let artWork of filteredArtworksArray">
     <img
-      [src]="'../../../assets/img/' + artWork.thumb"
-      alt="{{ artWork.nome }}"
-      (click)="openArtworkDialog(artWork)"
+      [src]="'../../../assets/img/' + artWork.thumbnail"
+      alt="{{ artWork.title}}"
     />
-    <h3>{{ artWork.Nome }}</h3>
-    <h4>{{ artWork.ANNO }}</h4>
-    <h5>{{ artWork.Tecnica | translate }}</h5>
+    <h3>{{ artWork.title }}</h3>
+    <h4>{{ artWork.year }}</h4>
+    <h5>{{ artWork.tequincue | translate }}</h5>
+    <button mat-raised-button color="primary" (click)="openArtworkDialog(artWork)">{{ 'VIEW_DETAILS' | translate }}</button>
 
     <!-- Sezione per mostrare il rating in stelle -->
     <div class="rating">

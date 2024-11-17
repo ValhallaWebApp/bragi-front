@@ -10,6 +10,9 @@ ng generate guard services/auth
 # Core and Shared Modules
 ng generate module modules/core --routing
 ng generate module modules/shared
+#shared admin 
+ng generate component modules/admin/shared/dialogs/edit-artwork-dialog
+ng generate component modules/admin/shared/dialogs/delete-artwork-dialog
 
 # Auth component
 

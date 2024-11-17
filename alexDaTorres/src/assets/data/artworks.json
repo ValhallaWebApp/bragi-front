@@ -1,0 +1,52 @@
+[
+    {
+        "id": "-NiVKzojxE6jn7J-eEaa",
+        "ANNO": "2023",
+        "Dimensioni": "150x100",
+        "Nome": "Anima e cuore del Turritano",
+        "Tecnica": "Acrilico",
+        "flag": true,
+        "like": 3,
+        "thumb": "24.jpg"
+    },
+    {
+        "id": "-NiVKzojxE6jn7J-eEpq",
+        "ANNO": "2023",
+        "Dimensioni": "70x100",
+        "Nome": "I Sogni sono come il Tramonto, se aspetti svaniscono",
+        "Tecnica": "Acrilico",
+        "flag": true,
+        "like": 18,
+        "thumb": "22.jpeg"
+    },
+    {
+        "id": "-NiVKzojxE6jn7J-eEsq",
+        "Anno": "2024",
+        "Dimensioni": "70 x100",
+        "Nome": "Vorrei illuminarti l\u2019anima",
+        "Tecnica": "Acrilico",
+        "flag": true,
+        "like": 0,
+        "thumb": "23.jpg"
+    },
+    {
+        "id": "-NiVKzojxE6jn7J-epyy",
+        "ANNO": 2024,
+        "Dimensioni": "70x100",
+        "Nome": "Il ricordo di un amore puro",
+        "Tecnica": "Acrilico",
+        "flag": true,
+        "like": 1,
+        "thumb": "ee.jpg"
+    },
+    {
+        "id": "-NiVKzp70ap1d0qdd1oi",
+        "ANNO": "N/A",
+        "Dimensioni": "50x40",
+        "Nome": "La Serenit\u00e0 non ha un limite",
+        "Tecnica": "Olio",
+        "flag": true,
+        "like": 0,
+        "thumb": "21.JPG"
+    }
+]

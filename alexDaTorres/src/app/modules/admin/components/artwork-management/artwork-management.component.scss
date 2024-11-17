@@ -1,0 +1,22 @@
+section{
+  padding: 10px;
+}
+.container-artworks{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .artwork-card{
+    margin: 10px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.704);
+    text-align: center;
+    max-width: 300px;
+    border-radius: 15px;
+    button{
+      margin: 5px;
+    }
+    img{
+      max-height: 150px;
+    }
+  }
+}
