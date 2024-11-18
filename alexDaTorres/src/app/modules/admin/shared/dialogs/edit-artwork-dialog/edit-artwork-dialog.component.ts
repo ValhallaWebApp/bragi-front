@@ -1,6 +1,9 @@
+import { ArtworksService } from 'src/app/services/artworks.service';
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-edit-artwork-dialog',
@@ -12,11 +15,13 @@ export class EditArtworkDialogComponent {
   isNew: boolean = false;
   thumbnailPreview: string | any | null = null;
   selectedFile: File | null = null;
+  uploadPercent: number | null = null; // Opzionale, per mostrare la percentuale di caricamento
 
   constructor(
     public dialogRef: MatDialogRef<EditArtworkDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private artworksService:ArtworksService
   ) {
     // Verifica se stiamo creando una nuova opera o modificandone una esistente
     this.isNew = !data;
@@ -52,36 +57,44 @@ export class EditArtworkDialogComponent {
     }
   }
 
+
+
   // Metodo per salvare le modifiche e chiudere la dialog
-  save(): void {
+  async save(): Promise<void> {
     if (this.editArtworkForm.valid) {
       const formValue = this.editArtworkForm.value;
 
       let artworkData: any;
 
       if (this.isNew) {
-        // Creazione di una nuova opera d'arte
-        artworkData = {
-          availability: true,
-          dimensions: {
-            height: formValue.altezza,
-            unit: 'cm',
-            width: formValue.larghezza
-          },
-          likes: 0, // Nuova opera, likes iniziali a 0
-          rating: {
-            average: 0,
-            totalRatingPoints: 0,
-            totalVotes: 0
-          },
-          technique: formValue.tecnica,
-          thumbnail: this.selectedFile ? this.selectedFile.name : 'default.jpg',
-          title: formValue.nome,
-          year: formValue.anno,
-          descrizioneKey: formValue.descrizione
-        };
+        // Se è una nuova opera d'arte, carica prima l'immagine
+        try {
+          const imageUrl = this.selectedFile ? await this.artworksService.uploadFile(this.selectedFile,0,formValue.nome) : 'default.jpg';
+          artworkData = {
+            availability: true,
+            dimensions: {
+              height: formValue.altezza,
+              unit: 'cm',
+              width: formValue.larghezza
+            },
+            likes: 0,
+            rating: {
+              average: 0,
+              totalRatingPoints: 0,
+              totalVotes: 0
+            },
+            technique: formValue.tecnica,
+            thumbnail: imageUrl, // Usa l'URL dell'immagine caricata
+            title: formValue.nome,
+            year: formValue.anno,
+            descrizioneKey: formValue.descrizione
+          };
+        } catch (error) {
+          console.error('Errore durante il caricamento dell\'immagine:', error);
+          return;
+        }
       } else {
-        // Modifica di un'opera esistente: preserviamo il rating e altri dati
+        // Modifica di un'opera esistente
         artworkData = {
           ...this.data,
           title: formValue.nome,
@@ -93,15 +106,11 @@ export class EditArtworkDialogComponent {
             width: formValue.larghezza
           },
           descrizioneKey: formValue.descrizione,
-          thumbnail: this.selectedFile ? this.selectedFile.name : this.data.thumbnail // Se è stato selezionato un nuovo file, usa quello
+          thumbnail: this.selectedFile ? await this.artworksService.uploadFile(this.selectedFile,0,formValue.nome) : this.data.thumbnail
         };
       }
 
       console.log('Dati dell\'opera salvati:', artworkData);
-      if (this.selectedFile) {
-        // Qui puoi aggiungere la logica per caricare il file, ad esempio su Firebase Storage
-        console.log('File selezionato:', this.selectedFile);
-      }
       this.dialogRef.close(artworkData);
     } else {
       console.error('Errore: il form non è valido.');

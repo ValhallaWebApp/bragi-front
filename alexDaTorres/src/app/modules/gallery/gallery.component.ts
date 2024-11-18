@@ -19,7 +19,7 @@ export class GalleryComponent {
   searchYear: number | any = null;
   selectedOrder: string = '0';
   ngOnInit(){
-      this.artworksService.getArtworks().subscribe(
+      this.artworksService.getArtworksFiltered().subscribe(
         (data) => {
           this.artworksArray = data;
           this.filteredArtworksArray = [...this.artworksArray]; // Clona i dati

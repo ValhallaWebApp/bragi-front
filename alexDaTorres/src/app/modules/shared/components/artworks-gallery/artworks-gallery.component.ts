@@ -33,7 +33,7 @@ export class ArtworksGalleryComponent implements OnInit {
       });
     }
     getArtworks(){
-      this.artworksService.getArtworks().subscribe(( data:any) => {
+      this.artworksService.getArtworksFiltered().subscribe(( data:any) => {
         this.artworks = data;
       });
     }

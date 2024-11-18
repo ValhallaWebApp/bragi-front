@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.startAutoSlide();
-    this.artWorksArray = this.artWorksService.getArtworks()
+    this.artWorksArray = this.artWorksService.getArtworksFiltered()
   }
 
   toggleDropdown(): void {

@@ -72,8 +72,8 @@ export class ArtworkManagementComponent {
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         // Aggiorna i dati dell'opera
-        console.log(result)
-        // this.artworksService.addArtwork(result);
+
+         this.artworksService.addArtwork(result);
       }
     });
   }

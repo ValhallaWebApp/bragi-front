@@ -4,7 +4,7 @@
   <div class="container-artworks">
     <div class="artwork-card" *ngFor="let artWork of artworksArray">
       <div>
-        <img src="../../../../../assets/img/{{artWork.thumbnail}}" alt="">
+        <img src="{{artWork.thumbnail.includes('https://firebasestorage')?artWork.thumbnail:'../../../../../assets/img/'+artWork.thumbnail}}" alt="">
       </div>
       <div>
         <!-- creare un nuovo componente dialog che possa permettere la modifica del quadro  -->

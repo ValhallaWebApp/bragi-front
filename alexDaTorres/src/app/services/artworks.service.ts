@@ -1,14 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
-import { catchError, map, Observable, throwError } from 'rxjs';
+import { catchError, finalize, map, Observable, throwError } from 'rxjs';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ArtworksService {
 
-  constructor(private db: AngularFireDatabase) {}
+  constructor(private db: AngularFireDatabase,private storage: AngularFireStorage) {}
 
   // Ottieni tutte le opere d'arte
   getArtworks(): Observable<any[]> {
@@ -25,7 +26,22 @@ export class ArtworksService {
       })
     );
   }
-
+  // Ottieni tutte le opere d'arte con avability true
+  getArtworksFiltered(): Observable<any[]> {
+    return this.db.list('/artWorks').snapshotChanges().pipe(
+      map((changes: any) =>
+        changes.map((c: any) => ({
+          id: c.payload.key,  // Ottieni l'ID del nodo
+          ...c.payload.val()  // Ottieni i dati dell'opera
+        }))
+        .filter((artwork: any) => artwork.availability === true)
+      ),
+      catchError((error) => {
+        console.error('Errore nel recuperare le opere:', error);
+        return throwError('Errore nel recuperare le opere, riprova più tardi.');
+      })
+    );
+  }
   // Aggiungi una nuova opera d'arte
   addArtwork(artwork: any): Promise<void> {
     const id = this.db.createPushId(); // Genera un nuovo ID univoco
@@ -92,6 +108,39 @@ export class ArtworksService {
     }).catch((error) => {
       console.error('Errore durante l\'aggiornamento dell\'opera:', error);
       throw new Error(`Errore durante l'aggiornamento dell'opera con ID ${artWorkId}: ${error.message}`);
+    });
+  }
+   // Metodo per caricare il file su Firebase Storage
+   uploadFile(selectedFile:any,uploadPercent:any,title:string): Promise<string> {
+    return new Promise((resolve, reject) => {
+      if (!selectedFile) {
+        return reject('Nessun file selezionato.');
+      }
+
+      const filePath = `artworks/img/${Date.now()}_${title}`;
+      const fileRef = this.storage.ref(filePath);
+      const task = this.storage.upload(filePath, selectedFile);
+
+      // Monitorare il progresso del caricamento
+      task.percentageChanges().subscribe((percentage) => {
+        uploadPercent = percentage ? Math.round(percentage) : null;
+      });
+
+      // Risolvere la Promise al termine del caricamento
+      task.snapshotChanges()
+        .pipe(
+          finalize(() => {
+            fileRef.getDownloadURL().subscribe((url) => {
+              resolve(url);
+            });
+          })
+        )
+        .subscribe(
+          () => {},
+          (error) => {
+            reject(error);
+          }
+        );
     });
   }
 }
