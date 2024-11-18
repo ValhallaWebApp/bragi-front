@@ -41,31 +41,31 @@ export class GalleryComponent {
 
     if (this.selectedTecnica) {
       filteredArray = filteredArray.filter((artWork:any) =>
-        artWork.tecnica?.toLowerCase().includes(this.selectedTecnica.toLowerCase())
+        artWork.tequenicue?.toLowerCase().includes(this.selectedTecnica.toLowerCase())
       );
     }
 
     // Filtra per titolo
     if (this.searchTitle) {
       filteredArray = filteredArray.filter((artWork:any) =>
-        artWork.nome.toLowerCase().includes(this.searchTitle.toLowerCase())
+        artWork.title.toLowerCase().includes(this.searchTitle.toLowerCase())
       );
     }
 
     // Filtra per anno
     if (this.searchYear) {
       filteredArray = filteredArray.filter(
-        (artWork:any) => artWork.anno.toString().includes(this.searchYear?.toLowerCase())
+        (artWork:any) => artWork.year.toString().includes(this.searchYear?.toLowerCase())
       );
     }
 
     // Ordina in base alla selezione
     if (this.selectedOrder === '1') {
       // Data crescente
-      filteredArray = filteredArray.sort((a:any, b:any) => a.anno - b.anno);
+      filteredArray = filteredArray.sort((a:any, b:any) => a.year - b.year);
     } else if (this.selectedOrder === '2') {
       // Data decrescente
-      filteredArray = filteredArray.sort((a:any, b:any) => b.anno - a.anno);
+      filteredArray = filteredArray.sort((a:any, b:any) => b.year - a.year);
     }
 
     // Aggiorna l'array di opere d'arte filtrato
