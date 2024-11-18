@@ -55,7 +55,7 @@ export class GalleryComponent {
     // Filtra per anno
     if (this.searchYear) {
       filteredArray = filteredArray.filter(
-        (artWork:any) => artWork.year.toString().includes(this.searchYear?.toLowerCase())
+        (artWork:any) => artWork.year == this.searchYear
       );
     }
 
