@@ -1,6 +1,6 @@
 <section>
   <h1>Modifica e gestisci i tuoi quadri</h1>
-  <button (click)="addAllArtworks()">pinooooooooooo</button>
+  <button mat-raised-button color="primary" (click)="addArtWork()">Aggiungi Quadro</button>
   <div class="container-artworks">
     <div class="artwork-card" *ngFor="let artWork of artworksArray">
       <div>
@@ -11,8 +11,8 @@
         <button (click)="editArtwork(artWork)" mat-raised-button color="primary">
           Modifica
         </button>
-        <button mat-raised-button color="secondary">
-          {{artWork.flag ? 'Nascondi': 'Visualizza'}}
+        <button (click)="deleteArtwork(artWork)" mat-raised-button color="secondary">
+          {{artWork.availability ? 'Nascondi': 'Visualizza'}}
         </button>
       </div>
     </div>

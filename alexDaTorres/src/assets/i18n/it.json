@@ -13,7 +13,7 @@
   },
   "JUMBOTRON": {
     "TITLE": "Benvenuto!",
-    "SUBTITLE": "Mi fa piacere accogliervi nella mia mostra virtuale, un luogo dove condivido la mia passione più profonda: la pittura.",
+    "SUBTITLE": "Mi fa piacere accoglierti nella mia galleria virtuale, un luogo dove condivido con chi ha curiosità e passione per l'arte la mia passione più profonda: la pittura. ",
     "BUTTON": "Scopri di più"
   },
   "VIEW_DETAILS" : "Visualizza Dettagli",
@@ -22,7 +22,7 @@
   },
   "ARTIST_PASSION": {
     "TITLE_TRAVEL": "Il Viaggio dell'Artista",
-    "DESCRIPTION_TRAVEL": "Il mio viaggio nell'arte è stato un percorso che ha toccato mete affascinanti, attraverso mostre nelle città d'arte come Venezia, Milano e Roma. Il Festival Internazionale di Berlino è stato uno dei traguardi più significativi. Mondadori e Arte hanno gentilmente riconosciuto il mio lavoro. \"Il molo turritano\" celebra Porto Torres, mentre \"L'isola di Tavolara\" e \"Capo Comino\" hanno trovato spazio nel film \"Free,\" con attori straordinari come Sandra Milo ed Enzo Salvi. La mia arte è in costante evoluzione, alimentata dalla passione che riverso in ogni opera.",
+    "DESCRIPTION_TRAVEL": "Il mio viaggio nell'arte è un percorso che ha, sino ad oggi, toccato mete affascinanti, grazie a mostre che ho tenuto in città d'arte come Venezia, Milano e Roma. Il Festival Internazionale di Berlino del xyzxyz è stato una delle tappe più significative. MONDADORI e ARTE hanno riconosciuto il mio lavoro. 'Il molo turritano' celebra Porto Torres, mentre i miei quadri 'L'Isola di Tavolara' e 'Capo Comino' hanno trovato spazio nel film 'Free - Liberi' (del 2020), che ha visto la presenza di alcuni attori straordinari come, tra gli altri, Antonio Catania, Corinne Clery, Ivano Marescotti, Sandra Milo, Enzo Salvi, Tullio Solenghi.  ",
     "IMAGE_ALT": "Opera dell'artista nel film Free",
     "TITLE_EXHIBITION": "",
     "DESCRIPTION_EXHIBITION": "Il mio viaggio nell'arte è stato un percorso che ha toccato mete affascinanti, attraverso mostre nelle città d'arte come Venezia, Milano e Roma. Il Festival Internazionale di Berlino è stato uno dei traguardi più significativi. Mondadori e Arte hanno gentilmente riconosciuto il mio lavoro. \"Il molo turritano\" celebra Porto Torres, mentre \"L'isola di Tavolara\" e \"Capo Comino\" hanno trovato spazio nel film \"Free,\" con attori straordinari come Sandra Milo ed Enzo Salvi. La mia arte è in costante evoluzione, alimentata dalla passione che riverso in ogni opera."
@@ -37,7 +37,7 @@
   },
   "ARTIST_INSPIRATION": {
     "TITLE": "Ispirazione",
-    "DESCRIPTION": "L'arte è la mia passione più profonda, un'ispirazione che affonda le radici nella Sardegna, la mia terra d'origine. Sebbene ora io risieda a Piacenza, la bellezza e la cultura della Sardegna sono sempre presenti nelle mie opere. La mia avventura artistica ha raggiunto traguardi sorprendenti, tra cui la presentazione una delle opera al Vaticano. Questo viaggio nell'arte è un continuo ritorno alle mie radici e un'esplorazione della bellezza che mi circonda.",
+    "DESCRIPTION": "L'arte è la mia passione più profonda, una costante ispirazione che affonda le radici nella Sardegna, la mia terra d'origine. Sebbene da qualche tempo io risieda a Piacenza, la bellezza e la cultura della Sardegna sono sempre presenti nelle mie opere. La mia avventura artistica ha raggiunto soddisfazioni inattese, tra cui la presentazione di una delle mie opere al Vaticano (si tratta di 'xyzxyz' del xyz). Questo viaggio nell'arte è un continuo ritorno alle mie radici e un'esplorazione della bellezza che mi circonda.",
     "IMAGE_ALT": "Dipinto ispirato alla Sardegna"
   },
   "FOOTER": {

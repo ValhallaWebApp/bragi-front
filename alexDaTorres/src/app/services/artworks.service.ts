@@ -64,4 +64,34 @@ export class ArtworksService {
       throw new Error('Errore durante la cancellazione dell\'opera.');
     });
   }
+
+  disabledArtWork(artWorkId:any){
+    console.log(artWorkId)
+    if (artWorkId==undefined) {
+      return Promise.reject(new Error('L\'ID dell\'opera è necessario per aggiornarla.'));
+    }
+
+    // Destrutturare l'oggetto per evitare di inviare l'ID nel database
+    return this.db.object(`/artWorks/${artWorkId}`).update({availability:false}).then(() => {
+      console.log(`Opera con ID: ${artWorkId} aggiornata con successo.`);
+    }).catch((error) => {
+      console.error('Errore durante l\'aggiornamento dell\'opera:', error);
+      throw new Error(`Errore durante l'aggiornamento dell'opera con ID ${artWorkId}: ${error.message}`);
+    });
+  }
+
+  enabledArtWork(artWorkId:any){
+    console.log(artWorkId)
+    if (artWorkId==undefined) {
+      return Promise.reject(new Error('L\'ID dell\'opera è necessario per aggiornarla.'));
+    }
+
+    // Destrutturare l'oggetto per evitare di inviare l'ID nel database
+    return this.db.object(`/artWorks/${artWorkId}`).update({availability:true}).then(() => {
+      console.log(`Opera con ID: ${artWorkId} aggiornata con successo.`);
+    }).catch((error) => {
+      console.error('Errore durante l\'aggiornamento dell\'opera:', error);
+      throw new Error(`Errore durante l'aggiornamento dell'opera con ID ${artWorkId}: ${error.message}`);
+    });
+  }
 }

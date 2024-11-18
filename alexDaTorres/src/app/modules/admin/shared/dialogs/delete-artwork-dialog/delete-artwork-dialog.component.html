@@ -1,1 +1,9 @@
-<p>delete-artwork-dialog works!</p>
+<section>
+  <h2>Vuoi {{data.availability?'disabilitare':'abilitare'}} il Quadro??</h2>
+  <div mat-dialog-actions>
+    <!-- Pulsante per salvare le modifiche -->
+    <button mat-raised-button color="primary" (click)="confirmDelete()" >Salva</button>
+    <!-- Pulsante per annullare -->
+    <button mat-button (click)="onCancel()">Chiudi</button>
+  </div>
+</section>

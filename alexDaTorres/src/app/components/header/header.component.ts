@@ -40,6 +40,17 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
   }
 
+  downloadFileRivista(){
+      // Creare un elemento <a> temporaneo per avviare il download
+      const link = document.createElement('a');
+      link.href = '../../../assets/rivista.pdf';
+      link.download = 'rivista AlexDaTorres.pdf'; // Il nome del file da scaricare
+      link.click(); // Simulare un click per avviare il download
+
+      // Facoltativo: Rimuovere l'elemento <a> dal DOM dopo l'uso
+      link.remove();
+  }
+
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
     this.sidenav.toggle();

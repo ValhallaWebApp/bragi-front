@@ -8,6 +8,15 @@ import { ArtworkManagementComponent } from './components/artwork-management/artw
 import { UserManagementComponent } from './components/user-management/user-management.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatIcon } from '@angular/material/icon';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
+import { DialogModule } from '@angular/cdk/dialog';
+import { EditArtworkDialogComponent } from './shared/dialogs/edit-artwork-dialog/edit-artwork-dialog.component';
+import { DeleteArtworkDialogComponent } from './shared/dialogs/delete-artwork-dialog/delete-artwork-dialog.component';
 
 
 @NgModule({
@@ -15,13 +24,23 @@ import { MatDialogModule } from '@angular/material/dialog';
     AdminComponent,
     AdminDashboardComponent,
     ArtworkManagementComponent,
+    EditArtworkDialogComponent,
+    DeleteArtworkDialogComponent,
     UserManagementComponent
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     AdminRoutingModule,
+    MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatIcon,
     MatButtonModule,
-    MatDialogModule
+    FormsModule,
+    TranslateModule,
+    DialogModule,
+    MatButtonModule
   ]
 })
 export class AdminModule { }

@@ -15,6 +15,7 @@ export class ArtworkManagementComponent {
   private jsonFilePath = 'assets/data/artworks-array.json';
   addAllArtworks(){
     // addArtwork()
+    console.log('artworksArray',this.artworksArray)
     this.artworksArray.map((obj:any)=>{
       this.artworksService.addArtwork(obj);
     })
@@ -53,30 +54,45 @@ export class ArtworkManagementComponent {
 
   editArtwork(artwork: any): void {
     const dialogRef = this.dialog.open(EditArtworkDialogComponent, {
-      width: '500px',
+
       data: artwork
     });
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         // Aggiorna i dati dell'opera
-        console.log(artwork)
-        this.artworksService.deleteArtwork(artwork.id);
+        console.log(result)
+        this.artworksService.updateArtwork(result);
       }
     });
   }
+  addArtWork(): void {
+    const dialogRef = this.dialog.open(EditArtworkDialogComponent, {});
 
-  deleteArtwork(artwork: any): void {
-    const dialogRef = this.dialog.open(DeleteArtworkDialogComponent, {
-      width: '300px',
-      data: artwork
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        // Aggiorna i dati dell'opera
+        console.log(result)
+        // this.artworksService.addArtwork(result);
+      }
     });
+  }
+  deleteArtwork(artwork: any): void {
+    const dialogRef = this.dialog.open(DeleteArtworkDialogComponent, {data: artwork});
 
     dialogRef.afterClosed().subscribe(confirmed => {
       if (confirmed) {
         // Elimina l'opera d'arte
-        this.artworksService.deleteArtwork(artwork.id);
+        console.log(artwork)
+        if (artwork.availability) {
+          this.artworksService.disabledArtWork(artwork.id);
+
+        }else{
+          this.artworksService.enabledArtWork(artwork.id);
+
+        }
       }
     });
+
   }
 }

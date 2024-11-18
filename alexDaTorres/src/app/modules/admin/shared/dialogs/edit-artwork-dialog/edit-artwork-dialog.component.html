@@ -1,1 +1,84 @@
-<button (click)="save()">Modifica</button>
+<div class="container-pop">
+  <h2 mat-dialog-title>{{ isNew ? 'Aggiungi un nuovo quadro' : 'Modifica i dettagli dell\'opera' }}</h2>
+  <form [formGroup]="editArtworkForm">
+    <!-- Titolo dell'opera -->
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="nome" />
+      <mat-error *ngIf="editArtworkForm.get('nome')?.hasError('required')">
+        Il nome è obbligatorio.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Miniatura (esistente o in anteprima) -->
+    <img *ngIf="thumbnailPreview" [src]="thumbnailPreview" alt="Anteprima dell'immagine" />
+    <img *ngIf="!thumbnailPreview && data?.thumbnail" [src]="'../../../../assets/img/' + data?.thumbnail" alt="{{ data?.title }}" />
+
+    <!-- Upload dell'immagine (fuori dal mat-form-field) -->
+    <div class="upload-field">
+      <label for="fileInput">Carica Immagine:</label>
+      <input id="fileInput" type="file" (change)="onFileSelected($event)" accept="image/*" />
+    </div>
+
+    <!-- Anno dell'opera -->
+    <mat-form-field appearance="fill">
+      <mat-label>Anno</mat-label>
+      <input matInput formControlName="anno" />
+      <mat-error *ngIf="editArtworkForm.get('anno')?.hasError('required')">
+        L'anno è obbligatorio.
+      </mat-error>
+      <mat-error *ngIf="editArtworkForm.get('anno')?.hasError('pattern')">
+        L'anno deve essere composto da 4 cifre.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Dimensioni dell'opera -->
+    <div class="dimensions-inputs">
+      <mat-form-field appearance="fill">
+        <mat-label>Altezza (cm)</mat-label>
+        <input matInput formControlName="altezza" type="number" />
+        <mat-error *ngIf="editArtworkForm.get('altezza')?.hasError('required')">
+          L'altezza è obbligatoria.
+        </mat-error>
+        <mat-error *ngIf="editArtworkForm.get('altezza')?.hasError('min')">
+          L'altezza deve essere almeno di 1 cm.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Larghezza (cm)</mat-label>
+        <input matInput formControlName="larghezza" type="number" />
+        <mat-error *ngIf="editArtworkForm.get('larghezza')?.hasError('required')">
+          La larghezza è obbligatoria.
+        </mat-error>
+        <mat-error *ngIf="editArtworkForm.get('larghezza')?.hasError('min')">
+          La larghezza deve essere almeno di 1 cm.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- Tecnica dell'opera -->
+    <mat-form-field appearance="fill">
+      <mat-label>Tecnica</mat-label>
+      <input matInput formControlName="tecnica" />
+      <mat-error *ngIf="editArtworkForm.get('tecnica')?.hasError('required')">
+        La tecnica è obbligatoria.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Descrizione dell'opera -->
+    <mat-form-field appearance="fill">
+      <mat-label>Descrizione</mat-label>
+      <textarea matInput formControlName="descrizione"></textarea>
+      <mat-error *ngIf="editArtworkForm.get('descrizione')?.hasError('required')">
+        La descrizione è obbligatoria.
+      </mat-error>
+    </mat-form-field>
+  </form>
+
+  <div mat-dialog-actions>
+    <!-- Pulsante per salvare le modifiche -->
+    <button mat-raised-button color="primary" (click)="save()" [disabled]="editArtworkForm.invalid">Salva</button>
+    <!-- Pulsante per annullare -->
+    <button mat-button (click)="onCancel()">Chiudi</button>
+  </div>
+</div>

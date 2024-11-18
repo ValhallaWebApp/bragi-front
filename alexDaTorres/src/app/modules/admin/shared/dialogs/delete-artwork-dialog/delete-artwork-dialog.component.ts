@@ -11,7 +11,9 @@ export class DeleteArtworkDialogComponent {
     public dialogRef: MatDialogRef<DeleteArtworkDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
-
+  ngOnInit(){
+    console.log(this.data)
+  }
   // Metodo per confermare la cancellazione
   confirmDelete(): void {
     this.dialogRef.close(true);

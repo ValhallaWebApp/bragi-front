@@ -14,6 +14,7 @@
         "thumbnail": "24.jpg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -33,6 +34,7 @@
         "thumbnail": "22.jpeg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -52,6 +54,7 @@
         "thumbnail": "23.jpg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -71,6 +74,7 @@
         "thumbnail": "ee.jpg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -90,6 +94,7 @@
         "thumbnail": "1.jpg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -109,6 +114,7 @@
         "thumbnail": "2.jpg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -128,6 +134,7 @@
         "thumbnail": "3.JPG",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -147,6 +154,7 @@
         "thumbnail": "4.jpg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -166,6 +174,7 @@
         "thumbnail": "5.jpg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -185,6 +194,7 @@
         "thumbnail": "6.jpg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -204,6 +214,7 @@
         "thumbnail": "7.jpg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -223,6 +234,7 @@
         "thumbnail": "8.jpg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -242,6 +254,7 @@
         "thumbnail": "9.jpg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -261,6 +274,7 @@
         "thumbnail": "10.jpg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -280,6 +294,7 @@
         "thumbnail": "11.jpg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -299,6 +314,7 @@
         "thumbnail": "12.jpg",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -318,6 +334,7 @@
         "thumbnail": "13.JPG",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -337,6 +354,7 @@
         "thumbnail": "14.JPG",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -356,6 +374,7 @@
         "thumbnail": "15.JPG",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -375,6 +394,7 @@
         "thumbnail": "16.JPG",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -394,6 +414,7 @@
         "thumbnail": "17.JPG",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -413,6 +434,7 @@
         "thumbnail": "18.JPG",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -432,6 +454,7 @@
         "thumbnail": "19.JPG",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -451,6 +474,7 @@
         "thumbnail": "20.JPG",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }
@@ -470,6 +494,7 @@
         "thumbnail": "21.JPG",
         "rating": {
             "average": 0,
+            "totalRatingPoints": 0,
             "totalVotes": 0,
             "reviews": []
         }

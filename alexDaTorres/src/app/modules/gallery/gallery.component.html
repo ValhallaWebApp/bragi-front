@@ -82,8 +82,8 @@
     <div class="rating">
       <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
         <mat-icon
-          (click)="rateArtwork(artWork.id, i)"
-          [ngClass]="{ active: i < artWork?.rating }"
+          (click)="rateArtwork(artWork, star)"
+          [ngClass]="{ active: i < artWork?.rating.average }"
           >star</mat-icon
         >
       </ng-container>
