@@ -35,6 +35,10 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from './environment';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { CartModule } from './modules/cart/cart.module';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { FeedbackDialogComponent } from './components/dialog7feedback-dialog/dialog7feedback-dialog.component';
 
 // Funzione per caricare i file di traduzione
 export function HttpLoaderFactory(http: HttpClient) {
@@ -45,7 +49,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         AppComponent,
         HeaderComponent,
         BannerComponent,
-        FooterComponent
+        FooterComponent,
+
     ],
     bootstrap: [AppComponent],
     exports:[AuthModule],
@@ -57,12 +62,15 @@ export function HttpLoaderFactory(http: HttpClient) {
         MatIconModule,
         MatButtonModule,
         MatListModule,
-        BrowserAnimationsModule,
+        MatCardModule,
+        MatDividerModule,       // Per usare <mat-card>
         MatDialogModule,
         MatButtonModule,
+        BrowserAnimationsModule,
         ContactModule,
         FormsModule,
         AuthModule,
+        CartModule,
         AngularFireModule.initializeApp(environment.firebaseConfig),
         AngularFireDatabaseModule,
         AngularFireAuthModule,

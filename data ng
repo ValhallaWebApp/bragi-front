@@ -21,6 +21,7 @@ ng generate component modules/auth/components/register
 
 # Pop up component
 ng generate component components/dialog/artwork-dialog
+ng generate component components/dialog7feedback-dialog
 
 # Contact shortcut component
 ng generate component components/shortcut/contact-icon

@@ -1,0 +1,7 @@
+<div mat-dialog-content>
+  <h2>{{ data.success ? 'Operazione riuscita' : 'Errore' }}</h2>
+  <p>{{ data.message }}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="onClose()">OK</button>
+</div>

@@ -1,8 +1,10 @@
+import { CartService } from './../../services/cart.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Component } from '@angular/core';
 import { ArtworksService } from 'src/app/services/artworks.service';
 import { ArtworkDialogComponent } from 'src/app/components/dialog/artwork-dialog/artwork-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { FeedbackDialogComponent } from 'src/app/components/dialog7feedback-dialog/dialog7feedback-dialog.component';
 
 @Component({
   selector: 'app-gallery',
@@ -31,7 +33,7 @@ export class GalleryComponent {
         }
       );
   }
-  constructor(private artworksService: ArtworksService,public translate: TranslateService,public dialog: MatDialog) {
+  constructor(private cartService:CartService,private artworksService: ArtworksService,public translate: TranslateService,public dialog: MatDialog) {
     this.filteredArtworksArray = this.artworksArray;
   }
 
@@ -112,6 +114,20 @@ export class GalleryComponent {
     const dialogRef = this.dialog.open(ArtworkDialogComponent, {
       width: '80vw',
       data: artwork,
+    });
+  }
+  addToCart(artwork: any): void {
+    this.cartService.addArtworkToCart(artwork).then((response) => {
+      this.openFeedbackDialog(response);
+    });
+  }
+  openFeedbackDialog(response: { success: boolean; message: string }): void {
+    this.dialog.open(FeedbackDialogComponent, {
+      width: '400px',
+      data: {
+        message: response.message,
+        success: response.success
+      }
     });
   }
 }

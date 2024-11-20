@@ -1,0 +1,27 @@
+section {
+  padding: 10px;
+  min-height: 80vh;
+  background-color: rgba(242, 204, 209, 0.418);
+
+  .artwork-card {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .artwork-thumbnail {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+  }
+
+  mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  button {
+    margin: 8px 0 8px 8px;
+  }
+}

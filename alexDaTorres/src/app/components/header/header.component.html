@@ -1,16 +1,17 @@
 <mat-toolbar class="app-toolbar">
-  <div class="filter">
-  </div>
-    <!-- Pulsante per aprire il menu laterale -->
-    <button mat-icon-button class="menu-icon" (click)="toggleMenu()">
-      <mat-icon>menu</mat-icon>
-    </button>
+  <div class="filter"></div>
+  <!-- Pulsante per aprire il menu laterale -->
+  <button mat-icon-button class="menu-icon" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <button mat-icon-button color="primary" routerLink="/cart">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+  <!-- Titolo dell'header, tradotto -->
+  <!-- <span class="header-title">{{ "HEADER.TITLE" | translate }}</span> -->
 
-    <!-- Titolo dell'header, tradotto -->
-    <!-- <span class="header-title">{{ "HEADER.TITLE" | translate }}</span> -->
-
-    <!-- Icona per il download con tooltip tradotto -->
-    <div
+  <!-- Icona per il download con tooltip tradotto -->
+  <div
     #dropdown
     class="custom-select"
     (click)="toggleDropdown()"
@@ -64,11 +65,18 @@
         {{ "HEADER.MENU.CONTACT" | translate }}
       </a>
       <div class="magazzine-download-button">
-        <button mat-raised-button color="accent" (click)="downloadFileRivista()">
+        <button
+          mat-raised-button
+          color="accent"
+          (click)="downloadFileRivista()"
+        >
           <mat-icon>cloud_download</mat-icon>
           {{ "MAGAZINE.DOWNLOAD_BUTTON" | translate }}
         </button>
       </div>
+      <button mat-icon-button color="primary" routerLink="/cart">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
       <!-- <button mat-raised-button color="warn" (click)="onLogout()">
         Logout
       </button> -->
