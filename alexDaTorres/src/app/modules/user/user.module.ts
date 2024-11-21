@@ -23,8 +23,7 @@ import { EditReviewDialogComponent } from 'src/app/components/dialog/edit-review
     OrderHistoryComponent,
     ProfileComponent,
     WishlistComponent,
-    EditReviewDialogComponent,
-    ReviewUserListComponent
+    ReviewUserListComponent,
   ],
   imports: [
     CommonModule,
@@ -38,6 +37,6 @@ import { EditReviewDialogComponent } from 'src/app/components/dialog/edit-review
     MatFormFieldModule,
     MatDialogModule,
   ],
-  exports:[EditReviewDialogComponent]
+  exports:[]
 })
 export class UserModule { }

@@ -12,7 +12,8 @@ import { ContactFormComponent } from 'src/app/components/contact-form/contact-fo
   declarations: [
     ContactComponent,
     ContactIconComponent,
-    ContactFormComponent
+    ContactFormComponent,
+
   ],
   imports: [
     ContactRoutingModule,

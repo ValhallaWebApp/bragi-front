@@ -14,7 +14,6 @@ import { MatIcon } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { TranslateModule } from '@ngx-translate/core';
 import { DialogModule } from '@angular/cdk/dialog';
-import { ArtworkDialogComponent } from 'src/app/components/dialog/artwork-dialog/artwork-dialog.component';
 
 
 @NgModule({
@@ -23,7 +22,6 @@ import { ArtworkDialogComponent } from 'src/app/components/dialog/artwork-dialog
     ArtworkCardComponent,
     FilterPanelComponent,
     SortingDropdownComponent,
-    ArtworkDialogComponent
   ],
   imports: [
     CommonModule,

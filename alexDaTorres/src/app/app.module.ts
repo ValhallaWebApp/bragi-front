@@ -1,94 +1,104 @@
-import { EditReviewDialogComponent } from 'src/app/components/dialog/edit-review-dialog/edit-review-dialog.component';
-import { AdminModule } from './modules/admin/admin.module';
-import { AuthModule } from '@angular/fire/auth';
-import { importProvidersFrom, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContactFormComponent } from './components/contact-form/contact-form.component';
-import { HeaderComponent } from './components/header/header.component';
-import { BannerComponent } from './components/banner/banner.component';
-import { ContactIconComponent } from './components/shortcut/contact-icon/contact-icon.component';
+import { environment } from './environment';
 
-//material
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIcon, MatIconModule } from '@angular/material/icon';
-import { MatButton, MatButtonModule } from '@angular/material/button';
-import { MatListModule } from '@angular/material/list';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TranslateLoader, TranslateModule, TranslatePipe } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import { FooterComponent } from './components/footer/footer.component';
-import { MatInputModule } from '@angular/material/input';         // Per utilizzare gli input di Angular Material
-import { MatSelectModule } from '@angular/material/select';       // Per utilizzare i menu a tendina (select)
-import { MatFormFieldModule } from '@angular/material/form-field'; // Per utilizzare i contenitori dei campi di input (form-field)
-import { MatDialogModule } from '@angular/material/dialog';
-import { ContactModule } from './modules/contact/contact.module';
-
-import { FormsModule } from '@angular/forms';
-
-// Firebase e AngularFire
+// Firebase and AngularFire
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { environment } from './environment';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { CartModule } from './modules/cart/cart.module';
+
+// Angular Material Modules
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
-import { FeedbackDialogComponent } from './components/dialog/dialog7feedback-dialog/dialog7feedback-dialog.component';
-import { PaymentComponent } from './modules/payment/payment.component';
-// Funzione per caricare i file di traduzione
+
+// HTTP Client and Translation
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+// Custom Modules
+import { AdminModule } from './modules/admin/admin.module';
+import { ContactModule } from './modules/contact/contact.module';
+import { CartModule } from './modules/cart/cart.module';
+import { DialogModule } from './components/dialog/dialog.module';
+
+// Components
+import { HeaderComponent } from './components/header/header.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+// Forms Module
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+// Function for loading translation files
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
+
 @NgModule({
   declarations: [
-        AppComponent,
-        HeaderComponent,
-        BannerComponent,
-        FooterComponent,
+    AppComponent,
+    HeaderComponent,
+    BannerComponent,
+    FooterComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
 
-    ],
-    bootstrap: [AppComponent],
-    exports:[AuthModule],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        MatSidenavModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatButtonModule,
-        MatListModule,
-        MatCardModule,
-        MatDividerModule,       // Per usare <mat-card>
-        MatDialogModule,
-        MatButtonModule,
-        BrowserAnimationsModule,
-        ContactModule,
-        FormsModule,
-        AuthModule,
-        CartModule,
-        AngularFireModule.initializeApp(environment.firebaseConfig),
-        AngularFireDatabaseModule,
-        AngularFireAuthModule,
-        AngularFirestoreModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        }),
-      ],
-        providers: [
-          provideHttpClient(withInterceptorsFromDi()),
-          // importProvidersFrom(
-          //   provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-          //   provideAuth(() => getAuth())
-          // )
-        ] })
-export class AppModule { }
+    // Firebase Initialization
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+
+    // Angular Material Modules
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatListModule,
+    MatCardModule,
+    MatDividerModule,
+    MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatDialogModule,
+
+    // Custom Modules
+    CartModule,
+    AdminModule, // Import AdminModule if required in this scope
+    ContactModule,
+    DialogModule,
+
+    // Translation Module
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+  ],
+  providers: [
+    provideHttpClient(withInterceptorsFromDi()),
+  ],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}

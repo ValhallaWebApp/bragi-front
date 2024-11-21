@@ -24,8 +24,6 @@ import { DeleteArtworkDialogComponent } from './shared/dialogs/delete-artwork-di
     AdminComponent,
     AdminDashboardComponent,
     ArtworkManagementComponent,
-    EditArtworkDialogComponent,
-    DeleteArtworkDialogComponent,
     UserManagementComponent
   ],
   imports: [
