@@ -17,6 +17,7 @@ export class ArtworksService {
       map((changes: any) =>
         changes.map((c: any) => ({
           id: c.payload.key,  // Ottieni l'ID del nodo
+          createAt: new Date().toISOString(), // Usa la data corrente del client// Salva la data di registrazione,
           ...c.payload.val()  // Ottieni i dati dell'opera
         }))
       ),

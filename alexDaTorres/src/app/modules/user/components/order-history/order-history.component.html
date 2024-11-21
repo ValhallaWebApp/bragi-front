@@ -1,1 +1,8 @@
-<p>order-history works!</p>
+<h2>Storico Ordini</h2>
+<mat-card *ngFor="let order of orders" class="order-card">
+  <mat-card-title>Ordine #{{ order.id }}</mat-card-title>
+  <mat-card-content>
+    <p>Data: {{ order.date | date }}</p>
+    <p>Totale: {{ order.total | currency:'EUR' }}</p>
+  </mat-card-content>
+</mat-card>

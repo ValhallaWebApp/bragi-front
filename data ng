@@ -13,6 +13,11 @@ ng generate module modules/shared
 #shared admin 
 ng generate component modules/admin/shared/dialogs/edit-artwork-dialog
 ng generate component modules/admin/shared/dialogs/delete-artwork-dialog
+# reviw component
+
+ng generate component modules/user/components/reviews/review-user-list
+#dialog reviw edit
+ng generate c components/dialog/edit-review-dialog
 
 # Auth component
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { FeedbackDialogComponent } from 'src/app/components/dialog7feedback-dialog/dialog7feedback-dialog.component';
+import { FeedbackDialogComponent } from 'src/app/components/dialog/dialog7feedback-dialog/dialog7feedback-dialog.component';
 
 @Component({
   selector: 'app-payment',

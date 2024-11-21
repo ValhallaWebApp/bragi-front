@@ -1,1 +1,8 @@
-<p>wishlist works!</p>
+<h2>Lista dei Desideri</h2>
+<mat-card *ngFor="let item of wishlistItems" class="wishlist-card">
+  <mat-card-title>{{ item.title }}</mat-card-title>
+  <mat-card-content>
+    <p>{{ item.description }}</p>
+    <button mat-button color="warn" (click)="removeFromWishlist(item.id)">Rimuovi</button>
+  </mat-card-content>
+</mat-card>

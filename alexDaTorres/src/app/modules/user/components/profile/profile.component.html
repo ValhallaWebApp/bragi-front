@@ -1,1 +1,12 @@
-<p>profile works!</p>
+<h2>Profilo Utente</h2>
+<form [formGroup]="profileForm">
+  <mat-form-field>
+    <mat-label>Nome Completo</mat-label>
+    <input matInput formControlName="fullName">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="saveProfile()" [disabled]="!profileForm.valid">Salva Modifiche</button>
+</form>

@@ -1,0 +1,32 @@
+<h2 mat-dialog-title>Modifica Recensione</h2>
+<div mat-dialog-content>
+  <form [formGroup]="reviewForm">
+    <!-- Campo per il Rating -->
+    <mat-form-field appearance="fill">
+      <mat-label>Valutazione (1-5)</mat-label>
+      <input matInput type="number" formControlName="rating" />
+      <mat-error *ngIf="reviewForm.get('rating')?.hasError('required')">
+        La valutazione è obbligatoria.
+      </mat-error>
+      <mat-error *ngIf="reviewForm.get('rating')?.hasError('min') || reviewForm.get('rating')?.hasError('max')">
+        La valutazione deve essere compresa tra 1 e 5.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Campo per il Commento -->
+    <mat-form-field appearance="fill">
+      <mat-label>Commento</mat-label>
+      <textarea matInput formControlName="comment"></textarea>
+      <mat-error *ngIf="reviewForm.get('comment')?.hasError('required')">
+        Il commento è obbligatorio.
+      </mat-error>
+      <mat-error *ngIf="reviewForm.get('comment')?.hasError('maxLength')">
+        Il commento non può superare i 500 caratteri.
+      </mat-error>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Annulla</button>
+  <button mat-raised-button color="primary" (click)="onSave()" [disabled]="reviewForm.invalid">Salva</button>
+</div>

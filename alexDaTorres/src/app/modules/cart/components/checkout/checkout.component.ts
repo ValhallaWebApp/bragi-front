@@ -1,4 +1,4 @@
-import { FeedbackDialogComponent } from './../../../../components/dialog7feedback-dialog/dialog7feedback-dialog.component';
+import { FeedbackDialogComponent } from '../../../../components/dialog/dialog7feedback-dialog/dialog7feedback-dialog.component';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CartService } from 'src/app/services/cart.service';

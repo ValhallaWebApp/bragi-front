@@ -1,0 +1,21 @@
+<div class="review-list">
+  <h2>Le Tue Recensioni</h2>
+  <div *ngIf="reviews$ | async as reviews; else noReviews">
+    <mat-card *ngFor="let review of reviews" class="review-card">
+      <mat-card-header>
+        <mat-card-title>Opera: {{ review.artworkTitle }}</mat-card-title>
+        <mat-card-subtitle>Rating: {{ review.rating }} / 5</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ review.comment }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="editReview(review)">Modifica</button>
+        <button mat-button color="warn" (click)="deleteReview(review.id)">Elimina</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <ng-template #noReviews>
+    <p>Non hai ancora lasciato recensioni.</p>
+  </ng-template>
+</div>

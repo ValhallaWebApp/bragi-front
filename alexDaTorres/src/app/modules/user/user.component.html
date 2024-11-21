@@ -1,1 +1,13 @@
-<p>user works!</p>
+<div class="user-container">
+  <nav>
+    <ul>
+      <li><a routerLink="profile">Profilo</a></li>
+      <li><a routerLink="order-history">Storico Ordini</a></li>
+      <li><a routerLink="wishlist">Lista dei Desideri</a></li>
+      <li><a routerLink="reviews">reviews list</a></li>
+    </ul>
+  </nav>
+  <div class="user-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

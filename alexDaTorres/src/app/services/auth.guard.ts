@@ -13,11 +13,17 @@ export class AuthGuard implements CanActivate, CanLoad {
   constructor(private authService: AuthService, private router: Router) {}
 
   // Controllo di accesso per attivare la rotta
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean> {
-    return this.checkUserAuthentication(state.url);
+  canActivate(): Observable<boolean> {
+    return this.authService.isAdmin().pipe(
+      take(1),
+      map(isAdmin => {
+        if (!isAdmin) {
+          this.router.navigate(['/user']); // Redirige se non sei admin
+          return false;
+        }
+        return true;
+      })
+    );
   }
 
   // Controllo di accesso per caricare il modulo (lazy load)

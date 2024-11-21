@@ -83,6 +83,9 @@
       <button *ngIf="!logged" mat-raised-button color="warn" routerLink="/auth/login">
         login
       </button>
+      <a mat-list-item routerLink="/auth/register" (click)="sidenav.close()">
+        Registrati ?
+      </a>
       <app-contact-icon></app-contact-icon>
       <!-- Custom Dropdown per la Lingua -->
     </mat-nav-list>

@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 import { ArtworksService } from 'src/app/services/artworks.service';
 import { ArtworkDialogComponent } from 'src/app/components/dialog/artwork-dialog/artwork-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
-import { FeedbackDialogComponent } from 'src/app/components/dialog7feedback-dialog/dialog7feedback-dialog.component';
+import { FeedbackDialogComponent } from 'src/app/components/dialog/dialog7feedback-dialog/dialog7feedback-dialog.component';
 
 @Component({
   selector: 'app-gallery',

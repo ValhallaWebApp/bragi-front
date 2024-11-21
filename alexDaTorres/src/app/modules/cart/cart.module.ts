@@ -12,7 +12,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { DialogModule } from '@angular/cdk/dialog';
-import { FeedbackDialogComponent } from 'src/app/components/dialog7feedback-dialog/dialog7feedback-dialog.component';
+import { FeedbackDialogComponent } from 'src/app/components/dialog/dialog7feedback-dialog/dialog7feedback-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
