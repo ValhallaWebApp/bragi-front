@@ -14,18 +14,22 @@ export class AuthGuard implements CanActivate, CanLoad {
 
   // Controllo di accesso per attivare la rotta
   canActivate(): Observable<boolean> {
-    return this.authService.isAdmin().pipe(
-      take(1),
-      map(isAdmin => {
-        if (!isAdmin) {
-          this.router.navigate(['/user']); // Redirige se non sei admin
+    return this.authService.getUserRole().pipe(
+      take(1), // Take the first (and only) emitted value, ensuring we aren't subscribed indefinitely
+      map(role => {
+        if (role === 'admin') {
+          this.router.navigate(['/admin']);
+          console.log(role)
+          return true; // Allow access for admin users
+        } else {
+          console.log(role)
+
+          this.router.navigate(['/user']); // Redirect to home if not authorized
           return false;
         }
-        return true;
       })
     );
   }
-
   // Controllo di accesso per caricare il modulo (lazy load)
   canLoad(route: Route | any): Observable<boolean> {
     return this.checkUserAuthentication(route.path);

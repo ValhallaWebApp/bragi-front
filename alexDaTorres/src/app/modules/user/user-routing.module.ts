@@ -4,13 +4,13 @@ import { UserComponent } from './user.component';
 import { OrderHistoryComponent } from './components/order-history/order-history.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-import { AuthGuard } from 'src/app/services/auth.guard';
 import { ReviewUserListComponent } from './components/reviews/review-user-list/review-user-list.component';
+import { UserGuard } from 'src/app/services/user.guard';
 
 const routes: Routes = [
   {
     path: '', component: UserComponent,
-    canActivate: [AuthGuard], // Assicurati che l'utente sia autenticato per accedere a queste rotte
+    canActivate: [UserGuard], // Assicurati che l'utente sia autenticato per accedere a queste rotte
     children: [
       { path: 'profile', component: ProfileComponent },
       { path: 'order-history', component: OrderHistoryComponent },

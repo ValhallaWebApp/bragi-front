@@ -6,6 +6,10 @@ cd alexDaTorres-frontend
 
 # Guard Auth
 ng generate guard services/auth
+ng generate guard services/admin
+ng generate guard services/user
+
+
 
 # Core and Shared Modules
 ng generate module modules/core --routing
