@@ -39,7 +39,7 @@ import { CartModule } from './modules/cart/cart.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { FeedbackDialogComponent } from './components/dialog7feedback-dialog/dialog7feedback-dialog.component';
-
+import { PaymentComponent } from './modules/payment/payment.component';
 // Funzione per caricare i file di traduzione
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -50,7 +50,6 @@ export function HttpLoaderFactory(http: HttpClient) {
         HeaderComponent,
         BannerComponent,
         FooterComponent,
-
     ],
     bootstrap: [AppComponent],
     exports:[AuthModule],

@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   dropdownOpen = false;
   languages = ['en', 'it', 'fr'];
   domain = '';
+  logged :boolean = false
   private documentClickListener!: () => void;
 
   constructor(private authService: AuthService, private router: Router,public translate: TranslateService, private renderer: Renderer2) {}
@@ -32,6 +33,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.dropdownOpen = false;
       }
     });
+    this.authService.isLoggedIn$.subscribe((loggedIn) => {
+      this.logged = loggedIn;
+    });
+    // this.logged = this.authService.isUserLoggedIn()
   }
 
   ngOnDestroy() {

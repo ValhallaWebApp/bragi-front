@@ -77,9 +77,12 @@
       <button mat-icon-button color="primary" routerLink="/cart">
         <mat-icon>shopping_cart</mat-icon>
       </button>
-      <!-- <button mat-raised-button color="warn" (click)="onLogout()">
+      <button *ngIf="logged" mat-raised-button color="warn" (click)="onLogout()">
         Logout
-      </button> -->
+      </button>
+      <button *ngIf="!logged" mat-raised-button color="warn" routerLink="/auth/login">
+        login
+      </button>
       <app-contact-icon></app-contact-icon>
       <!-- Custom Dropdown per la Lingua -->
     </mat-nav-list>

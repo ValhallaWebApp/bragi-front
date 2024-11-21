@@ -13,6 +13,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { DialogModule } from '@angular/cdk/dialog';
 import { FeedbackDialogComponent } from 'src/app/components/dialog7feedback-dialog/dialog7feedback-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import { FeedbackDialogComponent } from 'src/app/components/dialog7feedback-dial
     MatIconModule,        // (opzionale) Per icone come mat-card-avatar
     MatToolbarModule,     // (opzionale) Per la toolbar
     MatDividerModule,     // (opzionale) Per divisori se necessario
-    DialogModule
+    DialogModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatDialogModule
   ]
 })
 export class CartModule { }

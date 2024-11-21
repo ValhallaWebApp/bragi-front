@@ -1,1 +1,77 @@
-<p>checkout works!</p>
+<div class="checkout-container">
+  <h2>Checkout</h2>
+
+  <!-- Lista degli articoli nel carrello -->
+  <div class="cart-summary" *ngIf="cartItems.length > 0">
+    <mat-card *ngFor="let item of cartItems" class="artwork-card">
+      <div class="artwork-card-content">
+        <!-- Miniatura dell'opera -->
+        <div class="artwork-thumbnail">
+          <img [src]="item.thumbnail" alt="{{ item.title }}" />
+        </div>
+
+        <!-- Dettagli dell'opera -->
+        <div class="artwork-details">
+          <mat-card-title>{{ item.title }}</mat-card-title>
+          <mat-card-subtitle>{{ item.year }} - {{ item.technique }}</mat-card-subtitle>
+          <p>Dimensioni: {{ item.dimensions.height }} x {{ item.dimensions.width }} cm</p>
+          <p>Prezzo: € {{ item.price ? item.price : 'Non Disponibile' }}</p>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+
+  <!-- Messaggio se il carrello è vuoto -->
+  <div *ngIf="cartItems.length === 0">
+    <p>Il carrello è vuoto. <a routerLink="/gallery">Continua a fare shopping</a></p>
+  </div>
+
+  <!-- Modulo di inserimento dati utente per la spedizione -->
+  <form [formGroup]="checkoutForm" *ngIf="cartItems.length > 0">
+    <h3>Dettagli di spedizione</h3>
+    <mat-form-field appearance="fill">
+      <mat-label>Nome Completo</mat-label>
+      <input matInput formControlName="fullName" />
+      <mat-error *ngIf="checkoutForm.get('fullName')?.invalid">
+        Il nome completo è obbligatorio.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Indirizzo</mat-label>
+      <input matInput formControlName="address" />
+      <mat-error *ngIf="checkoutForm.get('address')?.invalid">
+        L'indirizzo è obbligatorio.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Città</mat-label>
+      <input matInput formControlName="city" />
+      <mat-error *ngIf="checkoutForm.get('city')?.invalid">
+        La città è obbligatoria.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- <mat-form-field appearance="fill">
+      <mat-label>CAP</mat-label>
+      <input matInput formControlName="zipCode" type="number" />
+      <mat-error *ngIf="checkoutForm.get('zipCode')?.invalid">
+        Il CAP è obbligatorio.
+      </mat-error>
+    </mat-form-field> -->
+
+    <mat-form-field appearance="fill">
+      <mat-label>Numero di telefono</mat-label>
+      <input matInput formControlName="phoneNumber" type="tel" />
+      <mat-error *ngIf="checkoutForm.get('phoneNumber')?.invalid">
+        Il numero di telefono è obbligatorio.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Pulsante per confermare l'ordine -->
+    <div class="checkout-actions">
+      <button mat-raised-button color="primary" (click)="placeOrder()" [disabled]="checkoutForm.invalid">Conferma Ordine</button>
+    </div>
+  </form>
+</div>

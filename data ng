@@ -82,9 +82,11 @@ ng generate service services/api
 ng generate service services/auth
 ng generate service services/cart
 ng generate service services/user
+ng generate service services/payment
 
 # Core Specific Services
 ng generate service modules/gallery/services/gallery
+
 
 # Guards and Interceptors
 ng generate service modules/core/guards/auth

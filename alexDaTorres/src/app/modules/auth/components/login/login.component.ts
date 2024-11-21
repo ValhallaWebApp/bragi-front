@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private authService: AuthService) {
+  constructor(private fb: FormBuilder, private authService: AuthService, public router:Router) {
     // Inizializza il form di login con campi email e password
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -26,7 +27,7 @@ export class LoginComponent {
       this.authService.login(email, password)
         .then(() => {
           console.log('Login avvenuto con successo!');
-          // Potresti voler reindirizzare l'utente dopo un login avvenuto con successo
+          this.router.navigate(['/admin']);          // Potresti voler reindirizzare l'utente dopo un login avvenuto con successo
         })
         .catch((error) => {
           console.error('Errore durante il login:', error);
