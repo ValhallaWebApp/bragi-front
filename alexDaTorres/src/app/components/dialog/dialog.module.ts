@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 // Components
 import { ArtworkDialogComponent } from './artwork-dialog/artwork-dialog.component';
@@ -17,6 +18,8 @@ import { EditReviewDialogComponent } from './edit-review-dialog/edit-review-dial
 import { FeedbackDialogComponent } from './dialog7feedback-dialog/dialog7feedback-dialog.component';
 import { DeleteArtworkDialogComponent } from './../../modules/admin/shared/dialogs/delete-artwork-dialog/delete-artwork-dialog.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { MatIcon } from '@angular/material/icon';
+import { ReviewFormComponent } from '../forms/review-form/review-form.component';
 
 @NgModule({
   imports: [
@@ -29,6 +32,8 @@ import { TranslateModule } from '@ngx-translate/core';
     MatSelectModule,
     MatFormFieldModule,
     MatDialogModule,
+    MatIcon,
+    MatExpansionModule,
     TranslateModule
   ],
   declarations: [
@@ -36,14 +41,16 @@ import { TranslateModule } from '@ngx-translate/core';
     EditArtworkDialogComponent,
     EditReviewDialogComponent,
     FeedbackDialogComponent,
-    DeleteArtworkDialogComponent
+    DeleteArtworkDialogComponent,
+    ReviewFormComponent
   ],
   exports: [
     ArtworkDialogComponent,
     EditArtworkDialogComponent,
     EditReviewDialogComponent,
     FeedbackDialogComponent,
-    DeleteArtworkDialogComponent
+    DeleteArtworkDialogComponent,
+    ReviewFormComponent
   ]
 })
 export class DialogModule { }

@@ -92,6 +92,7 @@ ng generate service services/auth
 ng generate service services/cart
 ng generate service services/user
 ng generate service services/payment
+ng generate service services/order
 
 # Core Specific Services
 ng generate service modules/gallery/services/gallery
@@ -107,3 +108,4 @@ ng generate component modules/home/components/artist-passion
 ng generate component modules/home/components/exhibitions
 ng generate component modules/home/components/artist-inspiration
 ng generate service services/articles
+ng generate component components/forms/review-form

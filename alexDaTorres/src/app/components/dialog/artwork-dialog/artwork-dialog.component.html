@@ -1,14 +1,58 @@
-<div class="container-pop">
-  <h2 mat-dialog-title>{{ data.title }}</h2>
-  <div mat-dialog-content>
-    <img [src]="'../../../../assets/img/'+data.thumbnail" alt="{{ data.title }}" />
-    <p><strong>Anno:</strong> {{ data.year }}</p>
-    <p><strong>Dimensioni:</strong> {{ data.dimensions.height }} * {{ data.dimensions.width }}</p>
-    <p><strong>Tecnica:</strong> {{ data.technique | translate }}</p>
-    <p><strong>Descrizione:</strong> {{ data.descrizioneKey | translate }}</p>
+<div class="artwork-detail">
+  <!-- Bottone per toggle recensioni -->
+  <button mat-stroked-button (click)="togglePanel()">Recensioni</button>
+
+  <!-- Pannello espandibile per recensioni -->
+  <mat-expansion-panel [expanded]="isExpanded" (closed)="isExpanded = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon>rate_review</mat-icon> Recensioni degli utenti
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="container-reviews">
+      <!-- Contenuto delle recensioni -->
+      <div *ngFor="let review of reviews" class="review-item">
+        <p>
+          <strong>{{ review.userEmail}}</strong>: <br>
+          {{ review.comment }} (Rating: {{ review.rating }} / 5)
+        </p>
+      </div>
+
+      <div *ngIf="reviews.length === 0">
+        <p>
+          Non ci sono recensioni per questo quadro. Sii il primo a lasciare una
+          recensione!
+        </p>
+      </div>
+    </div>
+    <hr>
+    <!-- Form per lasciare una nuova recensione -->
+    <app-review-form (submitReview)="onReviewSubmit($event)" (cancelReview)="onReviewCancel()"></app-review-form>
+  </mat-expansion-panel>
+
+  <!-- Dettagli dell'opera d'arte -->
+  <div *ngIf="!isExpanded" class="container-pop">
+    <div mat-dialog-content>
+      <h3>{{ data.title }}</h3>
+      <img
+        [src]="'../../../../assets/img/' + data.thumbnail"
+        alt="{{ data.title }}"
+      />
+      <p><strong>Anno:</strong> {{ data.year }}</p>
+      <p>
+        <strong>Dimensioni:</strong> {{ data.dimensions.height }} *
+        {{ data.dimensions.width }}
+      </p>
+      <p><strong>Tecnica:</strong> {{ data.technique | translate }}</p>
+      <p><strong>Descrizione:</strong> {{ data.descrizioneKey | translate }}</p>
+    </div>
   </div>
-  <div mat-dialog-actions>
+
+  <!-- Pulsanti di azione -->
+  <div class="action-buttons">
+    <button mat-raised-button color="primary" (click)="contactOnWhatsApp(data)">
+      Info <mat-icon>chat</mat-icon>
+    </button>
     <button mat-button (click)="onClose()">Chiudi</button>
-    <button mat-raised-button color="primary" (click)="contactOnWhatsApp(data)">Contatta per quest'opera</button>
   </div>
 </div>

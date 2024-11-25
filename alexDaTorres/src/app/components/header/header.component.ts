@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   languages = ['en', 'it', 'fr'];
   domain = '';
   logged :boolean = false
+  flagAdmin:any = false
   private documentClickListener!: () => void;
 
   constructor(private authService: AuthService, private router: Router,public translate: TranslateService, private renderer: Renderer2) {}
@@ -26,7 +27,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.domain = window.location.hostname;
     this.switchLanguage(this.currentLanguage);
-
+    this.isAdmin()
     // Listener per chiudere il dropdown se si clicca al di fuori
     this.documentClickListener = this.renderer.listen('document', 'click', (event: Event) => {
       if (this.dropdownOpen && !this.dropdownRef.nativeElement.contains(event.target)) {
@@ -98,5 +99,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .catch((error) => {
         console.error('Errore durante il logout:', error);
       });
+  }
+  isAdmin() {
+    this.flagAdmin = this.authService.isAdmin()
+
   }
 }

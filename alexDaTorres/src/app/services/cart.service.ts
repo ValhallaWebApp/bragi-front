@@ -13,7 +13,6 @@ export class CartService {
 
   constructor(private db: AngularFireDatabase, private afAuth: AngularFireAuth) {
     // Carica il carrello dall'inizio
-   this.loadCart();
    this.afAuth.authState.subscribe((user) => {
     if (user) {
       this.userId = user.uid; // Usa l'UID dell'utente autenticato
@@ -131,4 +130,5 @@ export class CartService {
         }
       }));
   }
+
 }

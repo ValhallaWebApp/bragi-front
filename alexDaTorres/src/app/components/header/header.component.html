@@ -64,6 +64,12 @@
       <a mat-list-item routerLink="/contact" (click)="sidenav.close()">
         {{ "HEADER.MENU.CONTACT" | translate }}
       </a>
+      <a *ngIf="logged && !flagAdmin" mat-list-item routerLink="/user" (click)="sidenav.close()">
+        Dashboard Client
+      </a>
+      <a *ngIf="logged && flagAdmin" mat-list-item routerLink="/admin" (click)="sidenav.close()">
+        Dashboard Admin
+      </a>
       <div class="magazzine-download-button">
         <button
           mat-raised-button

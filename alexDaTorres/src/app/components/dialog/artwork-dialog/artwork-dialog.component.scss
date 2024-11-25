@@ -1,9 +1,11 @@
 .container-pop{
  text-align: center;
-  margin: 30px 15px;
-  text-align: center;
   max-height: 60vh;
   overflow-y: scroll;
+  h3{
+
+    font-weight: bolder;
+  }
   img{
     max-width: 100%;
     max-height: 40vh;
@@ -12,4 +14,28 @@
   button{
     margin: 10px;
   }
+}
+.action-buttons{
+  display: flex;
+  flex-direction: column;
+  button{
+    min-width: 100%;
+  }
+}
+.artwork-detail {
+  position: relative;
+  width: 100%;
+}
+
+mat-expansion-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: white;
+}
+.container-reviews{
+  max-height: 35vh;
+  overflow-y: scroll;
 }

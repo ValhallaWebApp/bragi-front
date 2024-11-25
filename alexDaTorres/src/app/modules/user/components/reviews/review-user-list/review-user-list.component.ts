@@ -47,7 +47,7 @@ export class ReviewUserListComponent implements OnInit {
     dialogRef.afterClosed().subscribe((updatedReview) => {
       if (updatedReview) {
         // Aggiorna la recensione nel database usando il ReviewService
-        this.reviewService.updateReview(review.id, updatedReview)
+        this.reviewService.updateReview(review.artworkId,review.id, updatedReview)
           .then(() => {
             console.log('Recensione aggiornata con successo');
           })
@@ -60,12 +60,12 @@ export class ReviewUserListComponent implements OnInit {
 
   deleteReview(reviewId: string): void {
     // Chiama il servizio per eliminare la recensione
-    this.reviewService.deleteReview(reviewId)
-      .then(() => {
-        console.log('Recensione eliminata con successo');
-      })
-      .catch((error) => {
-        console.error('Errore durante l\'eliminazione della recensione:', error);
-      });
+    // this.reviewService.deleteReview(review.artworkId,reviewId)
+    //   .then(() => {
+    //     console.log('Recensione eliminata con successo');
+    //   })
+    //   .catch((error) => {
+    //     console.error('Errore durante l\'eliminazione della recensione:', error);
+    //   });
   }
 }

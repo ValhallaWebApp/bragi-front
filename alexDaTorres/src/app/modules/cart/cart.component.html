@@ -18,7 +18,7 @@
   <mat-card *ngFor="let item of cartItems" class="artwork-card">
     <mat-card-header>
       <div mat-card-avatar class="artwork-thumbnail">
-        <img [src]="item.thumbnail" alt="{{ item.title }}" />
+        <img [src]="'../../../assets/img/' + item.thumbnail" alt="{{ item.title }}" />
       </div>
       <mat-card-title>{{ item.title }}</mat-card-title>
       <mat-card-subtitle

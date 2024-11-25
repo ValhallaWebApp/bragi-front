@@ -76,8 +76,13 @@
     <h3>{{ artWork.title }}</h3>
     <h4>{{ artWork.year }}</h4>
     <h5>{{ artWork.tequincue | translate }}</h5>
-    <button mat-raised-button color="primary" (click)="openArtworkDialog(artWork)">{{ 'VIEW_DETAILS' | translate }}</button>
+<div>
+  <button mat-raised-button color="primary" (click)="openArtworkDialog(artWork)">{{ 'VIEW_DETAILS' | translate }}</button>
+  <button mat-raised-button color="secondary">
+    <mat-icon>rate_review</mat-icon>
+  </button>
 
+</div>
     <!-- Sezione per mostrare il rating in stelle -->
     <div class="rating">
       <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">

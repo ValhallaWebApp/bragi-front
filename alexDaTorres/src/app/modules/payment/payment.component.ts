@@ -19,26 +19,26 @@ export class PaymentComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.paymentService.getClientToken().subscribe({
-      next: (response) => {
-        this.clientToken = response.clientToken;
+    // this.paymentService.getClientToken().subscribe({
+    //   next: (response) => {
+    //     this.clientToken = response.clientToken;
 
-        // Inizializza la Drop-In UI di Braintree
-        dropin.create({
-          authorization: this.clientToken,
-          container: '#dropin-container'
-        }, (err, instance) => {
-          if (err) {
-            console.error('Errore durante l\'inizializzazione di Braintree:', err);
-            return;
-          }
-          this.dropinInstance = instance;
-        });
-      },
-      error: (error) => {
-        console.error('Errore nel recupero del client token:', error);
-      }
-    });
+    //     // Inizializza la Drop-In UI di Braintree
+    //     dropin.create({
+    //       authorization: this.clientToken,
+    //       container: '#dropin-container'
+    //     }, (err, instance) => {
+    //       if (err) {
+    //         console.error('Errore durante l\'inizializzazione di Braintree:', err);
+    //         return;
+    //       }
+    //       this.dropinInstance = instance;
+    //     });
+    //   },
+    //   error: (error) => {
+    //     console.error('Errore nel recupero del client token:', error);
+    //   }
+    // });
   }
 
   // Metodo per confermare il pagamento
@@ -55,20 +55,20 @@ export class PaymentComponent implements OnInit {
         }
 
         // Chiama il service per processare il pagamento
-        this.paymentService.processPayment(payload.nonce, 0.10).subscribe({
-          next: (result) => {
-            this.openFeedbackDialog({
-              success: true,
-              message: 'Il pagamento è stato effettuato con successo! ID transazione: ' + result.transactionId
-            });
-          },
-          error: (error) => {
-            this.openFeedbackDialog({
-              success: false,
-              message: 'Errore durante il pagamento: ' + error.message
-            });
-          }
-        });
+        // this.paymentService.processPayment(payload.nonce, 0.10).subscribe({
+        //   next: (result) => {
+        //     this.openFeedbackDialog({
+        //       success: true,
+        //       message: 'Il pagamento è stato effettuato con successo! ID transazione: ' + result.transactionId
+        //     });
+        //   },
+        //   error: (error) => {
+        //     this.openFeedbackDialog({
+        //       success: false,
+        //       message: 'Errore durante il pagamento: ' + error.message
+        //     });
+        //   }
+        // });
       });
     }
   }
