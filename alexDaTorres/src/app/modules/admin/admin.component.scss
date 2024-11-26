@@ -1,10 +1,20 @@
-section{
+.admin-container{
   padding: 10px;
   background-color: rgba(242, 204, 209, 0.418);
 min-height: 70vh;
   h3{
     margin: 0px;
     padding: 0px;
+  }
+  nav{
+    ul{
+      display: flex;
+      list-style-type: none;
+      li{
+        padding: 5px;
+        margin: 0px 5px;
+      }
+    }
   }
   .container-choise{
     text-align: center;

@@ -1,24 +1,12 @@
-<section>
-  <h1>Admin Dashboard</h1>
-  <h3>Gestisci i tuoi dati</h3>
-  <div class="container-choise">
-    <button routerLink="artworks" mat-raised-button color="primary">
-      <h3>Quadri</h3>
-    </button>
-    <button routerLink="commenti" mat-raised-button color="primary">
-      <h3>Commenti</h3>
-    </button>
-    <button mat-raised-button color="primary">
-      <h3>Statistiche</h3>
-    </button>
-    <button routerLink="vendite" mat-raised-button color="primary">
-      <h3>Vendite</h3>
-    </button>
-    <button mat-raised-button color="primary">
-      <h3>Anagrafiche</h3>
-    </button>
-    <button mat-raised-button color="primary">
-      <h3>Collaborazioni</h3>
-    </button>
+<div class="admin-container">
+  <nav>
+    <ul>
+      <li><a routerLink="artworks">Quadri</a></li>
+      <li><a routerLink="commenti">Commenti</a></li>
+      <li><a routerLink="vendite">Vendite</a></li>
+    </ul>
+  </nav>
+  <div class="admin-content">
+    <router-outlet></router-outlet>
   </div>
-</section>
+</div>

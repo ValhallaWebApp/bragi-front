@@ -23,10 +23,12 @@ export class ReviewService {
             const artworkReviews:any = snapshotTmp.payload.val();
             if (artworkReviews && typeof artworkReviews === 'object') {
               Object.entries(artworkReviews).forEach(([reviewKey, review]:any) => {
-                // Aggiungi il `reviewId` e l'artworkId per ogni recensione
-                Object.keys(review).map((key) => {
-                 flattenedReviews.push(review[key])
-                });
+                if (review && typeof review === 'object') {
+                  Object.keys(review).map((key) => {
+                   flattenedReviews.push(review[key])
+                  });
+
+                }
               });
             }
           });
