@@ -84,6 +84,7 @@ ng generate component modules/admin/components/admin-dashboard
 ng generate component modules/admin/components/artwork-management
 ng generate component modules/admin/components/user-management
 ng generate component modules/admin/components/admin-reviews
+ng generate component modules/admin/components/statistics-dashboard
 
 # Shared Components
 ng generate component components/contact-form
@@ -97,7 +98,7 @@ ng generate service services/cart
 ng generate service services/user
 ng generate service services/payment
 ng generate service services/order
-
+ng generate service services/statics
 # Core Specific Services
 ng generate service modules/gallery/services/gallery
 
@@ -113,3 +114,4 @@ ng generate component modules/home/components/exhibitions
 ng generate component modules/home/components/artist-inspiration
 ng generate service services/articles
 ng generate component components/forms/review-form
+ng generate service services/event-tracking

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { EventTrackingService } from './event-tracking.service';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,7 @@ export class CartService {
   cart$ = this.cart.asObservable();
   userId: string = 'guest'; // In un'app reale, potresti recuperare l'ID dell'utente autenticato
 
-  constructor(private db: AngularFireDatabase, private afAuth: AngularFireAuth) {
+  constructor(private db: AngularFireDatabase, private afAuth: AngularFireAuth,private eventTrackingService: EventTrackingService) {
     // Carica il carrello dall'inizio
    this.afAuth.authState.subscribe((user) => {
     if (user) {
@@ -62,7 +63,7 @@ export class CartService {
 
     const updatedCart = [...currentCart, artwork];
     this.cart.next(updatedCart);
-
+    this.eventTrackingService.trackAddToCart(artwork.id, artwork.title);
     return this.saveCart(updatedCart)
       .then(() => ({
         success: true,

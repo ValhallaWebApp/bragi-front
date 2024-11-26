@@ -5,6 +5,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { CartService } from './cart.service';
 import { take, switchMap,map,  catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
+import { EventTrackingService } from './event-tracking.service';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,8 @@ export class OrderService {
     private db: AngularFireDatabase,
     private afAuth: AngularFireAuth,
     private cartService: CartService,
-    private authService: AuthService
+    private authService: AuthService,
+    private eventTrackingService: EventTrackingService
   ) {}
   getOrders(): Observable<any[]> {
           return this.db
@@ -91,6 +93,7 @@ export class OrderService {
 
         // Costruisci i dati dell'ordine
         const orderData = {
+          id:'test',
           userId: user.uid,
           cartItems: cartItems,
           amount: cartItems.reduce((acc: any, item: any) => acc + (item.price || 0) * (item.quantity || 1), 0), // Calcola il totale
@@ -105,6 +108,7 @@ export class OrderService {
         // Svuota il carrello dopo aver piazzato l'ordine
         await this.cartService.clearCart();
 
+        this.eventTrackingService.trackPurchase(orderData?.id, orderData.amount);
         return {
           success: true,
           message: 'Ordine piazzato con successo!',

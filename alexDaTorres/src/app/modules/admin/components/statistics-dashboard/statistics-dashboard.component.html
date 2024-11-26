@@ -1,0 +1,70 @@
+<h1>Statistiche del Sito</h1>
+<div class="dashboard-container">
+
+  <div class="statistic-card small">
+    <h2>Numero Totale di Visualizzazioni</h2>
+    <ngx-charts-number-card
+      [results]="[{name: 'Visualizzazioni', value: totalViews$ | async}]">
+    </ngx-charts-number-card>
+  </div>
+
+  <div class="statistic-card small">
+    <h2>Numero Totale di Aggiunte al Carrello</h2>
+    <ngx-charts-number-card
+      [results]="[{name: 'Aggiunte al Carrello', value: totalAddToCart$ | async}]">
+    </ngx-charts-number-card>
+  </div>
+
+  <div class="statistic-card">
+    <h2>Distribuzione Attività Utenti</h2>
+    <ngx-charts-bar-vertical
+      [results]="[
+        {name: 'Utenti Loggati', value: (userEventsStats$ | async)?.loggedIn},
+        {name: 'Utenti Anonimi', value: (userEventsStats$ | async)?.anonymous}
+      ]"
+      [scheme]="'cool'"
+      [xAxis]="true"
+      [yAxis]="true">
+    </ngx-charts-bar-vertical>
+  </div>
+
+  <div class="artwork-stats" *ngIf="artworkStats$ | async as artworks">
+    <h2>Statistiche delle Opere</h2>
+    <div *ngFor="let artwork of artworks">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{ artwork.title }}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Visualizzazioni: {{ artwork.views }}</p>
+        <p>Aggiunte al Carrello: {{ artwork.addsToCart }}</p>
+        <ngx-charts-pie-chart
+          [results]="[
+            {name: 'Visualizzazioni', value: artwork.views},
+            {name: 'Aggiunte al Carrello', value: artwork.addsToCart}
+          ]"
+          [scheme]="'vivid'"
+          [legend]="true">
+        </ngx-charts-pie-chart>
+      </mat-expansion-panel>
+    </div>
+  </div>
+
+  <!-- General Views and Cart Statistics for all Artworks -->
+  <!-- General Views and Cart Statistics for all Artworks -->
+<div class="statistic-card">
+  <h2>Statistiche Generali delle Opere d'Arte</h2>
+  <ngx-charts-bar-vertical
+    *ngIf="overallStats$ | async as overallStats"
+    [results]="overallStats"
+    [scheme]="'cool'"
+    [xAxis]="true"
+    [yAxis]="true"
+    [legend]="true"
+    [showXAxisLabel]="true"
+    [xAxisLabel]="'Opera d\'Arte'"
+    [showYAxisLabel]="true"
+    [yAxisLabel]="'Interazioni (Visualizzazioni + Aggiunte)'">
+  </ngx-charts-bar-vertical>
+</div>
+
+</div>

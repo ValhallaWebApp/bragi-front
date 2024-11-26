@@ -1,0 +1,58 @@
+.dashboard-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.statistic-card.small {
+  padding: 20px;
+  width: 200px;
+  height: auto;
+  font-size: 0.9em;
+  ngx-charts-number-card {
+    height: 100px !important; // Reduce the height of the number card chart
+  }
+}
+.statistic-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  width: 300px; // Adjusted size for smaller appearance
+  margin: auto;
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  &.small {
+    width: 200px;
+    padding: 15px;
+  }
+}
+
+.artwork-stats {
+  mat-expansion-panel {
+    margin-bottom: 15px;
+
+    .mat-expansion-panel-header {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    ngx-charts-pie-chart {
+      margin-top: 10px;
+    }
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #3f51b5;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+}

@@ -20,6 +20,9 @@ import { DeleteArtworkDialogComponent } from './shared/dialogs/delete-artwork-di
 import { SalesListComponent } from './components/sales-list/sales-list.component';
 import { MatCardModule } from '@angular/material/card';
 import { AdminReviewsComponent } from './components/admin-reviews/admin-reviews.component';
+import { AdminStatisticsDashboardComponent } from './components/statistics-dashboard/statistics-dashboard.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 @NgModule({
@@ -29,7 +32,8 @@ import { AdminReviewsComponent } from './components/admin-reviews/admin-reviews.
     ArtworkManagementComponent,
     UserManagementComponent,
     SalesListComponent,
-    AdminReviewsComponent
+    AdminReviewsComponent,
+    AdminStatisticsDashboardComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +48,9 @@ import { AdminReviewsComponent } from './components/admin-reviews/admin-reviews.
     FormsModule,
     TranslateModule,
     DialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatExpansionModule,
+    NgxChartsModule
   ]
 })
 export class AdminModule { }

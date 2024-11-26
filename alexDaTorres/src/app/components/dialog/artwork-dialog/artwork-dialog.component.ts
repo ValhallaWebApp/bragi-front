@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { EventTrackingService } from 'src/app/services/event-tracking.service';
 import { ReviewService } from 'src/app/services/review.service';
 
 @Component({
@@ -19,7 +20,7 @@ export class ArtworkDialogComponent {
     this.reviewService.getReviewsByArtwork(this.data.id).subscribe((ele) => {
       this.reviews = ele;
     });
-    console.log(this.reviews);
+    this.eventTrackingService.trackArtworkView(this.data.id, this.data.title);
   }
   constructor(
     public dialogRef: MatDialogRef<ArtworkDialogComponent>,
@@ -27,6 +28,7 @@ export class ArtworkDialogComponent {
     private fb: FormBuilder,
     private afAuth: AuthService,
     private reviewService: ReviewService,
+    private eventTrackingService: EventTrackingService,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.reviewForm = this.fb.group({

@@ -6,6 +6,7 @@ import { UserGuard } from 'src/app/services/user.guard';
 import { SalesListComponent } from './components/sales-list/sales-list.component';
 import { AdminReviewsComponent } from './components/admin-reviews/admin-reviews.component';
 import { AdminGuard } from 'src/app/services/admin.guard';
+import { AdminStatisticsDashboardComponent } from './components/statistics-dashboard/statistics-dashboard.component';
 const routes: Routes = [
   {
     path: '', component: AdminComponent,
@@ -14,6 +15,7 @@ const routes: Routes = [
       { path: 'artworks', component:ArtworkManagementComponent},
       { path: 'vendite', component:SalesListComponent},
       { path: 'commenti', component: AdminReviewsComponent },
+      { path: 'statistiche', component: AdminStatisticsDashboardComponent },
     ]
     }
 ];
