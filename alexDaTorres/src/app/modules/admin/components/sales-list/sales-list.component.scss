@@ -1,0 +1,63 @@
+.sales-list-container {
+  padding: 20px;
+  background-color: #f59c8597;
+
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .mat-form-field {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .sale-item {
+    margin-bottom: 15px;
+
+    mat-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+      mat-card-header {
+        background-color: #f0f0f0;
+        border-bottom: 1px solid #e0e0e0;
+
+        mat-card-title {
+          font-weight: 600;
+          font-size: 1.2em;
+        }
+
+        mat-card-subtitle {
+          font-size: 0.9em;
+          color: #555;
+        }
+      }
+
+      mat-card-content {
+        p {
+          margin: 8px 0;
+        }
+
+        strong {
+          color: #333;
+        }
+      }
+
+      mat-card-actions {
+        button {
+          margin-right: 10px;
+
+          &:first-child {
+            margin-left: 5px;
+          }
+
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+}

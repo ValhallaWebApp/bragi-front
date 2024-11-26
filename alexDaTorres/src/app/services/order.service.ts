@@ -16,7 +16,36 @@ export class OrderService {
     private cartService: CartService,
     private authService: AuthService
   ) {}
-
+  getOrders(): Observable<any[]> {
+          return this.db
+            .list('orders', ref => ref.orderByChild('userId'))
+            .snapshotChanges() // Usa snapshotChanges per ottenere anche gli ID
+            .pipe(
+              map((changes:any) =>
+                changes.map((c:any) => ({
+                  id: c.payload.key, // Estrai l'ID dell'ordine
+                  ...c.payload.val() // Unisci l'ID con gli altri dati dell'ordine
+                }))
+              ),
+              catchError((error) => {
+                console.error('Errore durante il recupero degli ordini:', error);
+                return of([]); // Restituisce un Observable con un array vuoto in caso di errore
+              })
+            );
+  }
+    // Metodo per aggiornare lo stato di un ordine
+    updateOrderStatus(orderId: string, newStatus: string): Promise<void> {
+      return this.db
+        .object(`/orders/${orderId}`)
+        .update({ status: newStatus, updatedAt: new Date().toISOString() })
+        .then(() => {
+          console.log(`Stato dell'ordine aggiornato con successo a: ${newStatus}`);
+        })
+        .catch((error) => {
+          console.error('Errore durante l\'aggiornamento dello stato dell\'ordine:', error);
+          throw new Error('Errore durante l\'aggiornamento dello stato dell\'ordine.');
+        });
+    }
   getOrdersByUser(): Observable<any[]> {
     return this.authService.getUser().pipe(
       switchMap((user:any) => {

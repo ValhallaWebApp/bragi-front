@@ -22,6 +22,7 @@ ng generate component modules/admin/shared/dialogs/delete-artwork-dialog
 ng generate component modules/user/components/reviews/review-user-list
 #dialog reviw edit
 ng generate c components/dialog/edit-review-dialog
+ng generate c components/dialog/order-details-dialog
 
 # Auth component
 
@@ -34,7 +35,9 @@ ng generate component components/dialog7feedback-dialog
 
 # Contact shortcut component
 ng generate component components/shortcut/contact-icon
+ng generate component modules/admin/sales/components/sales-list
 
+--
 # Home Module
 ng generate module modules/home --route home --module app.module
 ng generate component modules/home/components/hero-banner
@@ -80,6 +83,7 @@ ng generate module modules/admin --route admin --module app.module
 ng generate component modules/admin/components/admin-dashboard
 ng generate component modules/admin/components/artwork-management
 ng generate component modules/admin/components/user-management
+ng generate component modules/admin/components/admin-reviews
 
 # Shared Components
 ng generate component components/contact-form

@@ -47,7 +47,7 @@ export class ReviewUserListComponent implements OnInit {
     dialogRef.afterClosed().subscribe((updatedReview) => {
       if (updatedReview) {
         // Aggiorna la recensione nel database usando il ReviewService
-        this.reviewService.updateReview(review.artworkId,review.id, updatedReview)
+        this.reviewService.updateReview(review, updatedReview)
           .then(() => {
             console.log('Recensione aggiornata con successo');
           })

@@ -1,0 +1,29 @@
+.admin-reviews-container {
+  padding: 20px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .review-card {
+    margin-bottom: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    mat-card-header {
+      background-color: #f0f0f0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    mat-card-actions {
+      button {
+        margin-right: 10px;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}

@@ -20,6 +20,9 @@ import { DeleteArtworkDialogComponent } from './../../modules/admin/shared/dialo
 import { TranslateModule } from '@ngx-translate/core';
 import { MatIcon } from '@angular/material/icon';
 import { ReviewFormComponent } from '../forms/review-form/review-form.component';
+import { OrderDetailsDialogComponent } from './order-details-dialog/order-details-dialog.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   imports: [
@@ -34,6 +37,7 @@ import { ReviewFormComponent } from '../forms/review-form/review-form.component'
     MatDialogModule,
     MatIcon,
     MatExpansionModule,
+    MatDividerModule,
     TranslateModule
   ],
   declarations: [
@@ -42,7 +46,9 @@ import { ReviewFormComponent } from '../forms/review-form/review-form.component'
     EditReviewDialogComponent,
     FeedbackDialogComponent,
     DeleteArtworkDialogComponent,
-    ReviewFormComponent
+    ReviewFormComponent,
+    OrderDetailsDialogComponent,
+    ConfirmDialogComponent
   ],
   exports: [
     ArtworkDialogComponent,
@@ -50,7 +56,9 @@ import { ReviewFormComponent } from '../forms/review-form/review-form.component'
     EditReviewDialogComponent,
     FeedbackDialogComponent,
     DeleteArtworkDialogComponent,
-    ReviewFormComponent
+    ReviewFormComponent,
+    OrderDetailsDialogComponent,
+    ConfirmDialogComponent
   ]
 })
 export class DialogModule { }

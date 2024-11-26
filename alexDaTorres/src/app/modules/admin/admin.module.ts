@@ -17,6 +17,9 @@ import { TranslateModule } from '@ngx-translate/core';
 import { DialogModule } from '@angular/cdk/dialog';
 import { EditArtworkDialogComponent } from './shared/dialogs/edit-artwork-dialog/edit-artwork-dialog.component';
 import { DeleteArtworkDialogComponent } from './shared/dialogs/delete-artwork-dialog/delete-artwork-dialog.component';
+import { SalesListComponent } from './components/sales-list/sales-list.component';
+import { MatCardModule } from '@angular/material/card';
+import { AdminReviewsComponent } from './components/admin-reviews/admin-reviews.component';
 
 
 @NgModule({
@@ -24,12 +27,15 @@ import { DeleteArtworkDialogComponent } from './shared/dialogs/delete-artwork-di
     AdminComponent,
     AdminDashboardComponent,
     ArtworkManagementComponent,
-    UserManagementComponent
+    UserManagementComponent,
+    SalesListComponent,
+    AdminReviewsComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     AdminRoutingModule,
+    MatCardModule,
     MatInputModule,
     MatSelectModule,
     MatFormFieldModule,

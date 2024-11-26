@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>Dettagli dell'Ordine</h2>
+<mat-dialog-content>
+  <div *ngIf="order">
+    <p><strong>Ordine ID:</strong> {{ order.id }}</p>
+    <p><strong>Data Ordine:</strong> {{ order.orderDate | date:'medium' }}</p>
+    <p><strong>Stato Ordine:</strong> {{ order.status }}</p>
+    <p><strong>Totale Ordine:</strong> € {{ order.amount }}</p>
+    <h3>Articoli Ordinati</h3>
+    <mat-divider></mat-divider>
+    <div *ngFor="let item of order.cartItems" class="order-item">
+      <p><strong>Articolo:</strong> {{ item.title }}</p>
+      <p><strong>Quantità:</strong> {{ item.quantity }}</p>
+      <p><strong>Prezzo Unitario:</strong> € {{ item.price }}</p>
+      <mat-divider></mat-divider>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" (click)="onClose()">Chiudi</button>
+</mat-dialog-actions>
