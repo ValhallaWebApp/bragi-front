@@ -38,6 +38,9 @@
         [src]="'../../../../assets/img/' + data.thumbnail"
         alt="{{ data.title }}"
       />
+      <button mat-raised-button color="primary" (click)="contactOnWhatsApp(data)">
+        Info <mat-icon>chat</mat-icon>
+      </button>
       <p><strong>Anno:</strong> {{ data.year }}</p>
       <p>
         <strong>Dimensioni:</strong> {{ data.dimensions.height }} *
@@ -51,7 +54,7 @@
   <!-- Pulsanti di azione -->
   <div class="action-buttons">
     <button mat-raised-button color="primary" (click)="contactOnWhatsApp(data)">
-      Info <mat-icon>chat</mat-icon>
+      Carrello <mat-icon>chat</mat-icon>
     </button>
     <button mat-button (click)="onClose()">Chiudi</button>
   </div>

@@ -1,7 +1,11 @@
 <section class="feature-gallery">
   <h1>{{ 'GALLERY.TITLE' | translate }}</h1>
   <div class="gallery-container">
-    <div class="gallery-item" *ngFor="let artwork of artworks" >
+   <div class="container-item"  *ngFor="let artwork of artworks" >
+     <button id="cart-button" color="primary" mat-button (click)="addToCart(artwork)">
+       <mat-icon>shopping_cart</mat-icon>
+     </button>
+    <div class="gallery-item">
       <div class="image-wrapper">
         <img src="../../../../../assets/img/{{artwork?.thumbnail}}" [alt]="artwork.title | translate" class="artwork-image">
       </div>
@@ -13,5 +17,6 @@
         <button class="artwork-details-button" (click)="openArtworkDialog(artwork)">{{ 'VIEW_DETAILS' | translate }}</button>
       </div>
     </div>
+   </div>
   </div>
 </section>

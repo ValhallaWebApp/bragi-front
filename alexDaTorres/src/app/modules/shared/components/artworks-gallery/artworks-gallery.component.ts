@@ -4,6 +4,8 @@ import { TranslateService } from '@ngx-translate/core';
 import { forkJoin, Observable, tap } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { ArtworkDialogComponent } from 'src/app/components/dialog/artwork-dialog/artwork-dialog.component';
+import { CartService } from 'src/app/services/cart.service';
+import { FeedbackDialogComponent } from 'src/app/components/dialog/dialog7feedback-dialog/dialog7feedback-dialog.component';
 
 @Component({
   selector: 'app-artworks-gallery',
@@ -13,7 +15,7 @@ import { ArtworkDialogComponent } from 'src/app/components/dialog/artwork-dialog
 })
 export class ArtworksGalleryComponent implements OnInit {
   artworks:any
-  constructor(public dialog: MatDialog,public artworksService: ArtworksService, public translate:TranslateService) {}
+  constructor(public dialog: MatDialog,public artworksService: ArtworksService, public translate:TranslateService, public cartService:CartService) {}
 
   ngOnInit(): void {
     this.getArtworks()
@@ -35,6 +37,20 @@ export class ArtworksGalleryComponent implements OnInit {
     getArtworks(){
       this.artworksService.getArtworksFiltered().subscribe(( data:any) => {
         this.artworks = data;
+      });
+    }
+    addToCart(artwork: any): void {
+      this.cartService.addArtworkToCart(artwork).then((response) => {
+        this.openFeedbackDialog(response);
+      });
+    }
+    openFeedbackDialog(response: { success: boolean; message: string }): void {
+      this.dialog.open(FeedbackDialogComponent, {
+        width: '400px',
+        data: {
+          message: response.message,
+          success: response.success
+        }
       });
     }
 }

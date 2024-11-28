@@ -1,0 +1,89 @@
+{
+  "-OCmWFsuKea8cRKMl47q": {
+    "amount": 0,
+    "cartItems": [
+      {
+        "availability": true,
+        "dimensions": {
+          "height": 100,
+          "unit": "cm",
+          "width": 70
+        },
+        "id": "-OBzMy4Fivla8FO4-Kdf",
+        "likes": 18,
+        "rating": {
+          "average": 3.6,
+          "totalRatingPoints": 18,
+          "totalVotes": 5
+        },
+        "technique": "Acrilico",
+        "thumbnail": "22.jpeg",
+        "title": "I Sogni sono come il Tramonto, se aspetti svaniscono",
+        "year": 2023
+      },
+      {
+        "availability": true,
+        "dimensions": {
+          "height": 100,
+          "unit": "cm",
+          "width": 70
+        },
+        "id": "-OBzMy4GuZuYq4yNBmcl",
+        "likes": 0,
+        "rating": {
+          "average": 5,
+          "totalRatingPoints": 5,
+          "totalVotes": 1
+        },
+        "technique": "Acrilico",
+        "thumbnail": "23.jpg",
+        "title": "Vorrei illuminarti l'anima",
+        "year": 2024
+      }
+    ],
+    "id": "-OCmWFsuKea8cRKMl47q",
+    "orderDate": "2024-11-28T11:25:43.335Z",
+    "shippingDetails": {
+      "address": "test",
+      "city": "test",
+      "fullName": "test",
+      "phoneNumber": "3486558084"
+    },
+    "status": "In elaborazione",
+    "userId": "dPpa4pFyTXNcFYFtfDxVGXRMIBI3"
+  },
+  "-OCmWKBXw_-EnzQBWd2V": {
+    "amount": 0,
+    "cartItems": [
+      {
+        "availability": true,
+        "dimensions": {
+          "height": 100,
+          "unit": "cm",
+          "width": 70
+        },
+        "id": "-OBzMy4Fivla8FO4-Kdf",
+        "likes": 18,
+        "rating": {
+          "average": 3.6,
+          "totalRatingPoints": 18,
+          "totalVotes": 5
+        },
+        "technique": "Acrilico",
+        "thumbnail": "22.jpeg",
+        "title": "I Sogni sono come il Tramonto, se aspetti svaniscono",
+        "year": 2023
+      }
+    ],
+    "id": "-OCmWKBXw_-EnzQBWd2V",
+    "orderDate": "2024-11-28T11:26:00.975Z",
+    "shippingDetails": {
+      "address": "dsa",
+      "city": "ada",
+      "fullName": "dawda",
+      "phoneNumber": "3486658084"
+    },
+    "status": "In elaborazione",
+    "userId": "dPpa4pFyTXNcFYFtfDxVGXRMIBI3"
+  }
+}

@@ -90,10 +90,10 @@ export class OrderService {
             message: 'Il carrello è vuoto. Aggiungi degli articoli prima di procedere.',
           };
         }
-
+        const eventId = this.db.createPushId();
         // Costruisci i dati dell'ordine
         const orderData = {
-          id:'test',
+          id:eventId,
           userId: user.uid,
           cartItems: cartItems,
           amount: cartItems.reduce((acc: any, item: any) => acc + (item.price || 0) * (item.quantity || 1), 0), // Calcola il totale
@@ -103,7 +103,7 @@ export class OrderService {
         };
 
         // Salva l'ordine nel RealTime Database
-        await this.db.list('orders').push(orderData);
+        await this.db.list('orders').set(eventId,orderData);
 
         // Svuota il carrello dopo aver piazzato l'ordine
         await this.cartService.clearCart();

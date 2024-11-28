@@ -22,7 +22,6 @@ import { ArtistInspirationComponent } from './components/artist-inspiration/arti
     FeatureGalleryComponent,
     TestimonialsComponent,
     JumbotronComponent,
-    ArtworksGalleryComponent,
     ArtistPassionComponent,
     ExhibitionsComponent,
     ArtistInspirationComponent
@@ -31,6 +30,7 @@ import { ArtistInspirationComponent } from './components/artist-inspiration/arti
     CommonModule,
     HomeRoutingModule,
     TranslateModule,
+    SharedModule
 
   ]
 })

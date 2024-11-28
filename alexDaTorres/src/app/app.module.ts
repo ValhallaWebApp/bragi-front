@@ -42,6 +42,8 @@ import { FooterComponent } from './components/footer/footer.component';
 
 // Forms Module
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from './modules/shared/shared.module';
+import { HomeModule } from './modules/home/home.module';
 
 // Function for loading translation files
 export function HttpLoaderFactory(http: HttpClient) {
@@ -86,7 +88,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AdminModule, // Import AdminModule if required in this scope
     ContactModule,
     DialogModule,
-
+    SharedModule,
+    HomeModule,
     // Translation Module
     TranslateModule.forRoot({
       loader: {
