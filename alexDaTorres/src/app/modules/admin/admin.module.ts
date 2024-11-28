@@ -22,7 +22,7 @@ import { MatCardModule } from '@angular/material/card';
 import { AdminReviewsComponent } from './components/admin-reviews/admin-reviews.component';
 import { AdminStatisticsDashboardComponent } from './components/statistics-dashboard/statistics-dashboard.component';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { NgxChartsModule, LegendPosition } from '@swimlane/ngx-charts';
 
 
 @NgModule({

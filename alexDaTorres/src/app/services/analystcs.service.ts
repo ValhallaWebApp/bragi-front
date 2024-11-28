@@ -129,4 +129,30 @@ export class AnalyticsService {
         })
       );
   }
+  // Raccoglie tutte le posizioni geografiche dalle interazioni degli utenti
+  getLocationStats(): Observable<{ name: string, value: number }[]> {
+    return this.db.list('/user_events')
+      .valueChanges()
+      .pipe(
+        map((events: any[]) => {
+          const countryCount: { [key: string]: number } = {};
+          events.forEach((event: any) => {
+            if (event.location && event.location.country) {
+              const country = event.location.country;
+              countryCount[country] = (countryCount[country] || 0) + 1;
+            }
+          });
+
+          return Object.keys(countryCount).map(key => ({
+            name: key,
+            value: countryCount[key]
+          }));
+        }),
+        catchError((error) => {
+          console.error('Errore durante il recupero delle statistiche geografiche:', error);
+          return of([]);
+        })
+      );
+  }
 }
+

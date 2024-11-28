@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { map, Observable } from 'rxjs';
+import { LegendPosition } from '@swimlane/ngx-charts';
 import { AnalyticsService } from 'src/app/services/analystcs.service';
 
 @Component({
@@ -12,8 +13,10 @@ export class AdminStatisticsDashboardComponent implements OnInit {
   totalAddToCart$!: Observable<number>;
   userEventsStats$!: Observable<{ loggedIn: number; anonymous: number }>;
   artworkStats$!: Observable<any[]>;
-  overallArtworkStats$!: Observable<{ title: string, views: number, addsToCart: number }[]>;
-  overallStats$!: Observable<{ name: string, value: number }[]>;
+  overallStats$!: Observable<{ name: string; value: number }[]>;
+  locationStats$!: Observable<{ name: string; value: number }[]>;
+
+  legendPosition = LegendPosition.Below; // Uso coerente della posizione
 
   constructor(private analyticsService: AnalyticsService) {}
 
@@ -22,12 +25,14 @@ export class AdminStatisticsDashboardComponent implements OnInit {
     this.totalAddToCart$ = this.analyticsService.getTotalAddToCart();
     this.userEventsStats$ = this.analyticsService.getUserEventsStats();
     this.artworkStats$ = this.analyticsService.getArtworkStats();
-   // Format the overall stats to match the format required by the bar chart.
-   this.overallStats$ = this.analyticsService.getOverallArtworkStats().pipe(
-    map(stats => stats.map(stat => ({
-      name: stat.title,
-      value: stat.views + stat.addsToCart
-    })))
-  );
+    this.overallStats$ = this.analyticsService.getOverallArtworkStats().pipe(
+      map((stats) =>
+        stats.map((stat) => ({
+          name: stat.title,
+          value: stat.views + stat.addsToCart,
+        }))
+      )
+    );
+    this.locationStats$ = this.analyticsService.getLocationStats();
   }
 }

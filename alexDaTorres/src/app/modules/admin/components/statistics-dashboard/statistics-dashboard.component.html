@@ -1,6 +1,7 @@
-<h1>Statistiche del Sito</h1>
 <div class="dashboard-container">
+  <h1>Statistiche del Sito</h1>
 
+  <!-- Visualizzazioni Totali -->
   <div class="statistic-card small">
     <h2>Numero Totale di Visualizzazioni</h2>
     <ngx-charts-number-card
@@ -8,6 +9,7 @@
     </ngx-charts-number-card>
   </div>
 
+  <!-- Aggiunte al Carrello Totali -->
   <div class="statistic-card small">
     <h2>Numero Totale di Aggiunte al Carrello</h2>
     <ngx-charts-number-card
@@ -15,6 +17,7 @@
     </ngx-charts-number-card>
   </div>
 
+  <!-- Distribuzione Attività Utenti (Loggati vs Anonimi) -->
   <div class="statistic-card">
     <h2>Distribuzione Attività Utenti</h2>
     <ngx-charts-bar-vertical
@@ -28,6 +31,40 @@
     </ngx-charts-bar-vertical>
   </div>
 
+  <!-- Statistiche Generali delle Opere d'Arte -->
+  <div class="statistic-card">
+    <h2>Statistiche Generali delle Opere d'Arte</h2>
+    <ngx-charts-bar-vertical
+      *ngIf="overallStats$ | async as overallStats"
+      [results]="overallStats"
+      [scheme]="'cool'"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="true"
+      [legendPosition]="legendPosition"
+      [showXAxisLabel]="true"
+      [xAxisLabel]="'Opera d\'Arte'"
+      [showYAxisLabel]="true"
+      [yAxisLabel]="'Interazioni (Visualizzazioni + Aggiunte)'">
+    </ngx-charts-bar-vertical>
+  </div>
+
+  <!-- Statistiche Geografiche delle Interazioni -->
+  <div class="statistic-card">
+    <h2>Distribuzione Geografica delle Interazioni</h2>
+    <ngx-charts-pie-chart
+      *ngIf="locationStats$ | async as locationStats"
+      [results]="locationStats"
+      [scheme]="'vivid'"
+      [legend]="true"
+      [legendPosition]="legendPosition"
+      [labels]="true"
+      [doughnut]="false"
+      [explodeSlices]="true">
+    </ngx-charts-pie-chart>
+  </div>
+
+  <!-- Statistiche delle Singole Opere d'Arte -->
   <div class="artwork-stats" *ngIf="artworkStats$ | async as artworks">
     <h2>Statistiche delle Opere</h2>
     <div *ngFor="let artwork of artworks">
@@ -35,36 +72,20 @@
         <mat-expansion-panel-header>
           <mat-panel-title>{{ artwork.title }}</mat-panel-title>
         </mat-expansion-panel-header>
-        <p>Visualizzazioni: {{ artwork.views }}</p>
-        <p>Aggiunte al Carrello: {{ artwork.addsToCart }}</p>
+
         <ngx-charts-pie-chart
           [results]="[
             {name: 'Visualizzazioni', value: artwork.views},
             {name: 'Aggiunte al Carrello', value: artwork.addsToCart}
           ]"
           [scheme]="'vivid'"
-          [legend]="true">
+          [legend]="true"
+          [legendPosition]="legendPosition"
+          [labels]="true">
         </ngx-charts-pie-chart>
+        <p>Visualizzazioni: {{ artwork.views }}</p>
+        <p>Aggiunte al Carrello: {{ artwork.addsToCart }}</p>
       </mat-expansion-panel>
     </div>
   </div>
-
-  <!-- General Views and Cart Statistics for all Artworks -->
-  <!-- General Views and Cart Statistics for all Artworks -->
-<div class="statistic-card">
-  <h2>Statistiche Generali delle Opere d'Arte</h2>
-  <ngx-charts-bar-vertical
-    *ngIf="overallStats$ | async as overallStats"
-    [results]="overallStats"
-    [scheme]="'cool'"
-    [xAxis]="true"
-    [yAxis]="true"
-    [legend]="true"
-    [showXAxisLabel]="true"
-    [xAxisLabel]="'Opera d\'Arte'"
-    [showYAxisLabel]="true"
-    [yAxisLabel]="'Interazioni (Visualizzazioni + Aggiunte)'">
-  </ngx-charts-bar-vertical>
-</div>
-
 </div>

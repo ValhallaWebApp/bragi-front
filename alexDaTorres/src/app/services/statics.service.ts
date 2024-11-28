@@ -3,13 +3,14 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { IpService } from './ip.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StatisticsService {
-  constructor(private db: AngularFireDatabase) {}
-
+  constructor(private db: AngularFireDatabase, private http: HttpClient, private ipService:IpService) {}
   // Get statistics for artwork views
   getArtworkViewStats(): Observable<any[]> {
     return this.db.list('/statistics/artworkViews').valueChanges().pipe(
