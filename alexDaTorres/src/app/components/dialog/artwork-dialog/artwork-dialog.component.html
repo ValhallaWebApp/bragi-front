@@ -33,29 +33,36 @@
   <!-- Dettagli dell'opera d'arte -->
   <div *ngIf="!isExpanded" class="container-pop">
     <div mat-dialog-content>
-      <h3>{{ data.title }}</h3>
-      <img
-        [src]="'../../../../assets/img/' + data.thumbnail"
-        alt="{{ data.title }}"
-      />
-      <button mat-raised-button color="primary" (click)="contactOnWhatsApp(data)">
-        Info <mat-icon>chat</mat-icon>
+      <div>
+        <h3>{{ data.title }}</h3>
+        <img
+          [src]="'../../../../assets/img/' + data.thumbnail"
+          alt="{{ data.title }}"
+        /> <br>
+        <button mat-raised-button color="primary" (click)="contactOnWhatsApp(data)">
+          Info <mat-icon>chat</mat-icon>
+        </button>
+      </div>
+      <div>
+        <button mat-raised-button color="warn" (click)="addToCart(data)">
+          <mat-icon>shopping_cart</mat-icon> Carrello
       </button>
-      <p><strong>Anno:</strong> {{ data.year }}</p>
-      <p>
-        <strong>Dimensioni:</strong> {{ data.dimensions.height }} *
-        {{ data.dimensions.width }}
-      </p>
-      <p><strong>Tecnica:</strong> {{ data.technique | translate }}</p>
-      <p><strong>Descrizione:</strong> {{ data.descrizioneKey | translate }}</p>
+        <p><strong>Anno:</strong> {{ data.year }}</p>
+        <p>
+          <strong>Dimensioni:</strong> {{ data.dimensions.height }} *
+          {{ data.dimensions.width }}
+        </p>
+        <p><strong>Tecnica:</strong> {{ data.technique | translate }}</p>
+        <p><strong>Descrizione:</strong> {{ data.descrizioneKey | translate }}</p>
+      </div>
     </div>
   </div>
 
   <!-- Pulsanti di azione -->
   <div class="action-buttons">
-    <button mat-raised-button color="primary" (click)="contactOnWhatsApp(data)">
-      Carrello <mat-icon>chat</mat-icon>
-    </button>
+    <button mat-raised-button color="warn" (click)="addToCart(data)">
+      <mat-icon>shopping_cart</mat-icon> Carrello
+  </button>
     <button mat-button (click)="onClose()">Chiudi</button>
   </div>
 </div>

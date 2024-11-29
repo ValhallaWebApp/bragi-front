@@ -1,24 +1,43 @@
 <div class="order-history-container">
-  <h2>Storico Ordini</h2>
-
-  <!-- Lista degli ordini dell'utente -->
-    <div *ngIf="orders.length > 0; else noOrders">
-      <mat-card *ngFor="let order of orders" class="order-card">
-        <mat-card-header>
-          <mat-card-title>Ordine #{{ order.id }}</mat-card-title>
-          <mat-card-subtitle>{{ order.orderDate | date }}</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <p><strong>Stato:</strong> {{ order.status }}</p>
-          <div *ngFor="let item of order.items">
-            <p>{{ item.title }} - Prezzo: € {{ item.price }}</p>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
-
-  <!-- Messaggio se non ci sono ordini -->
-  <ng-template #noOrders>
+  <h1>Storico Ordini</h1>
+  <div *ngIf="orders.length === 0">
     <p>Non hai ancora effettuato ordini.</p>
-  </ng-template>
+  </div>
+
+  <div *ngIf="orders.length > 0" class="order-list">
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let order of orders">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <span class="col">
+              Ordine del:
+              <span>
+                {{ order.orderDate | date: 'dd/MM/yyyy' }}
+              </span>
+            </span>
+            <span class="col">
+             Status: <span [ngClass]="getStatusClass(order.status)">
+              {{ order.status }}
+             </span>
+            </span>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{ order.cartItems.length }} opere - Totale: € {{ order.amount }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div class="order-details">
+          <div *ngFor="let item of order.cartItems" class="order-item">
+            <img [src]="'assets/img/' + item.thumbnail" alt="{{ item.title }}" class="thumbnail">
+            <div class="details">
+              <h3>{{ item.title }}</h3>
+              <p>Dimensioni: {{ item.dimensions.height }} x {{ item.dimensions.width }} {{ item.dimensions.unit }}</p>
+              <p>Anno: {{ item.year }}</p>
+              <p>Media Voti: {{ item.rating.average }} ({{ item.rating.totalVotes }} voti)</p>
+            </div>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
 </div>

@@ -1,12 +1,42 @@
-<h2>Profilo Utente</h2>
-<form [formGroup]="profileForm">
-  <mat-form-field>
-    <mat-label>Nome Completo</mat-label>
-    <input matInput formControlName="fullName">
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>Email</mat-label>
-    <input matInput formControlName="email">
-  </mat-form-field>
-  <button mat-raised-button color="primary" (click)="saveProfile()" [disabled]="!profileForm.valid">Salva Modifiche</button>
+<form [formGroup]="userProfileForm" (ngSubmit)="saveProfile()">
+  <mat-card>
+    <mat-card-title>Modifica Profilo Utente</mat-card-title>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="name" placeholder="Nome">
+      <mat-error *ngIf="userProfileForm.get('name')?.invalid">Il nome è richiesto.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" placeholder="Email">
+      <mat-error *ngIf="userProfileForm.get('email')?.invalid">Email non valida.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Telefono</mat-label>
+      <input matInput formControlName="phone" placeholder="Telefono">
+      <mat-error *ngIf="userProfileForm.get('phone')?.invalid">Inserisci un numero di telefono valido.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Indirizzo</mat-label>
+      <textarea matInput formControlName="address" placeholder="Indirizzo"></textarea>
+      <mat-error *ngIf="userProfileForm.get('address')?.invalid">L'indirizzo è richiesto.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Lingua Preferita</mat-label>
+      <mat-select formControlName="preferredLanguage">
+        <mat-option value="it">Italiano</mat-option>
+        <mat-option value="en">Inglese</mat-option>
+        <mat-option value="es">Spagnolo</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-checkbox formControlName="consentToMarketing">Accetto di ricevere comunicazioni di marketing</mat-checkbox>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="userProfileForm.invalid || isSubmitting">Salva</button>
+  </mat-card>
 </form>

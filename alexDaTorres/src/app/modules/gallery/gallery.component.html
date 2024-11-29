@@ -78,7 +78,7 @@
     <h5>{{ artWork.tequincue | translate }}</h5>
 <div>
   <button mat-raised-button color="primary" (click)="openArtworkDialog(artWork)">{{ 'VIEW_DETAILS' | translate }}</button>
-  <button mat-raised-button color="secondary">
+  <button mat-raised-button color="secondary" (click)="openReviewDialog(artWork)">
     <mat-icon>rate_review</mat-icon>
   </button>
 

@@ -5,7 +5,7 @@ import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact.component';
 import { MatButtonModule } from '@angular/material/button';
 import { ContactIconComponent } from "../../components/shortcut/contact-icon/contact-icon.component";
-import { ContactFormComponent } from 'src/app/components/contact-form/contact-form.component';
+import { ContactFormComponent } from 'src/app/components/forms/contact-form/contact-form.component';
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { ContactFormComponent } from 'src/app/components/contact-form/contact-fo
     ContactComponent,
     ContactIconComponent,
     ContactFormComponent,
-
+    ContactFormComponent
   ],
   imports: [
     ContactRoutingModule,

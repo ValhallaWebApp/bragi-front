@@ -34,6 +34,20 @@ export class AuthService {
       })
     );
   }
+// Metodo per ottenere i dati dell'utente
+getUserData(): Observable<any> {
+  return this.afAuth.authState.pipe(
+    switchMap(user => {
+      if (user) {
+        return this.db.object<any>(`users/${user.uid}`).valueChanges().pipe(
+
+        );
+      } else {
+        return of(''); // Default role se l'utente non è autenticato
+      }
+    })
+  );
+}
 
   // Metodo per verificare se l'utente è un amministratore
   isAdmin(): Observable<boolean> {

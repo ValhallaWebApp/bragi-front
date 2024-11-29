@@ -1,10 +1,38 @@
 .app-container{
     background-image: url('../assets/icon/decor_ghost.png');
-
-}
+    background-color: rgba(242, 204, 209, 0.862);
+  }
 *{
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  filter: invert(0);
 }
+// SCSS per rendere la barra di scorrimento moderna ed elegante
+.scroll-container {
+
+  // Stili per i browser Webkit (Chrome, Safari, Edge)
+  &::-webkit-scrollbar {
+    width: 4px;  // Larghezza della barra di scorrimento
+    height: 8px; // Altezza della barra di scorrimento (per scorrimento orizzontale)
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);  // Colore della "thumb" (la parte che si muove)
+    border-radius: 10px;  // Bordo arrotondato per un aspetto più elegante
+    transition: background-color 0.3s ease; // Transizione per cambiamento colore
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.6); // Colore più scuro al passaggio del mouse
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.05); // Colore della traccia della barra di scorrimento
+    border-radius: 10px; // Bordo arrotondato per coerenza con la "thumb"
+  }
+
+  // Stili per Firefox
+  scrollbar-width: 4px;  // Imposta una barra di scorrimento sottile
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.05);  // Colore della thumb e del track
+}
+

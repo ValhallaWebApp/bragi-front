@@ -1,24 +1,71 @@
-.container-pop{
- text-align: center;
+.container-pop {
+  text-align: center;
   max-height: 60vh;
-  overflow-y: scroll;
-  h3{
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    & > div {
+      max-width: 400px;
+      text-align: center;
+    }
+  }
+  // Stili per i browser Webkit (Chrome, Safari, Edge)
+  &::-webkit-scrollbar {
+    width: 4px; // Larghezza della barra di scorrimento
+    height: 8px; // Altezza della barra di scorrimento (per scorrimento orizzontale)
+  }
 
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.3
+    ); // Colore della "thumb" (la parte che si muove)
+    border-radius: 10px; // Bordo arrotondato per un aspetto più elegante
+    transition: background-color 0.3s ease; // Transizione per cambiamento colore
+
+    &:hover {
+      background-color: rgba(
+        0,
+        0,
+        0,
+        0.6
+      ); // Colore più scuro al passaggio del mouse
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.05
+    ); // Colore della traccia della barra di scorrimento
+    border-radius: 10px; // Bordo arrotondato per coerenza con la "thumb"
+  }
+
+  // Stili per Firefox
+  scrollbar-width: 4px; // Imposta una barra di scorrimento sottile
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.05); // Colore della thumb e del track
+  h3 {
     font-weight: bolder;
   }
-  img{
+  img {
     max-width: 100%;
     max-height: 40vh;
     text-align: center;
   }
-  button{
+  button {
     margin: 10px;
   }
 }
-.action-buttons{
+.action-buttons {
   display: flex;
   flex-direction: column;
-  button{
+  button {
     min-width: 100%;
   }
 }
@@ -35,7 +82,7 @@ mat-expansion-panel {
   z-index: 10;
   background-color: white;
 }
-.container-reviews{
+.container-reviews {
   max-height: 35vh;
   overflow-y: scroll;
 }

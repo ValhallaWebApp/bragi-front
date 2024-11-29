@@ -16,6 +16,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReviewUserListComponent } from './components/reviews/review-user-list/review-user-list.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { EditReviewDialogComponent } from 'src/app/components/dialog/edit-review-dialog/edit-review-dialog.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,9 @@ import { EditReviewDialogComponent } from 'src/app/components/dialog/edit-review
     MatSelectModule,
     MatFormFieldModule,
     MatDialogModule,
+    MatExpansionModule,
+    MatIconModule,
+    FormsModule,
   ],
   exports:[]
 })

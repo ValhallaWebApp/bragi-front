@@ -5,6 +5,7 @@ import { ArtworksService } from 'src/app/services/artworks.service';
 import { ArtworkDialogComponent } from 'src/app/components/dialog/artwork-dialog/artwork-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { FeedbackDialogComponent } from 'src/app/components/dialog/dialog7feedback-dialog/dialog7feedback-dialog.component';
+import { ReviewDialogComponent } from 'src/app/components/dialog/review-dialog/review-dialog.component';
 
 @Component({
   selector: 'app-gallery',
@@ -33,7 +34,7 @@ export class GalleryComponent {
         }
       );
   }
-  constructor(private cartService:CartService,private artworksService: ArtworksService,public translate: TranslateService,public dialog: MatDialog) {
+  constructor(private artworksService: ArtworksService,public translate: TranslateService,private cartService:CartService,public dialog: MatDialog) {
     this.filteredArtworksArray = this.artworksArray;
   }
 
@@ -112,6 +113,12 @@ export class GalleryComponent {
 
   openArtworkDialog(artwork: any): void {
     const dialogRef = this.dialog.open(ArtworkDialogComponent, {
+      width: '80vw',
+      data: artwork,
+    });
+  }
+  openReviewDialog(artwork: any): void {
+    const dialogRef = this.dialog.open(ReviewDialogComponent, {
       width: '80vw',
       data: artwork,
     });

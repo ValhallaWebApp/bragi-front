@@ -89,7 +89,7 @@ $link-color: #705d56; /* Marrone chiaro per i link */
 /* Stile del sidenav */
 .sidenav {
   width: 250px;
-  background: #f5e4d7bc; /* Beige chiaro */
+  background-color: rgba(242, 204, 209, 0.66);
   background-image: url('../../../assets/icon/decor_ghost.png');
   color: $dark-text;
   z-index: 1500;
@@ -133,7 +133,8 @@ $link-color: #705d56; /* Marrone chiaro per i link */
   overflow-y: auto;
   height: calc(100vh - 64px);
   padding: 0px;
-  background: bisque;
+  background-color: rgb(242, 204, 209);
+
   color: $dark-text;
   background-image: url('../../../assets/icon/decor_ghost.png');
   background-repeat: repeat;

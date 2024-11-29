@@ -1,0 +1,62 @@
+<mat-dialog-content>
+
+<h3>Scrivi una recensione</h3>
+<form [formGroup]="reviewForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Valutazione (1-5)</mat-label>
+    <input
+      matInput
+      formControlName="rating"
+      type="number"
+      min="1"
+      max="5"
+    />
+    <mat-error *ngIf="reviewForm.get('rating')?.hasError('required')">
+      La valutazione è obbligatoria
+    </mat-error>
+    <mat-error
+      *ngIf="
+        reviewForm.get('rating')?.hasError('min') ||
+        reviewForm.get('rating')?.hasError('max')
+      "
+    >
+      La valutazione deve essere compresa tra 1 e 5
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Commento</mat-label>
+    <textarea matInput formControlName="comment" maxlength="200"></textarea>
+    <mat-error *ngIf="reviewForm.get('comment')?.hasError('required')">
+      Il commento è obbligatorio
+    </mat-error>
+    <mat-error *ngIf="reviewForm.get('comment')?.hasError('maxlength')">
+      Il commento non può superare i 200 caratteri
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Campo email visibile solo se l'utente non è loggato -->
+  <mat-form-field  appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" />
+    <mat-error *ngIf="reviewForm.get('email')?.hasError('required')">
+      L'email è obbligatoria se non sei loggato
+    </mat-error>
+    <mat-error *ngIf="reviewForm.get('email')?.hasError('email')">
+      Inserisci un indirizzo email valido
+    </mat-error>
+  </mat-form-field>
+
+  <div class="actions">
+    <button mat-button (click)="onCancel()">Chiudi</button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onSubmit($event)"
+      [disabled]="reviewForm.invalid"
+    >
+      Invia
+    </button>
+  </div>
+</form>
+</mat-dialog-content>

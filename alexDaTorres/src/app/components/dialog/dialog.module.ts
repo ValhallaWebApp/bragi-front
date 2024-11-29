@@ -23,6 +23,7 @@ import { ReviewFormComponent } from '../forms/review-form/review-form.component'
 import { OrderDetailsDialogComponent } from './order-details-dialog/order-details-dialog.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { ReviewDialogComponent } from './review-dialog/review-dialog.component';
 
 @NgModule({
   imports: [
@@ -48,7 +49,8 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     DeleteArtworkDialogComponent,
     ReviewFormComponent,
     OrderDetailsDialogComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    ReviewDialogComponent
   ],
   exports: [
     ArtworkDialogComponent,
@@ -58,7 +60,9 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     DeleteArtworkDialogComponent,
     ReviewFormComponent,
     OrderDetailsDialogComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    ReviewDialogComponent
+
   ]
 })
 export class DialogModule { }

@@ -1,0 +1,114 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  gap: 30px;
+  background-color: #f5f5f594; // Sfondo tenue per contrasto con le cards
+}
+
+form {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+mat-card {
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); // Aggiungi una shadow per dare profondità
+  background-color: #ffffffa1;
+}
+
+mat-card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+  background: #ffffff;
+}
+
+.mat-form-field.appearance-outline {
+  .mat-form-field-outline-thick {
+    border-width: 2px;
+    border-color: #3f51b5; // Miglioramento del colore di contorno
+  }
+
+  .mat-form-field-label {
+    color: #3f51b5; // Stesso colore del contorno per coesione visiva
+  }
+}
+
+button {
+  align-self: flex-end;
+  margin-top: 30px;
+}
+
+button[mat-raised-button] {
+  background-color: #3f51b5;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #303f9f;
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    color: #666666;
+  }
+}
+
+.mat-checkbox {
+  margin-top: 10px;
+
+  .mat-checkbox-label {
+    color: #555;
+  }
+}
+
+.mat-error {
+  color: #e53935; // Colore rosso per indicare errori
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.mat-select {
+  width: 100%;
+}
+
+.mat-select-trigger {
+  padding: 8px 12px;
+}
+
+.mat-dialog-actions {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mat-dialog-container {
+  border-radius: 20px;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #3f51b5;
+}
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-ripple {
+  background-color: #e53935;
+}
+
+textarea[matInput] {
+  height: 100px; // Altezza personalizzata per il campo di testo più grande
+}
+

@@ -1,10 +1,12 @@
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { EventTrackingService } from 'src/app/services/event-tracking.service';
 import { ReviewService } from 'src/app/services/review.service';
+import { FeedbackDialogComponent } from '../dialog7feedback-dialog/dialog7feedback-dialog.component';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-artwork-dialog',
@@ -29,6 +31,8 @@ export class ArtworkDialogComponent {
     private afAuth: AuthService,
     private reviewService: ReviewService,
     private eventTrackingService: EventTrackingService,
+    private cartService:CartService,
+    public dialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.reviewForm = this.fb.group({
@@ -82,5 +86,19 @@ export class ArtworkDialogComponent {
   onReviewCancel(): void {
     this.isExpanded = false
     console.log("L'utente ha annullato la recensione.");
+  }
+  addToCart(artwork: any): void {
+    this.cartService.addArtworkToCart(artwork).then((response) => {
+      this.openFeedbackDialog(response);
+    });
+  }
+  openFeedbackDialog(response: { success: boolean; message: string }): void {
+    this.dialog.open(FeedbackDialogComponent, {
+      width: '400px',
+      data: {
+        message: response.message,
+        success: response.success
+      }
+    });
   }
 }

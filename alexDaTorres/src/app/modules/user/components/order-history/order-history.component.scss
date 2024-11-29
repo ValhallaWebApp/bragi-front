@@ -1,0 +1,106 @@
+.order-history-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+
+  h1 {
+    text-align: center;
+    color: #3f51b5;
+  }
+
+  .order-list {
+    margin-top: 20px;
+  }
+
+  .order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .order-item {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .thumbnail {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .details {
+      flex: 1;
+
+      h3 {
+        margin: 0;
+        font-size: 1.2em;
+        color: #333;
+      }
+
+      p {
+        margin: 5px 0;
+        color: #666;
+      }
+    }
+  }
+
+  .status-shipped {
+    color: green;
+  }
+
+  .status-cancelled {
+    color: red;
+  }
+
+  .status-pending {
+    color: orange;
+  }
+}
+
+// Modern Scrollbar
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.mat-expansion-panel-header{
+  height: auto;
+  padding: 10px 10px;
+ .col{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: auto;
+  padding: 0px 5px;
+  text-wrap: nowrap;
+ }
+}

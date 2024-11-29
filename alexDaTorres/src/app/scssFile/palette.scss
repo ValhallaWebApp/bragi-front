@@ -1,0 +1,157 @@
+// Definizione della palette di colori
+$viola-tramonto: #6A0572;
+$giallo-oro: #FFC857;
+$blu-notturno: #003366;
+$rosa-alba: #FF6F61;
+$verde-foglia: #4CAF50;
+$azzurro-acqua: #87CEEB;
+$beige-sabbia: #F4E1C1;
+$grigio-roccia: #8A8A8A;
+
+// Stili Generali
+body {
+  background-color: $beige-sabbia;
+  color: $blu-notturno;
+  font-family: 'Arial, sans-serif';
+  margin: 0;
+  padding: 0;
+}
+
+// Header e Footer
+header, footer {
+  background-color: $viola-tramonto;
+  color: $giallo-oro;
+  padding: 20px;
+  text-align: center;
+}
+
+// Stili per i Pulsanti
+button {
+  background-color: $giallo-oro;
+  color: $blu-notturno;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($giallo-oro, 10%);
+  }
+}
+
+.button-secondary {
+  background-color: $verde-foglia;
+  color: #fff;
+
+  &:hover {
+    background-color: darken($verde-foglia, 10%);
+  }
+}
+
+// Stili per le Sezioni
+.section {
+  padding: 40px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+
+  &.highlight {
+    background-color: $azzurro-acqua;
+  }
+
+  &.call-to-action {
+    background-color: $rosa-alba;
+    color: #fff;
+  }
+}
+
+// Card delle Opere d'Arte
+.card {
+  background-color: #fff;
+  border: 1px solid $grigio-roccia;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+
+  h3 {
+    color: $viola-tramonto;
+  }
+
+  p {
+    color: $grigio-roccia;
+  }
+}
+
+// Stili per i Form
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+
+  .mat-form-field-label {
+    color: $blu-notturno;
+  }
+
+  .mat-input-element {
+    color: $blu-notturno;
+  }
+
+  mat-error {
+    color: $rosa-alba;
+  }
+}
+
+// Stili per le Liste
+ul {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: $azzurro-acqua;
+    color: $blu-notturno;
+    border-radius: 5px;
+  }
+}
+
+// Stili per le intestazioni principali
+h1, h2, h3 {
+  color: $viola-tramonto;
+}
+
+// Stili per le icone
+.icon {
+  color: $giallo-oro;
+  margin-right: 10px;
+}
+
+// Stili per lo stato degli ordini
+.status {
+  &.completed {
+    color: $verde-foglia;
+  }
+  &.cancelled {
+    color: $rosa-alba;
+  }
+}
+
+// Stili per le scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $beige-sabbia;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $viola-tramonto;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darken($viola-tramonto, 15%);
+}
